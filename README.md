@@ -23,5 +23,5 @@ Input/Output:
   - open an a11y statement from my computer or from a URL;
 - output:
   - an a11y statement in HTML w/ a json w/ the variables in the <head> of the page that the entity can copy and paste in their website;
-  - a json file w/ the variables that the entity can use to generate their personal a11y statement with one condition: the entity must to put in the a11y statement the json data in the '<head>' of the page;
+  - a json file w/ the variables that the entity can use to generate their personal a11y statement with one condition: the entity must to put in the a11y statement the json data in the `<head>` of the page;
 
