@@ -7,6 +7,7 @@ This is an attempt to adapt the [WAI-statement](https://github.com/w3c/wai-state
 According to the PT legislation we'll have one a11y statement per each website or app.
 
 We need:
+- input model: [PT a11y statement](http://acessibilidade.tk/a11y/a11y-modelo-pt-input)
 - to create sections with static text and/or questions;
 - conditional text, questions or entire sections dependent of previous input variables;
 - the sections can have a custom heading title or don't have any title (for example in the introduction we don't need a title);
@@ -22,6 +23,6 @@ Input/Output:
   - create a new a11y statement;
   - open an a11y statement from my computer or from a URL;
 - output:
-  - an a11y statement in HTML w/ a json w/ the variables in the `<head>` of the page that the entity can copy and paste in their website;
-  - a json file w/ the variables that the entity can use to generate their personal a11y statement with one condition: the entity must to put in the a11y statement the json data in the `<head>` of the page;
+  - an a11y statement in HTML w/ all the variables mapped (get it directly from the content page - ideally - or "maybe" from a json referenced in the `<head>` of the page) that the entity can copy and paste in their website;
+  - a json file w/ the variables that the entity can use to generate their personal a11y statement with one condition: the entity must to put in the a11y statement page the json data referenced in the `<head>` of the page;
 
