@@ -332,7 +332,15 @@ details h3 {
   margin-left: 2rem;
 }
 
+#accstatement #accstmnt_standard_other_name {
+    display: none;
+}
 
+#accstatement #accstmnt_standard_other:checked ~ #accstmnt_standard_other_name {
+    display: block;
+    flex-basis: auto;
+    width: 100%;
+}
 
 /*input, textarea, select {
     width: 100%;
