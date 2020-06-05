@@ -372,7 +372,8 @@
     // Set button-backtotop href
     Array.prototype.forEach.call(document.querySelectorAll('a[href="#top"]'), function setTopHref(el) {
       el.addEventListener('click', function handleBackToTopClick(event) {
-        el.setAttribute('href', '#' + _getCurrentPage() + '-top');
+        // el.setAttribute('href', '#' + _getCurrentPage() + '-top');
+        el.setAttribute('href', '#' + window.location.hash + '-top');
       });
     });
   }
