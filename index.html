@@ -393,11 +393,11 @@
                                 <input type="text" id="accstmnt_limitation_[n]_reason" name="reason"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_us">Ce que nous faisons pour y pallier</label>
+                                <label for="accstmnt_limitation_[n]_us">Ce que l'équipe fait pour y pallier</label>
                                 <input type="text" id="accstmnt_limitation_[n]_us" name="us"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_you">Ce qui peut être fait en attendant</label>
+                                <label for="accstmnt_limitation_[n]_you">Ce que l'utilisateur peut faire en attendant</label>
                                 <input type="text" id="accstmnt_limitation_[n]_you" name="you"/>
                             </div>
                         </fieldset>
@@ -408,24 +408,21 @@
                     </div>
                 </fieldset>
 
-                <h3 class="label">Compatibility with user environment
+                <h3 class="label">Compatibilité avec l'environnement de l'utilisateur
                     <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_asstech" data-target="#support_asstech" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                 </h3>
                 <div class="information" id="support_asstech" hidden="hidden">
-                    <p>Despite best efforts, accessibility may not work well in every combination of operating system, web browser, and assistive technology. Developers typically test their websites and mobile applications with common user environments, to determine compatibility. WCAG defines requirements for accessibility features provided by content authors to be
-                        <a href="https://www.w3.org/TR/WCAG21/#dfn-accessibility-supported">accessibility supported</a>. Communicating this compatibility expectation helps user to determine if that is the cause for any issues they may be observing.</p>
+                    <p>Malgré tous les efforts déployés, l'accessibilité peut ne pas fonctionner correctement dans toutes les combinaisons de système d'exploitation, de navigateur web et de technologie d'assistance. Les développeurs testent généralement leurs services avec des environnements les plus communs. Communiquer sur les environnements testés aide l'utilisateur à déterminer si les outils utilisés pourraient être la cause d'un problème observé.</p>
                 </div>
 
                 <fieldset class="group" id="compatible_tech">
-                    <legend class="visuallyhidden">Compatibility with user environment</legend>
+                    <legend class="visuallyhidden">Compatibilité avec l'environement utilisateur</legend>
 
-                    <p class="expl">Describe the environments (combinations of web browsers, assistive technologies, and operating systems) that the content is expected to work with. These should be in-line with the WCAG definition of
-                        <a href="https://www.w3.org/TR/WCAG21/#dfn-accessibility-supported">accessibility supported</a>
-                        use of technologies.</p>
+                    <p class="expl">Décrivez les environnements (combinaisons de navigateurs web, de technologies d'assistance et de systèmes d'exploitation) avec lesquels le contenu est censé fonctionner.</p>
 
                     <div class="field line">
                         <label for="accstmnt_asstech_compatible_1">Environment 1</label>
-                        <em>(Exemple : « browser X with assistive technology Y on operating system Z »)</em>
+                        <em>(Exemple : « navigateur X avec la technologie d'assistance Y et le système d'exploitation Z »)</em>
                         <input type="text" id="accstmnt_asstech_compatible_1" name="accstmnt_asstech_compatible"/>
                     </div>
 
@@ -434,24 +431,24 @@
                         <input type="text" id="accstmnt_asstech_compatible_[n]" name="accstmnt_asstech_compatible"/>
                     </div>
 
-                    <button class="add-line" type="button">Add another compatible environment</button>
+                    <button class="add-line" type="button">Ajouter un environnement testé</button>
                 </fieldset>
 
-                <h3 class="label">Known incompatibility
+                <h3 class="label">Incompatibilités connues
                     <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_incompatible" data-target="#support_incompatible" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                 </h3>
                 <div class="information" id="support_incompatible" hidden="hidden">
-                    <p>Help users understand what versions of operating systems, web browsers, and assistive technologies are not (or no longer) supported. This helps user to determine if they can use your website or mobile application with their current environments.</p>
+                    <p>Aidez les utilisateurs à comprendre quelles versions de systèmes d'exploitation, de navigateurs web et de technologies d'assistance ne sont pas (ou plus) prises en charge. Cela les aide à déterminer s'ils peuvent utiliser votre site web ou votre application mobile avec leur environnement actuel.</p>
                 </div>
 
                 <fieldset class="group" id="incompatible_tech">
-                    <legend class="visuallyhidden">Known incompatibility</legend>
+                    <legend class="visuallyhidden">Environnements incompatibles</legend>
 
-                    <p class="expl">Describe the environments (combinations of web browsers, assistive technologies, and operating systems) that the content is not expected to work with.</p>
+                    <p class="expl">Décrivez les environnements (combinaisons de navigateurs web, de technologies d'assistance et de systèmes d'exploitation) avec lesquels le contenu n'est pas censé fonctionner.</p>
 
                     <div class="field line">
                         <label for="accstmnt_asstech_incompatible_1">Environment 1</label>
-                        <em>(Exemple : « browsers older than 3 major versions » or « Mobile operating systems older than 5 years »)</em>
+                        <em>(Exemple : « navigateurs vieux de plus de 3 versions majeures »)</em>
                         <input type="text" id="accstmnt_asstech_incompatible_1" name="accstmnt_asstech_incompatible"/>
                     </div>
                     <div class="field proto">
@@ -460,7 +457,7 @@
                     </div>
 
                     <button type="button" class="add-line">
-                        Add another incompatible environment
+                        Ajouter une autre incompatibilité connue
                     </button>
                 </fieldset>
 
