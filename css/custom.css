@@ -241,7 +241,8 @@ a.button-backtotop {
 	color: white;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
 	opacity: 0;
-	transition: opacity .5s linear
+	transition: opacity .5s linear;
+	font-weight: normal;
 }
 
 .button-backtotop.active,
