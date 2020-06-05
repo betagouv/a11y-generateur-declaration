@@ -18,7 +18,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Gerar uma Declaração de Acessibilidade | Web Accessibility Initiative (WAI) | W3C</title>
+    <title>Générateur de déclaration d'accessibilité | Web Accessibility Initiative (WAI) | W3C</title>
     <link rel="stylesheet" href="css/generator.css">
     <link rel="stylesheet" href="assets-wai/style.css">
 
@@ -39,34 +39,39 @@
   <body id="top" class="page-generate-an-accessibility-statement">
   
   <main id="main">
-    <h1>Gerador da Declaração de Acessibilidade</h1>
-    
+    <img class="marianne" src="LogoRF.svg" alt="République française">
+    <h1>Générateur de déclaration d'accessibilité</h1>
     <div id="accstatement">
+
     <section class="page create" hidden="hidden">
         <div class="container">
 
-            
+<aside class="box warning">
+  <header class="box-h ">Outil en cours de développement</header><div class="box-i">
+    <p>Contacter <a href="mailto:design@beta.gouv.fr">l'équipe de Designer Transverses</a> pour plus d'informations.</p>            
+  </div>
+</aside>
 
 <aside class="box">
-    <header class="box-h ">Como utilizar a presente ferramenta para gerar a sua declaração de acessibilidade</header>
-    <div class="box-i">
-        <p>Se precisa de uma Declaração de Acessibilidade para o seu sítio Web ou para a sua aplicação móvel insira os dados no formulário, pré-visualize e descarregue a declaração. A declaração apresenta-se em HTML e está pronta para copiar e colar no seu sítio Web. Nenhuma informação introduzida por si é guardada fora do seu navegador Web. No final do processo toda a informação fica apenas guardada na página HTML descarregável. A página foi concebida para ser <em lang="en">machine readable</em> pelo que é conveniente não alterar significativamente o seu conteúdo depois de gerado pelo presente processo.</p>
-    </div>
-</aside>            
+  <header class="box-h ">Comment utiliser cet outil de génération d'accessibilité</header><div class="box-i">
+    <p>Les informations que vous fournissez ci-dessous génèrent une déclaration d'accessibilité que vous pouvez télécharger et affiner. Aucun des champs n'est obligatoire. Aucune des informations que vous saisissez n'est stockée en dehors de votre navigateur web.</p>            
+  </div>
+</aside>
 
 <nav class="box box-simple box-full" aria-labelledby="tocheading" id="toc">
-  <header id="tocheading" class="box-h box-h-simple box-h-full">Conteúdos da Página</header>
+  <header id="tocheading" class="box-h box-h-simple box-h-full">Contenu de la page</header>
   <div class="box-i">
+
 
             <ul>
                 <li>
-                    <a href="#create-basic">Informação básica</a>
+                    <a href="#create-basic">Informations générales</a>
                 </li>
                 <li>
-                    <a href="#create-efforts">Your efforts</a>
+                    <a href="#create-efforts">Vos engagements</a>
                 </li>
                 <li>
-                    <a href="#create-technical">Technical information</a>
+                    <a href="#create-technical">Informations techniques</a>
                 </li>
                 <li>
                     <a href="#create-approval">Approval and complaints process</a>
@@ -78,193 +83,174 @@
 </nav>
 
 
-<div style="display: flex; align-items: center;">
-    <div class="excol-all"></div>
-        <div style="text-align: right; flex:1">
-            <button type="button" class="showhidebutton button-small" aria-expanded="false" data-target=".information" data-showtext="Mostrar toda a informação adicional" data-hidetext="Esconder toda a informação adicional">Mostrar toda a informação adicional</button>
-        </div>
-    </div>
-    <form name="create_accessibility_statement_form">
-        <details open>
-            <summary markdown="block">
-                <h2 id="create-basic">Informação básica</h2>
-                <p class="intro">Nesta secção recolhe-se um conjunto mínimo de informação essencial para produzir a sua declaração de acessibilidade. Inclui-se informação sobre a entidade, a identificação do sítio Web ou da aplicação móvel e informação de contacto.</p>
-            </summary>
-            <div markdown="block">
+            <div style="display: flex; align-items: center;">
+                <div class="excol-all"></div>
+                <div style="text-align: right; flex:1">
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" data-target=".information" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
+                </div>
+            </div>
+            <form name="create_accessibility_statement_form">
+                <details open><summary markdown="block">
+                <h2 id="create-basic">Informations générales</h2>
+                <p class="intro">Cette section contient le minimum recommandé pour votre déclaration d'accessibilité. Cela comprend des informations sur votre organisation, les normes d'accessibilité que vous avez appliquées et vos coordonnées pour recevoir du feedback.</p>
+
+                </summary>
+  <div markdown="block">
                 <div class="group">
-                    <h3 class="label">Sobre a declaração
-                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_about" data-target="#info_about" data-showtext="Mostrar Info" data-hidetext="Esconder Info">Mostrar Info</button>
+                    <h3 class="label">À propos de votre déclaration
+                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_about" data-target="#info_about" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                     </h3>
                     <div class="information" id="info_about" hidden="hidden">
-                        <p>Aqui pode inserir a designação da sua entidade, o endereço web e o nome do seu sítio Web ou aplicação móvel. Caso introduza uma aplicação móvel e para identificar uma versão específica inclua a informação da versão e a data do seu lançamento.</p>
-                    </div>
-                    <div class="field">
-                        <H4>Sobre a entidade a quem pertence o sítio Web ou a aplicação móvel:</H4>                        
-                        <fieldset class="field" id="accstmt_org_prefix">
-                            <legend class="label">Prefixo (p.e. a Agência; o Instituto; a Fundação; a Entidade; a Autoridade, ...):</legend>
-                            <div class="radio-field">
-                                <input type="radio" name="accstmt_org_prefix" id="accstmt_org_prefix_a" checked="checked" value="A">
-                                <label for="accstmt_org_prefix_a">A</label>
-                            </div>
-                            <div class="radio-field">
-                                <input type="radio" name="accstmt_org_prefix" id="accstmt_org_prefix_o" value="O">
-                                <label for="accstmt_org_prefix">O</label>
-                            </div>       
-                        </fieldset>
-                        <div class="field">                  
-                            <label for="accstmt_org">Nome da entidade</label>
-                            <em>(Exemplo: “AMA - Agência para a Modernização Administrativa, I.P.”)</em>
-                            <input type="text" id="accstmt_org"/>
-                        </div>
+                        <p>Vous pouvez renseigner le nom de votre organisation, l'adresse web et le nom de votre site ou application. Pour les applications mobiles, inclure le numéro de version et la date de sortie permettant d'identifier une version spécifique.</p>
                     </div>
 
-                    <h4>Sobre o sítio Web ou a aplicação móvel:</h4>
-                    <fieldset class="field" id="accstmt_org_prefix">
-                        <legend class="label">Esta Declaração diz respeito a um sítio Web ou a uma aplicação móvel?</legend>
-                        <div class="radio-field">
-                            <input type="radio" name="accstmt_siteapp" id="accstmt_siteapp_site" checked="checked" value="o sítio Web">
-                            <label for="accstmt_siteapp_site">sítio Web</label>
-                        </div>
-                        <div class="radio-field">
-                            <input type="radio" name="accstmt_siteapp" id="accstmt_siteapp_app" value="a aplicação móvel">
-                            <label for="accstmt_siteapp_app">aplicação móvel</label>
-                        </div>        
-                    </fieldset>
+                    <div class="field">
+                        <label for="accstmt_org">Nom de l'organisation</label>
+                        <em>(Exemple : “BetaGouv”)</em>
+                        <input type="text" id="accstmt_org"/>
+                    </div>
 
                     <div class="field">
-                        <label for="accstmt_url">Endereço do sítio Web ou da aplicação móvel</label>
-                        <em>(Exemplo: “https://www.exemplo.org”)</em>
+                        <label for="accstmt_url">Adresse de votre site ou de votre application mobile</label>
+                        <em>(Exemple : “https://se.betagouv.fr”)</em>
                         <input type="text" id="accstmt_url"/>
                     </div>
+
                     <div class="field">
-                        <label for="accstmt_namesite">Nome do sítio Web ou da aplicação móvel</label>
-                        <em>(Exemplo: “sítio Web institucional da Entidade X” ou “Aplicação Móvel 1.2.3”)</em>
+                        <label for="accstmt_namesite">Nom de votre site ou de votre application mobile</label>
+                        <em>(Exemple : “Ma startup d'État” or “Mon App 1.2.3”)</em>
                         <input type="text" id="accstmt_namesite"/>
                     </div>
                 </div>
 
                 <div class="group">
-                    <h3 class="label">Estado de conformidade
-                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_conformance" data-target="#info_conformance" data-showtext="Mostrar Info" data-hidetext="Esconder Info">Mostrar Info</button>
-                    </h3>
-                    <div class="information" id="info_conformance" hidden="hidden">
-                        <p>Tendo por base os requisitos de acessibilidade do Decreto-lei n.º 83/2018, de 19 de outubro, correspondentes à conformidade 'duplo-A' das WCAG 2.1, como classifica o grau de conformidade do sítio Web ou da aplicação móvel.</p>
-                    </div>
-
-                    <fieldset class="field" id="conformance-status">
-                        <legend class="visuallyhidden">Estado de conformidade:</legend>
-                        <div class="radio-field">
-                            <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_full" value="Fully conformant"/>
-                            <label for="accstmnt_conformance_full">
-                                <span class="status">Plenamente conforme</span>
-                                <span class="meaning">conforme com o nível AA das WCAG 2.1</span>
-                            </label>
-                        </div>
-                        <div class="radio-field">
-                            <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" value="Partially conformant" checked="checked"/>
-                            <label for="accstmnt_conformance_partial">
-                                <span class="status">Parcialmente conforme</span>
-                                <span class="meaning">algumas partes do conteúdo não estão totalmente conformes com o nível AA das WCAG 2.1</span>                    
-                            </label>
-                        </div>
-                        <div class="radio-field">
-                            <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" value="Non conformant"/>
-                            <label for="accstmnt_conformance_nonconformant">
-                                <span class="status">Não conforme</span>
-                                <span class="meaning">o conteúdo não está conforme com o nível AA das WCAG 2.1</span>
-                            </label>
-                        </div>
-                    </fieldset>                     
-                </div>
-
-
-                <div class="group">
-                    <h3 class="label">Accessibility standards applied
-                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_standards" data-target="#info_standards" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                    <h3 class="label">Standards d'accessibilités testés
+                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_standards" data-target="#info_standards" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                     </h3>
                     <div class="information" id="info_standards" hidden="hidden">
-                        <p>Which accessibility standard have you been following? The
-                            <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a>
-                            is internationally recognized. The latest version is WCAG 2.1.</p>
+                        <p>Quels standards avez vous appliqués? Le
+                            <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG (Web Content Accessibility Guidelines)</a> est la norme internationalle. Sa dernière version est le WCAG 2.1. Le RGAA (Registre...) est son implémentation française. Sa dernière version est le RGAA 4.0. Plusieurs niveaux sont possibles. Une startup d'état doit au moins être au niveau AA. Le niveau AAA est encore plus strict.</p>
                     </div>
 
                     <fieldset class="field" id="standard-applied">
-                        <legend class="label">Accessibility standard followed:</legend>
+                        <legend class="label">Standard d'accessibilité testé :</legend>
                         <div class="radio-field">
-                            <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag21aa" checked="checked" value="WCAG 2.1 level AA"/>
-                            <label for="accstmnt_standard_wcag21aa">WCAG 2.1 level AA</label>
+                            <input type="radio" name="accstmnt_standard" id="accstmnt_standard_rgaa40aa" checked="checked" value="RGAA 4.0 niveau AA"/>
+                            <label for="accstmnt_standard_rgaa40aa">RGAA 4.0 niveau AA</label>
                         </div>
 
                         <div class="radio-field">
-                            <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag20aa" value="WCAG 2.0 level AA"/>
-                            <label for="accstmnt_standard_wcag20aa">WCAG 2.0 level AA</label>
+                            <input type="radio" name="accstmnt_standard" id="accstmnt_standard_rgaa40aaa" value="RGAA 4.0 niveau AAA"/>
+                            <label for="accstmnt_standard_rgaa40aaa">RGAA 4.0 niveau AAA</label>
                         </div>
 
                         <div class="radio-field">
                             <input type="radio" name="accstmnt_standard" id="accstmnt_standard_other" value="another standard"/>
-                            <label for="accstmnt_standard_other">Other</label>
+                            <label for="accstmnt_standard_other">Autre</label>
                             <input aria-label="Other standard name" type="text" id="accstmnt_standard_other_name">
                         </div>
                     </fieldset>
-                </div>                
+                </div>
 
                 <div class="group">
-                    <h3 class="label">Additional accessibility considerations
-                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_additional" data-target="#info_additional" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                    <h3 class="label">Statut de conformité
+                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_conformance" data-target="#info_conformance" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
+                    </h3>
+                    <div class="information" id="info_conformance" hidden="hidden">
+                        <p>À quel point votre site est-il conforme au standard choisi dans la section précédente ? Parfois, To what degree do you conform to the accessibility standard stated in the previous section? Parfois, une conformité non totale peut être justifiée : vous pourrez indiquer les parties qui ne sont pas encore conformes, et les aides disponibles pour les utilisateurs plus loin dans ce formulaire.</p>
+                    </div>
+
+                    <fieldset class="field" id="conformance-status">
+                        <legend class="visuallyhidden">Statut de conformité</legend>
+                        <div class="radio-field">
+                            <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_full" value="Totalement conforme"/>
+                            <label for="accstmnt_conformance_full">
+                                <span class="status">Totalement conforme</span> :
+                                <span class="meaning">le contenu est entièrement conforme aux standards d'accessibilité, sans aucune exception.</span>
+                            </label>
+                        </div>
+                        <div class="radio-field">
+                            <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" value="Partiellement conforme" checked="checked"/>
+                            <label for="accstmnt_conformance_partial">
+                                <span class="status">Partiellement conforme</span> :
+                                <span class="meaning">certaines sections du contenu ne sont pas entièrement conformes aux standards d'accessibilités</span>
+                                <span>(vous pourrez indiquer les exceptions dans la section dédiée de ce formulaire)</span>
+                            </label>
+                        </div>
+                        <div class="radio-field">
+                            <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" value="Non conforme"/>
+                            <label for="accstmnt_conformance_nonconformant">
+                                <span class="status">Non conforme</span> :
+                                <span class="meaning">le contenu n'est pas conforme aux standards d'accessibilité</span>
+                            </label>
+                        </div>
+                        <div class="radio-field">
+                            <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_unknown" value="Non audité"/>
+                            <label for="accstmnt_conformance_unknown">
+                                <span class="status">Non audité</span> :
+                                <span class="meaning">le contenu n'a pas été audié, ou les résultats de l'audit ne sont pas encore disponibles.</span>
+                            </label>
+                        </div>
+                        <div class="radio-field">
+                            <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_inapplicable" value=""/>
+                            <label for="accstmnt_conformance_inapplicable">Aucun</label>
+                        </div>
+                        <input id="accstmnt_conformance_meaning" type="hidden" value="">
+                    </fieldset>
+                </div>
+
+                <div class="group">
+                    <h3 class="label">Autres considérations relatives à l'accessibilité 
+                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_additional" data-target="#info_additional" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                     </h3>
                     <div class="information" id="info_additional" hidden="hidden">
-                        <p>Sometimes you may be applying more accessibility requirements than those specified in the accessibility standard stated above. For example, you may be providing sign language videos or real-time captioning for live media. Here you can list these additional accessibility requirements.</p>
+                        <p>Parfois, vous pouvez appliquer des exigences d'accessibilité plus strictes que celles spécifiées dans la norme d'accessibilité mentionnée ci-dessus. Par exemple, vous pouvez fournir des vidéos en langue des signes ou des sous-titres en temps réel pour les médias en direct. Vous pouvez énumérer ici ces exigences d'accessibilité supplémentaires.</p>
                         <p>
-                            <strong>Example:</strong>
-                            “Although our goal is WCAG 2.1 Level AA conformance, we have also applied some Level AAA Success Criteria: Images of text are only used for decorative purposes. Re-authentication after a session expires does not cause loss of data. Some videos have sign language interpretation.”</p>
+                            <strong>Exemple :</strong>
+                            "Bien que notre objectif soit la conformité aux RGAA 4.0 Niveau AA, nous avons également appliqué certains critères de réussite du niveau AAA : Les images de texte ne sont utilisées qu'à des fins décoratives. La ré-authentification après l'expiration d'une session n'entraîne pas de perte de données. Certaines vidéos sont interprétées en langage des signes".</p>
                     </div>
 
                     <div class="field">
-                        <label for="accstmt_additions">Additional accessibility requirements applied</label>
+                        <label for="accstmt_additions">Exigences supplémentaires</label>
                         <textarea id="accstmt_additions" rows="3"></textarea>
                     </div>
                 </div>
 
                 <div class="group">
-                    <h3 class="label">Feedback options
-                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_feedback" data-target="#info_feedback" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                    <h3 class="label">Moyen de contact
+                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_feedback" data-target="#info_feedback" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                     </h3>
                     <div class="information" id="info_feedback" hidden="hidden">
-                        <p>In which ways can users can get in touch with your organization when they encounter an accessibility barrier? Ideally you should provide more than one option. Also indicate the duration after which users can expect a response from your organization.</p>
+                        <p>De quelle manière les utilisateurs peuvent-ils contacter votre organisation lorsqu'ils rencontrent un obstacle à l'accessibilité ? Idéalement, vous devriez proposer plusieurs options. Indiquez également la durée après laquelle les utilisateurs peuvent s'attendre à une réponse de votre organisation.</p>
                     </div>
 
                     <fieldset class="group" id="form-feedback">
-                        <legend class="visuallyhidden">Feedback options</legend>
+                        <legend class="visuallyhidden">Moyens de contact</legend>
                         <div class="field">
-                            <label for="accstmnt_contact_phone">Phone</label>
-                            <em>(Example: “+12 34 567 89 00”)</em>
+                            <label for="accstmnt_contact_phone">Téléphone</label>
+                            <em>(Exemple : “+33 34 567 89 00”)</em>
                             <input type="tel" id="accstmnt_contact_phone"/>
                         </div>
                         <div class="field">
                             <label for="accstmnt_contact_email">E-mail</label>
-                            <em>(Example: “accessibility@example.org”)</em>
+                            <em>(Exemple : “julien@beta.gouv.fr”)</em>
                             <input type="email" id="accstmnt_contact_email"/>
                         </div>
                         <div class="field">
-                            <label for="accstmnt_contact_visit">Visitor Address</label>
-                            <em>(Example: “Main Street 1, 234 Example Ville”)</em>
+                            <label for="accstmnt_contact_visit">Adresse</label>
+                            <em>(Exemple : “DINUM, Ségur, Paris”)</em>
                             <input type="text" id="accstmnt_contact_visit"/>
-                        </div>
-                        <div class="field">
-                            <label for="accstmnt_contact_write">Postal address</label>
-                            <em>(Example: “PO Box 1, 234 Example Ville”)</em>
-                            <input type="text" id="accstmnt_contact_write"/>
                         </div>
 
                         <div class="field">
-                            <label for="accstmnt_contact_other">Other contact options</label>
-                            <em>(Example: on social media; Twitter: @ExampleUser)</em>
+                            <label for="accstmnt_contact_other">Autres moyens de contact</label>
+                            <em>(Exemple : sur les réseaux sociaux ; Twitter : @MaSuperStartupDeta)</em>
                             <textarea id="accstmnt_contact_other"></textarea>
                         </div>
 
                         <div class="field">
-                            <label for="accstmnt_contact_responsetime">Typical duration for response</label>
-                            <em>(Example: “2 business days”)</em>
+                            <label for="accstmnt_contact_responsetime">Délai de réponse moyen</label>
+                            <em>(Exemple : “2 jours ouvrés”)</em>
                             <input type="text" id="accstmnt_contact_responsetime"/>
                         </div>
 
@@ -272,15 +258,15 @@
                 </div>
 
                 <div class="group">
-                    <h3 class="label">Date of publication
-                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_date" data-target="#info_date" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                    <h3 class="label">Date de publication
+                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_date" data-target="#info_date" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                     </h3>
                     <div class="information" id="info_date" hidden="hidden">
-                        <p>Providing a date helps users to understand if the accessibility statement is being actively maintained or outdated. Ideally the date of an accessibility statement should not exceed one year, or it may be considered unmaintained. Writing out the month makes the date clearer internationally (eg. "1 February 2019" rather than "01/02/2019", which is ambiguous).</p>
+                        <p>Fournir une date aide les utilisateurs à comprendre si la déclaration d'accessibilité est activement tenue à jour ou si elle est dépassée. Idéalement, la date d'une déclaration d'accessibilité ne devrait pas dépasser un an, sinon elle peut être considérée comme non tenue à jour. La mention du mois rend la date plus claire au niveau international (par exemple, "1er février 2019" au lieu de "01/02/2019", qui est ambigu).</p>
                     </div>
 
                     <div class="field">
-                        <label for="accstmt_date">Publication date of this accessibility statement</label>
+                        <label for="accstmt_date">Date de publication de cette déclaration d'accessibilité</label>
                         <input type="text" id="accstmt_date" class="today"/>
                     </div>
                 </div>
@@ -288,155 +274,147 @@
 </details>
 
                 <details ><summary markdown="block">
-                <h2 id="create-efforts">Your efforts</h2>
-                <p class="intro">In this section you can describe the efforts your organization takes to ensure accessibility. This helps users to understand your sincerity and the validity of the claims you make in your accessibility statement.</p>
+                <h2 id="create-efforts">Vos engagements</h2>
+                <p class="intro">Dans cette section, vous pouvez décrire les efforts que votre startup déploie pour assurer l'accessibilité de votre site ou application. Cela aide les utilisateurs à comprendre votre sincérité et la validité des affirmations que vous faites dans votre déclaration d'accessibilité.</p>
 
                 </summary>
   <div markdown="block">
-                <h3 class="label">Organizational measures
-                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_measures" data-target="#info_measures" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                <h3 class="label">Mesures organisationnelles
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_measures" data-target="#info_measures" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                 </h3>
                 <div class="information" id="info_measures" hidden="hidden">
-                    <p>List the measures that your organization undertakes to achieve sustainable accessibility. This includes measures such as procurement actions, training, raising awareness, and quality assurance. Some of these measures are pre-defined for your convenience but you can add more as needed.</p>
+                    <p>Dressez la liste des mesures envers laquelle votre startup s'engage pour parvenir à une accessibilité durable. Cela comprend des mesures telles que des actions d'achat, de formation, de sensibilisation et d'assurance qualité. Ce formulaire propose des mesures, mais vous pouvez en ajouter d'autres si nécessaire.</p>
                 </div>
 
                 <fieldset class="group">
-                    <legend class="visuallyhidden">Organizational measures</legend>
+                    <legend class="visuallyhidden">Mesures organisationnelles</legend>
                     <ul class="nolist field" id="effort-list">
                         <li class="radio-field">
-                            <input id="accstmnt_orginfo_measures_1" name="accstmnt_orginfo_measures" type="checkbox" value="Include accessibility as part of our mission statement."/>
-                            <label for="accstmnt_orginfo_measures_1">Include accessibility as part of our mission statement.</label>
+                            <input id="accstmnt_orginfo_measures_1" name="accstmnt_orginfo_measures" type="checkbox" value="Inclure l'accessibilité dans notre mission."/>
+                            <label for="accstmnt_orginfo_measures_1">Inclure l'accessibilité dans notre mission.</label>
                         </li>
                         <li class="radio-field">
-                            <input id="accstmnt_orginfo_measures_2" name="accstmnt_orginfo_measures" type="checkbox" value="Include accessibility throughout our internal policies."/>
-                            <label for="accstmnt_orginfo_measures_2">Include accessibility throughout our internal policies.</label>
+                            <input id="accstmnt_orginfo_measures_2" name="accstmnt_orginfo_measures" type="checkbox" value="Inclure l'accessibilité dans l'ensemble de nos politiques internes."/>
+                            <label for="accstmnt_orginfo_measures_2">Inclure l'accessibilité dans l'ensemble de nos politiques internes.</label>
                         </li>
                         <li class="radio-field">
-                            <input id="accstmnt_orginfo_measures_3" name="accstmnt_orginfo_measures" type="checkbox" value="Integrate accessibility into our procurement practices."/>
-                            <label for="accstmnt_orginfo_measures_3">Integrate accessibility into our procurement practices.</label>
+                            <input id="accstmnt_orginfo_measures_4" name="accstmnt_orginfo_measures" type="checkbox" value="Nommer un responsable et/ou médiateur de l'accessibilité."/>
+                            <label for="accstmnt_orginfo_measures_4">Nommer un responsable et/ou médiateur de l'accessibilité.</label>
                         </li>
                         <li class="radio-field">
-                            <input id="accstmnt_orginfo_measures_4" name="accstmnt_orginfo_measures" type="checkbox" value="Appoint an accessibility officer and/or ombudsperson."/>
-                            <label for="accstmnt_orginfo_measures_4">Appoint an accessibility officer and/or ombudsperson.</label>
+                            <input id="accstmnt_orginfo_measures_5" name="accstmnt_orginfo_measures" type="checkbox" value="Fournir une formation continue sur l'accessibilité à notre équipe."/>
+                            <label for="accstmnt_orginfo_measures_5">Fournir une formation continue sur l'accessibilité à notre équipe.</label>
                         </li>
                         <li class="radio-field">
-                            <input id="accstmnt_orginfo_measures_5" name="accstmnt_orginfo_measures" type="checkbox" value="Provide continual accessibility training for our staff."/>
-                            <label for="accstmnt_orginfo_measures_5">Provide continual accessibility training for our staff.</label>
-                        </li>
-                        <li class="radio-field">
-                            <input id="accstmnt_orginfo_measures_6" name="accstmnt_orginfo_measures" type="checkbox" value="Assign clear accessibility targets and responsibilities."/>
-                            <label for="accstmnt_orginfo_measures_6">Assign clear accessibility targets and responsibilities.</label>
-                        </li>
-                        <li class="radio-field">
-                            <input id="accstmnt_orginfo_measures_7" name="accstmnt_orginfo_measures" type="checkbox" value="Employ formal accessibility quality assurance methods."/>
-                            <label for="accstmnt_orginfo_measures_7">Employ formal accessibility quality assurance methods.</label>
+                            <input id="accstmnt_orginfo_measures_6" name="accstmnt_orginfo_measures" type="checkbox" value="Attribuer des objectifs et des responsabilités claires en matière d'accessibilité."/>
+                            <label for="accstmnt_orginfo_measures_6">Attribuer des objectifs et des responsabilités claires en matière d'accessibilité.</label>
                         </li>
                     </ul>
 
                     <div id="accstmnt_orginfo_othermeasures" class="group">
                         <div class="field line">
-                            <label for="accstmnt_orginfo_othermeasures_1">Other measure 1</label>
-                            <em>(Example: “Include people with disabilities in our design personas”)</em>
+                            <label for="accstmnt_orginfo_othermeasures_1">Autre mesure (1)</label>
+                            <em>(Exemple : “Inclure les personnes handicapées dans nos procédés de conception du service”)</em>
                             <input type="text" id="accstmnt_orginfo_othermeasures_1" name="accstmnt_orginfo_measures"/>
                         </div>
                         <div class="field proto">
-                            <label for="accstmnt_orginfo_othermeasures_[n]">Other measure [n]</label>
+                            <label for="accstmnt_orginfo_othermeasures_[n]">Autre mesure [n]</label>
                             <input type="text" id="accstmnt_orginfo_othermeasures_[n]" name="accstmnt_orginfo_measures"/>
                         </div>
                     </div>
 
                     <button type="button" class="add-line">
-                        Add another measure
+                        Ajouter une nouvelle mesure
                     </button>
                 </fieldset>
                 </div>
 </details>
 
                 <details ><summary markdown="block">
-                <h2 id="create-technical">Technical information</h2>
-                <p class="intro">In this section you can provide more technical details to help users understand any issues they may be observing. This includes information about compatibility with web browsers and assistive technologies.</p>
+                <h2 id="create-technical">Informations techniques</h2>
+                <p class="intro">Dans cette section, vous pouvez fournir des détails techniques supplémentaires pour aider les utilisateurs à comprendre les problèmes qu'ils peuvent observer. Il s'agit notamment d'informations sur la compatibilité avec les navigateurs web et les technologies d'assistance.</p>
                 </summary>
   <div markdown="block">
 
-                <h3 class="label">Accessibility limitations
-                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_limitations" data-target="#info_limitations" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                <h3 class="label">Limites d'accessibilités
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_limitations" data-target="#info_limitations" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                 </h3>
                 <div class="information" id="info_limitations" hidden="hidden">
-                    <p>There are many situations in which limitations to accessibility can occur. For example, you may not be able ensure instant accessibility of user-generated content. Providing transparency on such situations helps users to understand any issue they may be observing, and to find alternatives where applicable. Under the EU Web Accessibility Directive, public bodies are required to provide information on the parts of the content that do not conform, the reason for not conforming, and, if applicable, where to find accessible alternatives.</p>
+                    <p>Il existe de nombreuses situations dans lesquelles l'accessibilité peut être limitée. Par exemple, vous pouvez ne pas être en mesure d'assurer l'accessibilité instantanée du contenu généré par l'utilisateur. La transparence dans de telles situations aide les utilisateurs à comprendre tout problème qu'ils peuvent observer et à trouver des solutions de rechange le cas échéant. Selon la loi, les organismes publics (et dont les startuos d'états) sont tenus de fournir des informations sur les parties du contenu qui ne sont pas conformes, la raison de cette non-conformité et, le cas échéant, où trouver des alternatives accessibles.</p>
                 </div>
 
                 <fieldset class="group">
-                    <legend class="visuallyhidden">Accessibility limitations</legend>
-                    <p class="expl">List the
-                        <em>content parts</em>
-                        that have accessibility limitations, a
-                        <em>description of the issue</em>
-                        that may be observed by users, a brief explanation of
-                        <em>why the issue occurs</em>, and
-                        <em>what to do in the mean time</em>, such as who to contact or where to find accessibility alternatives where appropriate.</p>
+                    <legend class="visuallyhidden">Limites d'accessibilités</legend>
+                    <p class="expl">Listez les
+                        <em>contenus</em>
+                        qui ont des limitations d'accessibilité, une
+                        <em>description du problème</em>
+                        que peut rencontrer un utilisateur, une explication brève de
+                        <em>pourquoi le problème peut arriver</em>, et
+                        <em>ce qu'il peut faire en attendant</em>, comme par exemple contacter quelqu'un ou utiliser telle ou telle alternative.</p>
 
                     <div id="accstmnt_issues">
                         <fieldset id="accstmnt_limitation_1" class="group line">
-                            <legend>Accessibility limitation 1</legend>
+                            <legend>Limitation d'accessibilité</legend>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_element">Content part</label>
-                                <em>(Example: “Comments from users”)</em>
+                                <label for="accstmnt_limitation_1_element">Contenu</label>
+                                <em>(Exemple : Commentaire des utilisateurs”)</em>
                                 <input type="text" id="accstmnt_limitation_1_element" name="element"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_description">Description of the issue</label>
-                                <em>(Example: “Uploaded images may not have text alternatives”)</em>
+                                <label for="accstmnt_limitation_1_description">Description du problème</label>
+                                <em>(Exemple : “Les images uploadées peuvent ne pas avoir de texte alternatif”)</em>
                                 <input type="text" id="accstmnt_limitation_1_description" name="description"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_reason">Why the issue occurs</label>
-                                <em>(Example: “We cannot ensure the quality of contributions”)</em>
+                                <label for="accstmnt_limitation_1_reason">Pourquoi le problème arrive</label>
+                                <em>(Exemple : “Nous ne pouvons garantir la qualité des contributions.”)</em>
                                 <input type="text" id="accstmnt_limitation_1_reason" name="reason"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_us">What we are doing about it</label>
-                                <em>(Example: “We monitor user comments and typically repair issues within 2 business days”)</em>
+                                <label for="accstmnt_limitation_1_us">Ce que nous faisons pour y pallier</label>
+                                <em>(Exemple : “Nous monitorons les commentaires et essayons de les corriger dans la semaine suivant leur publication.”)</em>
                                 <input type="text" id="accstmnt_limitation_1_us" name="us"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_you">What to do in the meantime</label>
-                                <em>(Example: “Please use the ‘report issue’ button if you encounter an issue”)</em>
+                                <label for="accstmnt_limitation_1_you">Ce qui peut être fait en attendant</label>
+                                <em>(Exemple : “Merci d'utiliser le formulaire de contact si vous rencontrez un problème”)</em>
                                 <input type="text" id="accstmnt_limitation_1_you" name="you"/>
                             </div>
                         </fieldset>
 
                         <fieldset id="accstmnt_limitation_[n]" class="group proto">
-                            <legend>Accessibility limitation [n]</legend>
+                            <legend>Limite d'accessibilité [n]</legend>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_element">Content part</label>
+                                <label for="accstmnt_limitation_[n]_element">Contenu</label>
                                 <input type="text" id="accstmnt_limitation_[n]_element" name="element"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_description">Description of the issue</label>
+                                <label for="accstmnt_limitation_[n]_description">Description du problème</label>
                                 <input type="text" id="accstmnt_limitation_[n]_description" name="description"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_reason">Why the issue occurs</label>
+                                <label for="accstmnt_limitation_[n]_reason">Pourquoi le problème arrive</label>
                                 <input type="text" id="accstmnt_limitation_[n]_reason" name="reason"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_us">What we are doing about it</label>
+                                <label for="accstmnt_limitation_[n]_us">Ce que nous faisons pour y pallier</label>
                                 <input type="text" id="accstmnt_limitation_[n]_us" name="us"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_you">What to do in the meantime</label>
+                                <label for="accstmnt_limitation_[n]_you">Ce qui peut être fait en attendant</label>
                                 <input type="text" id="accstmnt_limitation_[n]_you" name="you"/>
                             </div>
                         </fieldset>
 
                         <button type="button" class="add-line">
-                            Add another limitation
+                            Ajouter une autre limite d'accessibilité
                         </button>
                     </div>
                 </fieldset>
 
                 <h3 class="label">Compatibility with user environment
-                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_asstech" data-target="#support_asstech" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_asstech" data-target="#support_asstech" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                 </h3>
                 <div class="information" id="support_asstech" hidden="hidden">
                     <p>Despite best efforts, accessibility may not work well in every combination of operating system, web browser, and assistive technology. Developers typically test their websites and mobile applications with common user environments, to determine compatibility. WCAG defines requirements for accessibility features provided by content authors to be
@@ -452,7 +430,7 @@
 
                     <div class="field line">
                         <label for="accstmnt_asstech_compatible_1">Environment 1</label>
-                        <em>(Example: “browser X with assistive technology Y on operating system Z”)</em>
+                        <em>(Exemple : “browser X with assistive technology Y on operating system Z”)</em>
                         <input type="text" id="accstmnt_asstech_compatible_1" name="accstmnt_asstech_compatible"/>
                     </div>
 
@@ -465,7 +443,7 @@
                 </fieldset>
 
                 <h3 class="label">Known incompatibility
-                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_incompatible" data-target="#support_incompatible" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_incompatible" data-target="#support_incompatible" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                 </h3>
                 <div class="information" id="support_incompatible" hidden="hidden">
                     <p>Help users understand what versions of operating systems, web browsers, and assistive technologies are not (or no longer) supported. This helps user to determine if they can use your website or mobile application with their current environments.</p>
@@ -478,7 +456,7 @@
 
                     <div class="field line">
                         <label for="accstmnt_asstech_incompatible_1">Environment 1</label>
-                        <em>(Example: “browsers older than 3 major versions” or “Mobile operating systems older than 5 years”)</em>
+                        <em>(Exemple : “browsers older than 3 major versions” or “Mobile operating systems older than 5 years”)</em>
                         <input type="text" id="accstmnt_asstech_incompatible_1" name="accstmnt_asstech_incompatible"/>
                     </div>
                     <div class="field proto">
@@ -492,7 +470,7 @@
                 </fieldset>
 
                 <h3 class="label">Technologies used
-                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_tech" data-target="#support_tech" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_tech" data-target="#support_tech" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                 </h3>
                 <div class="information" id="support_tech" hidden="hidden">
                     <p>You may be relying on specific web technologies, such as JavaScript, WAI-ARIA, or SVG to ensure accessibility of your content. Communicating this expectation in the accessibility statement can help users to understand the reason for issues they may be observing. For example, the accessibility features may not work because the user disabled JavaScript. The
@@ -500,10 +478,10 @@
                         on "<em>accessibility supported was of using technologies relied upon</em>" provides more background.</p>
                 </div>
 
-                <p class="expl">Describe the technologies that are relied upon for conformance. The content would not conform if that technology is turned off or is not supported.</p>
+                <p class="expl">Decrivez les technologies indispensables pour atteindre la conformité. Le contenu n'est pas conforme si cette technologie est désactivée ou non supportée.</p>
 
                 <fieldset class="field">
-                    <legend class="label">Technologies:</legend>
+                    <legend class="label">Technologies :</legend>
 
                     <ul id="tech_relied" class="nolist">
                         <li class="radio-field">
@@ -534,105 +512,99 @@
                         <li class="radio-field proto">
                             <input type="checkbox" id="accstmnt_tech_other_[n]" value="other" checked="checked"/>
                             <span id="accstmnt_tech_other_label_[n]">
-                                <label for="accstmnt_tech_other_[n]">Other [n]</label>
+                                <label for="accstmnt_tech_other_[n]">Autre [n]</label>
                                 <span class="visuallyhidden">
-                                    name</span></span>
+                                    nom</span></span>
                             <input id="accstmnt_tech_other_[n]_value" type="text" aria-describedby="accstmnt_tech_other_label_[n]" name="accstmnt_tech"/>
                         </li>
                     </ul>
 
-                    <button class="add-line" type="button">Add another technology</button>
+                    <button class="add-line" type="button">Ajouter une autre technologie</button>
                 </fieldset>
 
-                <h3 class="label">Assessment approach
-                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_accstmnt_approach" data-target="#info_accstmnt_approach" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                <h3 class="label">Réalisation de l'audit
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_accstmnt_approach" data-target="#info_accstmnt_approach" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                 </h3>
                 <div class="information" id="info_accstmnt_approach" hidden="hidden">
-                    <p>How did you assess your website or mobile application, to determine the information provided in the previous sections? This helps users understand your quality assurance process and the background for the claims you make in your accessibility statement.</p>
+                    <p>Comment le site a-t-il été audité ? Cette information aide les utilisateurs à comprendre la qualité de cette déclaration d'accessibilité.</p>
                 </div>
 
                 <fieldset id="accstmnt_assessment" class="group">
-                    <legend class="visuallyhidden">Assessment approach</legend>
+                    <legend class="visuallyhidden">Réalisation de l'audit</legend>
                     <ul class="nolist">
                         <li class="radio-field">
-                            <input id="accstmnt_approach_1" name="accstmnt_approach" type="checkbox" value="Self-evaluation"/>
-                            <label for="accstmnt_approach_1">Self-evaluation: the content was evaluated by your own organization or the developer of the content</label>
+                            <input id="accstmnt_approach_1" name="accstmnt_approach" type="checkbox" value="Auto-évaluation"/>
+                            <label for="accstmnt_approach_1">Auto-évaluation : le contenu a été évalué par votre organisation.</label>
                         </li>
                         <li class="radio-field">
-                            <input id="accstmnt_approach_2" name="accstmnt_approach" type="checkbox" value="External evaluation"/>
-                            <label for="accstmnt_approach_2">External evaluation: the content was evaluated by an external entity not involved in the design and development process</label>
+                            <input id="accstmnt_approach_2" name="accstmnt_approach" type="checkbox" value="Évaluation externe"/>
+                            <label for="accstmnt_approach_2">Évaluation externe : le contenu a été évalué par une entité externe n'ayant pas participé au processus de conception et de développement du service.</label>
                         </li>
                     </ul>
 
                     <div class="group">
                         <div class="field line">
-                            <label for="accstmnt_approach_other_1">Other approach 1</label>
-                            <em>(Example: a formal quality assurance process throughout the design and development process)</em>
+                            <label for="accstmnt_approach_other_1">Autre approche 1</label>
+                            <em>(Exemple : un processus d'assurance qualité tout au long du processus de conception et de développement a été formalisé)</em>
                             <input type="text" id="accstmnt_approach_other_1" name="accstmnt_approach"/>
                         </div>
 
                         <div class="field proto">
-                            <label for="accstmnt_approach_other_[n]">Other approach [n]</label>
+                            <label for="accstmnt_approach_other_[n]">Autre approche [n]</label>
                             <input type="text" id="accstmnt_approach_other_[n]" name="accstmnt_approach"/>
                         </div>
 
-                        <button type="button" class="add-line">Add another approach</button>
+                        <button type="button" class="add-line">Ajouter une autre approche</button>
                     </div>
                 </fieldset>
 
-                <h3 class="label">Related evidence
-                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_related" data-target="#support_related" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                <h3 class="label">Documents associées
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_related" data-target="#support_related" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                 </h3>
                 <div class="information" id="support_related" hidden="hidden">
-                    <p>Provide links to related background and evidence to support the claims you make in this accessibility, and to provide more transparency and credibility. This can include an evaluation report, an evaluation statement, or a certification.</p>
+                    <p>Des documents connexes peuvent apporter plus de transparence et de crédibilité à cette déclaration d'accessibilité. Il peut s'agir d'un rapport d'évaluation, d'une déclaration d'évaluation ou d'une certification.</p>
                 </div>
 
                 <div class="group">
                     <div class="field">
-                        <label for="accstmnt_audit_url">Link to recent evaluation report
-                            <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_url" data-target="#info_audit_url" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                        <label for="accstmnt_audit_url">Lien vers un rapport d'évaluation
+                            <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_url" data-target="#info_audit_url" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                         </label>
-                        <em>(Example: “https://example.org/accessibility-evaulation-report”)</em>
+                        <em>(Exemple : “https://example.org/accessibility-evaulation-report”)</em>
 
                         <div class="information" id="info_audit_url" hidden="hidden">
-                            <p>An evaluation report provides details on which accessibility requirements are met, and which are not. While this is usually more technical of nature than the average user, it can help some users to understand issues they have been observing. You can use the
-                                <a href="https://www.w3.org/WAI/eval/report-tool/">WCAG-EM Evaluation Report Tool</a>
-                                to create an evaluation report. Place the link to the report here.</p>
+                            <p>Un rapport d'évaluation fournit des détails sur les critères qui sont respectées et ceux qui ne le sont pas exigences en matière d'accessibilité. Bien qu'il soit généralement assez technique, il peut aider certains utilisateurs à comprendre les problèmes qu'ils ont observés. Le W3C propose un outil pour créer un rapport d'évaluation : <a href="https://www.w3.org/WAI/eval/report-tool/" lang="en">WCAG-EM Evaluation Report Tool</a>.</p>
                         </div>
 
                         <input type="url" id="accstmnt_audit_url"/>
                     </div>
 
                     <div class="field">
-                        <label for="accstmnt_audit_wcagem">Link to evaluation statement
-                            <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_statement" data-target="#info_audit_statement" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                        <label for="accstmnt_audit_wcagem">Lien vers une déclaration d'évaluation
+                            <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_statement" data-target="#info_audit_statement" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                         </label>
-                        <em>(Example: “https://example.org/accessibility-evaulation-statement”)</em>
+                        <em>(Exemple : “https://example.org/accessibility-evaulation-statement”)</em>
 
                         <div class="information" id="info_audit_statement" hidden="hidden">
-                            <p>An evaluation statement summarizes the essential outcomes of an evaluation report. The
-                                <a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM)</a>
-                                defines requirements for evaluation statements in
-                                <a href="https://www.w3.org/TR/WCAG-EM/#step5c">Step 5.c</a>
-                                of the document. This can be provided instead of or in addition to an evaluation report provided above.</p>
+                            <p>Une déclaration d'évaluation résume les résultats essentiels d'un rapport d'évaluation. Ce document peut être fourni à la place ou en complément d'un rapport d'évaluation fourni ci-dessus.</p>
                         </div>
 
                         <input type="url" id="accstmnt_audit_wcagem"/>
                     </div>
 
                     <div class="field line">
-                        <label for="accstmnt_audit_other_1">Other evidence 1</label>
-                        <em>(Example: “https://example.org/accessibility-evaulation-certificate”)</em>
+                        <label for="accstmnt_audit_other_1">Autre document 1</label>
+                        <em>(Exemple : “https://example.org/accessibility-evaulation-certificate”)</em>
                         <input type="text" id="accstmnt_audit_other_1" name="accstmnt_audit_other"/>
                     </div>
 
                     <div class="field proto">
-                        <label for="accstmnt_audit_other_[n]">Other evidence [n]</label>
+                        <label for="accstmnt_audit_other_[n]">Autre document [n]</label>
                         <input type="text" id="accstmnt_audit_other_[n]" name="accstmnt_audit_other"/>
                     </div>
 
                     <button type="button" class="add-line">
-                        Add another related evidence
+                        Ajouter un autre document
                     </button>
                 </div>
 
@@ -646,7 +618,7 @@
   <div markdown="block">
 
                 <h3 class="label">Formal approval
-                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="org_approved" data-target="#org_approved" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="org_approved" data-target="#org_approved" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                 </h3>
                 <div class="information" id="org_approved" hidden="hidden">
                     <p>Your organization may want to formally approve this accessibility statement, for example for internal purposes or to show users that this is part of the corporate policy.</p>
@@ -657,19 +629,19 @@
 
                     <div class="field">
                         <label for="accstmnt_orginfo_approved_name">Name of person or department</label>
-                        <em>(Example: “Communication Department”)</em>
+                        <em>(Exemple : “Communication Department”)</em>
                         <input type="text" id="accstmnt_orginfo_approved_name"/>
                     </div>
 
                     <div class="field">
                         <label for="accstmnt_orginfo_approved_function">Function</label>
-                        <em>(Example: “Director of Communication”)</em>
+                        <em>(Exemple : “Director of Communication”)</em>
                         <input type="text" id="accstmnt_orginfo_approved_function"/>
                     </div>
                 </fieldset>
 
                 <h3 class="label">Formal complaints
-                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_complaints" data-target="#info_complaints" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_complaints" data-target="#info_complaints" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                 </h3>
                 <div class="information" id="info_complaints" hidden="hidden">
                     <p>In some situations you may want to or may be required to provide information about a formal complaints procedures. For example, a quality management process within your organization may require you to establish a formal complaints procedure with clear escalation paths. The
@@ -677,7 +649,7 @@
                             <svg aria-label="External Site" class="icon-external-link "><use xlink:href="/wai-statements/assets/images/icons.svg#icon-external-link"></use></svg></a>
                         foresees EU countries to have legal “enforcement procedures” when users are not satisfied with the responses from public bodies. Inform users about any such formal complaints procedures. This may also motivate them to provide you with valuable feedback about the accessibility of your content.</p>
                     <p>
-                        <strong>Example:</strong>
+                        <strong>Exemple :</strong>
                         “We aim to respond to accessibility feedback within 2 business days, and to propose a solution within 10 business days. You are entitled to escalate a complaint to [organizational or legal entity], should you be dissatisfied with our response to you.”</p>
                 </div>
 
@@ -690,12 +662,12 @@
 
                 
 
-<aside class="box"><div class="box-i">
+<aside class="box actions"><div class="box-i">
 
 
                 <div class="statement-actions">
                     <a class="button" href="#preview" data-action="statement_preview">
-                        Preview your accessibility statement
+                        Prévisualiser votre déclaration d'accessibilité
                     </a>
                 </div>
                 
@@ -707,91 +679,81 @@
         </div>
     </section>
 
-<section class="page preview" hidden="hidden">
-    <aside class="box box-example">
-        <header class="box-h  box-h-example">Pré-visualizar a sua declaração de acessibilidade</header>
+    <section class="page preview" hidden="hidden">
+        
 
-        <div class="box-i">
-            <div id="statement_generated">
-                <div id="statement_header">
-                    <h2>Declaração de Acessibilidade para <span class="basic-information website-name" data-print="accstmt_siteapp" data-printdefault="">O SÍTIO WEB / A APLICAÇÃO MÓVEL</span> <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span></h2>
-                    <p>
-                        <span class="basic-information organization-name-prefix" data-print="accstmt_org_prefix" data-printdefault="O(A)"></span> 
-                        <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="ORGANIZATION"></span> compromete-se a disponibilizar 
-                        <span class="basic-information website-name" data-print="accstmt_siteapp" data-printdefault="">O SÍTIO WEB / A APLICAÇÃO MÓVEL</span> 
-                        <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>, em conformidade com o Decreto-lei n.º 83/2018 de 19 de outubro que transpõe a Diretiva (UE) 2016/2102 do Parlamento Europeu e do Conselho, relativa à acessibilidade dos sítios Web e das aplicações móveis.
-                    </p>
-                </div>
+<aside class="box box-example"><header class="box-h  box-h-example">Prévisualisation de votre déclaration d'accessibilité</header><div class="box-i">
 
-                <div id="statement-conformance" data-if="accstmnt_conformance">
-                    <h3>Estado de conformidade</h3>
-                    <p>
-                        <span class="basic-information website-name" data-print="accstmt_siteapp" data-printdefault="O SÍTIO WEB / A APLICAÇÃO MÓVEL"></span> <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> está [plenamente conforme] para com o Decreto-lei n.º 83/2018 de 19 de outubro. [As não conformidades e/ou isenções são indicadas abaixo.]
-                    </p>
-                    <p>
-                        <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
-                        is
-                        <span class="basic-information conformance-status" data-print="accstmnt_conformance" data-printfilter="lowercase"></span>
-                        with
-                        <span class="basic-information conformance-standard"><span data-print="accstmnt_standard" data-if="accstmnt_standard_other_name" data-negate></span><span data-print="accstmnt_standard_other_name" data-if="accstmnt_standard_other_name"></span>.</span>
-                        <span data-if="accstmnt_conformance_meaning">
-                        <span class="basic-information conformance-status" data-print="accstmnt_conformance"></span>
-                        means that
-                        <span class="basic-information conformance-meaning" data-print="accstmnt_conformance_meaning" data-printdefault="CONFORMANCE_MEANING"></span>.
-                        </span>
-                    </p>
-                </div>
 
+        <div id="statement_generated">
+            <div id="statement_header">
+                <h2>Déclaration d'accessibilité de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="ce service"></span></h2>
+                <p>
+                    <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="Notre organisation"></span>
+                    s’engage à rendre son service accessible à tous les internautes, y compris aux personnes qui présentent un handicap et utilisent des logiciels ou matériels spécialisés.
+                </p>
+            </div>
 
             <div id="statement-measures-block" data-if="accstmnt_orginfo_measures">
-                <h3>Measures to support accessibility</h3>
+                <h3>Moyens mis en place </h3>
                 <p>
-                    <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="ORGANIZATION"></span>
-                    takes the following measures to ensure accessibility of
-                    <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>:
+                    <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="Notre organisation"></span>
+                    a pris les mesures suivantes pour s'assurer de l'accessibilité de
+                    <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="notre site"></span>:
                 </p>
                 <ul id="statement-measures" class="organizational-effort accessibility-measures" data-print="accstmnt_orginfo_measures" data-printfilter="capitalize"></ul>
             </div>
 
+            <div id="statement-conformance" data-if="accstmnt_conformance">
+                <h3>État de conformité</h3>
+                <p>
+                    En France, le <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite">référentiel général d’amélioration de l’accessibilité (RGAA)</a> établi les critères à respecter pour concevoir une service accessible.
+
+                    <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="Notre site">Notre site</span>
+                    est
+                    <b><span class="basic-information conformance-status" data-print="accstmnt_conformance" data-printfilter="lowercase"></span>
+                    aux critères du  
+                    <span class="basic-information conformance-standard"><span data-print="accstmnt_standard" data-if="accstmnt_standard_other_name" data-negate></span><span data-print="accstmnt_standard_other_name" data-if="accstmnt_standard_other_name"></span></b>.</span>
+                    <span data-if="accstmnt_conformance_meaning">
+                        <span class="basic-information conformance-status" data-print="accstmnt_conformance"></span>
+                        veut dire que
+                        <span class="basic-information conformance-meaning" data-print="accstmnt_conformance_meaning" data-printdefault="CONFORMANCE_MEANING"></span>.
+                    </span>
+                </p>
+            </div>
+
             <div id="statement-additions" data-if="accstmt_additions">
-                <h4>Additional accessibility considerations</h4>
+                <h4>Exigences supplémentaires</h4>
                 <p class="basic-information conformance-additions" data-print="accstmt_additions" data-printfilter="capitalize"></p>
             </div>
 
             <div data-if="accstmnt_contact_phone, accstmnt_contact_email, accstmnt_contact_visit, accstmnt_contact_write, accstmnt_contact_other">
-                <h3>Feedback</h3>
+                <h3>Amélioration et contact</h3>
                 <p>
-                    We welcome your feedback on the accessibility of
-                    <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>.
-                    Please let us know if you encounter accessibility barriers on
-                    <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>:
+                    Vous pouvez nous aider à améliorer l'accessibilité du site en nous signalant les problèmes éventuels que vous rencontrez.
                 </p>
                 <ul class="basic-information feedback h-card">
                     <li data-if="accstmnt_contact_phone">
-                        Phone:
+                        Téléphone :
                         <span class="phone-number p-tel" data-print="accstmnt_contact_phone"></span>
                     </li>
                     <li data-if="accstmnt_contact_email">
-                        E-mail:
+                        E-mail :
                         <a class="email u-email" href="mailto:" data-print="accstmnt_contact_email"></a>
                     </li>
                     <li data-if="accstmnt_contact_visit">
-                        Visitor address:
+                        Adresse :
                         <span class="visitor-address p-extended-address" data-print="accstmnt_contact_visit"></span>
-                    </li>
-                    <li data-if="accstmnt_contact_write">
-                        Postal address:
-                        <span class="postal-address p-adr" data-print="accstmnt_contact_write"></span>
                     </li>
                     <li class="contact-other p-note" data-if="accstmnt_contact_other" data-print="accstmnt_contact_other"></li>
                 </ul>
                 <p data-if="accstmnt_contact_responsetime">
-                    We try to respond to feedback within <span class="feedback responsetime" data-print="accstmnt_contact_responsetime"></span>.
+                    Nous essayons de répondre dans les <span class="feedback responsetime" data-print="accstmnt_contact_responsetime"></span>.
                 </p>
             </div>
 
             <div id="statement-asstech" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
-                <h3>Compatibility with browsers and assistive technology</h3>
+                <h3>Compatibilité avec les navigateurs et les technologies d'assistance</h3>
                 <div id="statement-asstech-compatible-block">
                     <p>
                         <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>
@@ -835,22 +797,22 @@
             </div>
 
             <div id="statement-assessment-block" data-if="accstmnt_approach">
-                <h3>Assessment approach</h3>
+                <h3>Méthode d'audit</h3>
                 <p>
-                    <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span>
-                    assessed the accessibility of
+                    <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="Notre organisation">Notre organisation</span>
+                    a audité 
                     <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
-                    by the following approaches:
+                    en suivant les approches suivantes :
                 </p>
                 <ul id="statement-assessments" class="technical-information assessment-approaches" data-print="accstmnt_approach"></ul>
             </div>
 
             <div data-if="accstmnt_audit_url">
-                <h3>Evaluation report</h3>
+                <h3>Rapport d'évaluation</h3>
                 <p>
-                    An evaluation report for
+                    Un rapport d'évaluation de 
                     <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
-                    is available at:
+                    est disponible :
                     <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_url"></a>.
                 </p>
             </div>
@@ -866,7 +828,7 @@
             </div>
 
             <div data-if="accstmnt_audit_other">
-                <h3>Other evidence</h3>
+                <h3>Autres documents</h3>
                 <p>Other related evidence for <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span> is available at:</p>
                 <ul data-print="accstmnt_audit_other" class="technical-information related-evidence-other"></ul>
             </div>
@@ -890,9 +852,7 @@
             <hr noshade="noshade"/>
 
             <p>
-                This statement was created on
-                <span class="basic-information statement-created-date" data-print="accstmt_date" data-printdefault="DATE"></span>
-                using the <a href="http://localhost:4000/wai-statements/planning/statements/">W3C Accessibility Statement Generator Tool</a>.
+                Cette déclaration d'accessibilité a été créé le <span class="basic-information statement-created-date" data-print="accstmt_date" data-printdefault="DATE"></span> grâce au <a href="http://localhost:4000/wai-statements/planning/statements/">Générateur de déclaration d'accessibilité RGAA de BetaGouv</a>.
             </p>
         </div>
         
@@ -902,8 +862,8 @@
 
 
         <div class="button-group statement-actions">
-            <a class="button" href="#create">Back to generator tool</a>
-            <button type="button" data-action="preview_save_as_html">Download as HTML page</button>
+            <a class="button" href="#create">Retour au générateur</a>
+            <button type="button" data-action="preview_save_as_html">Télécharger en tant que page HTML</button>
         </div>
     </section>
 </div>
@@ -911,16 +871,16 @@
 <!-- generator standalone js -->
 <script src="js/generator.js"></script>
 
- <a class="button button-backtotop" href="#top"><span><svg aria-hidden="true" class="icon-arrow-up "><use xlink:href="/wai-statements/assets/images/icons.svg#icon-arrow-up"></use></svg> Voltar ao Topo</span></a>
+ <a class="button button-backtotop" href="#top"><span><svg aria-hidden="true" class="icon-arrow-up "><use xlink:href="/wai-statements/assets/images/icons.svg#icon-arrow-up"></use></svg> Retourner en haut</span></a>
 
 </main>
 
 <!-- Footer --> 
 <footer class="page-footer default-grid" aria-label="Página">
     <div class="inner">
-      <p><strong>Última atualização:</strong> 11 de fevereiro 2019.</p>
-      <p><strong>Nota:</strong> O presente Gerador em português da Declaração de Acessibilidade é uma adaptação da <a href="https://www.w3.org/WAI/planning/statements/" title="Projeto WAI-Tools">Declaração de Acessibilidade</a> desenvolvida pelo <a href="https://www.w3.org/WAI/EO/" lang="en">Education and Outreach Working Group (EOWG)</a> como parte do <a href="https://www.w3.org/WAI/Tools/">projeto <span lang="en">WAI-Tools</span></a>, co-financiado pela Comissão Europeia, ao abrigo do Programa Horizon 2020 (780057). <a href="../acknowledgements/">Agradecimentos</a>.</p>
-
+      <p><strong>Date de publication:</strong> 3 juin 2020.</p>
+      <p><strong>Note:</strong> Ce générateur de déclaration d'accessibilité en français est une adaptation libre du projet <a href="https://www.w3.org/WAI/planning/statements/" title="Projet WAI-Tools">
+Developing an Accessibility Statement</a> du groupe de travail <a href="https://www.w3.org/WAI/EO/" lang="en">Education and Outreach Working Group (EOWG)</a> du W3C. Il est réalisé dans le cadre de <a href="https://beta.gouv.fr/">BetaGouv</a>.</p>
     </div>
 </footer>
   

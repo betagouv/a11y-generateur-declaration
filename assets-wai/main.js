@@ -308,7 +308,7 @@ observer.observe(document.querySelector('main'), { attributes: true, subtree: tr
     });
 
     Array.prototype.forEach.call(excolAll, function(el, i){
-      el.innerHTML = '<button class="expand button button-secondary button-small">+ Expand All Sections</button> <button class="collapse button button-secondary button-small">&minus; Collapse All Sections</button>';
+      el.innerHTML = '<button class="expand button button-secondary button-small">+ Afficher toutes les sections</button> <button class="collapse button button-secondary button-small">&minus; Fermer toutes les sections</button>';
     });
 
     Array.prototype.forEach.call(document.querySelectorAll('.excol-all'), function(el, i){
