@@ -392,6 +392,10 @@
               _savePreviewAs('html');
               break;
 
+            case 'copy_clipboard':
+              _copyClipboard();
+              break;
+
             case 'preview_save_as_json':
               _savePreviewAs('json');
               break;
@@ -497,6 +501,19 @@
     var saver = saver || null;
 
     saver.saveAs(data, filetype);
+  }
+
+  function _copyClipboard() {
+    var generatedStatementMarkup = _getGeneratedStatement();
+    console.log(generatedStatementMarkup);
+    generatedStatementMarkup.select();
+    document.execCommand("copy");
+    // copyText = document.getElementById("myInput");
+    // /* Select the text field */
+    // copyText.select();
+    // copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+    // /* Copy the text inside the text field */
+    // document.execCommand("copy");
   }
 
   function _printFormInput() {

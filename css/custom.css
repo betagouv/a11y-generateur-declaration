@@ -160,6 +160,16 @@ a.stealthy-link:visited {
     text-decoration: line-through;
 }
 
+button.primary, .button.primary {
+	/*font-size: 1.2em;*/
+	background-color:  #0E893E ;
+	padding: .5em 1em;
+}
+button.primary:visited, .button.primary:visited {
+	color: white;
+}
+
+
 .showhidebutton {
 	background: transparent;
 	color:  #53657d ;
@@ -224,6 +234,9 @@ aside.box header {
 	font-size: 1em;
 	color: #003b80 ;
 }
+aside.box button, aside.box .button {
+	font-size: 1em;
+}
 aside p {
 	margin-top: 0;
 	color:   #53657d;
@@ -236,8 +249,8 @@ a.button-backtotop {
 	right: 16px;
 	opacity: .85;
 	border-radius: 100px;
-	background-color:  #0E893E ;
-	border-color:  #0E893E ;
+	background-color:  #53657d ;
+	border-color:  #53657d ;
 	color: white;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
 	opacity: 0;
@@ -440,15 +453,6 @@ aside.box.actions {
 }
 .statement-actions {
 	margin: 3em 0;	
-}
-
-.actions .button {
-	font-size: 1.2em;
-	background-color:  #0E893E ;
-	padding: .5em 1em;
-}
-.actions .button:visited {
-	color: white;
 }
 
 footer {
