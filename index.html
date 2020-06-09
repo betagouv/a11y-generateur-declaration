@@ -91,12 +91,13 @@
                 </div>
             </div>
             <form name="create_accessibility_statement_form">
-                <details open><summary markdown="block">
-                <h2 id="create-basic">Informations générales</h2>
-                <p class="intro">Cette section contient le minimum recommandé pour votre déclaration d'accessibilité. Cela comprend des informations sur votre organisation, les normes d'accessibilité que vous avez appliquées et vos coordonnées pour recevoir du feedback.</p>
-
-                </summary>
-  <div markdown="block">
+                <details open>
+                    <summary markdown="block">
+                        <h2 id="create-basic">Informations générales</h2>
+                        <p class="intro">Cette section contient le minimum recommandé pour votre déclaration d'accessibilité. Cela comprend des informations sur votre organisation, les normes d'accessibilité que vous avez appliquées et vos coordonnées pour recevoir du feedback.</p>
+                    </summary>
+                <div markdown="block">
+                
                 <div class="group">
                     <h3 class="label">À propos de votre déclaration
                         <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_about" data-target="#info_about" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
@@ -129,28 +130,45 @@
                         <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_standards" data-target="#info_standards" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                     </h3>
                     <div class="information" id="info_standards" hidden="hidden">
-                        <p>Quels standards avez vous appliqués? Le
-                            <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG (Web Content Accessibility Guidelines)</a> est la norme internationalle. Sa dernière version est le WCAG 2.1. Le RGAA (Registre...) est son implémentation française. Sa dernière version est le RGAA 4.0. Plusieurs niveaux sont possibles. Une startup d'état doit au moins être au niveau AA. Le niveau AAA est encore plus strict.</p>
+                        <p>Quels standards avez vous appliqués ? Le
+                            <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG (Web Content Accessibility Guidelines)</a> est la norme internationale. Sa dernière version est le WCAG 2.1. Le RGAA est son implémentation française. Sa dernière version est le RGAA 4.0.</p>
                     </div>
 
                     <fieldset class="field" id="standard-applied">
                         <legend class="label">Critères de référence :</legend>
                         <div class="radio-field">
-                            <input type="radio" name="accstmnt_standard" id="accstmnt_standard_rgaa40aa" checked="checked" value="RGAA 4.0 niveau AA"/>
-                            <label for="accstmnt_standard_rgaa40aa">RGAA 4.0 niveau AA</label>
+                            <input type="radio" name="accstmnt_standard" id="accstmnt_standard_rgaa40aa" checked="checked" value="RGAA 4.0"/>
+                            <label for="accstmnt_standard_rgaa40aa">RGAA 4.0</label>
                         </div>
 
-                        <div class="radio-field">
+<!--                         <div class="radio-field">
                             <input type="radio" name="accstmnt_standard" id="accstmnt_standard_rgaa40aaa" value="RGAA 4.0 niveau AAA"/>
                             <label for="accstmnt_standard_rgaa40aaa">RGAA 4.0 niveau AAA</label>
                         </div>
-
+ -->
                         <div class="radio-field">
                             <input type="radio" name="accstmnt_standard" id="accstmnt_standard_other" value="another standard"/>
                             <label for="accstmnt_standard_other">Autre</label>
                             <input aria-label="Other standard name" type="text" id="accstmnt_standard_other_name">
                         </div>
                     </fieldset>
+                </div>
+
+                <div class="group">
+                    <h3 class="label">Exigences supplémentaires
+                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_additional" data-target="#info_additional" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
+                    </h3>
+                    <div class="information" id="info_additional" hidden="hidden">
+                        <p>Parfois, vous pouvez appliquer des exigences d'accessibilité plus strictes que celles spécifiées dans la norme d'accessibilité mentionnée ci-dessus. Par exemple, vous pouvez fournir des vidéos en langue des signes ou des sous-titres en temps réel pour les médias en direct. Vous pouvez énumérer ici ces exigences d'accessibilité supplémentaires.</p>
+                        <p>
+                            <strong>Exemple :</strong>
+                            « Bien que notre objectif soit la conformité aux RGAA 4.0 Niveau AA, nous avons également appliqué certains critères de réussite du niveau AAA : Les images de texte ne sont utilisées qu'à des fins décoratives. La ré-authentification après l'expiration d'une session n'entraîne pas de perte de données. Certaines vidéos sont interprétées en langage des signes ».</p>
+                    </div>
+
+                    <div class="field">
+                        <label for="accstmt_additions">Exigences supplémentaires</label>
+                        <textarea id="accstmt_additions" rows="3"></textarea>
+                    </div>
                 </div>
 
                 <div class="group">
@@ -201,20 +219,92 @@
                 </div>
 
                 <div class="group">
-                    <h3 class="label">Exigences supplémentaires
-                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_additional" data-target="#info_additional" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
+                    <h3 class="label">Réalisation de l'audit
+                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_accstmnt_approach" data-target="#info_accstmnt_approach" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                     </h3>
-                    <div class="information" id="info_additional" hidden="hidden">
-                        <p>Parfois, vous pouvez appliquer des exigences d'accessibilité plus strictes que celles spécifiées dans la norme d'accessibilité mentionnée ci-dessus. Par exemple, vous pouvez fournir des vidéos en langue des signes ou des sous-titres en temps réel pour les médias en direct. Vous pouvez énumérer ici ces exigences d'accessibilité supplémentaires.</p>
-                        <p>
-                            <strong>Exemple :</strong>
-                            "Bien que notre objectif soit la conformité aux RGAA 4.0 Niveau AA, nous avons également appliqué certains critères de réussite du niveau AAA : Les images de texte ne sont utilisées qu'à des fins décoratives. La ré-authentification après l'expiration d'une session n'entraîne pas de perte de données. Certaines vidéos sont interprétées en langage des signes".</p>
+                    <div class="information" id="info_accstmnt_approach" hidden="hidden">
+                        <p>Comment le site a-t-il été audité ? Cette information aide les utilisateurs à comprendre la qualité de cette déclaration d'accessibilité.</p>
+                    </div>
+        
+                    <fieldset id="accstmnt_assessment" class="field">
+                        <legend class="visuallyhidden">Réalisation de l'audit</legend>
+                        <ul class="nolist">
+                            <li class="radio">
+                                <input id="accstmnt_approach_1" name="accstmnt_approach" type="radio" value="en auto-évaluation"/>
+                                <label for="accstmnt_approach_1">Auto-évaluation : le contenu a été évalué par votre organisation.</label>
+                            </li>
+                            <li class="radio">
+                                <input id="accstmnt_approach_2" name="accstmnt_approach" type="radio" value="par évaluation externe"/>
+                                <label for="accstmnt_approach_2">Évaluation externe : le contenu a été évalué par une entité externe n'ayant pas participé au processus de conception et de développement du service.</label>
+                                <!-- TODO : nom de l'entreprise -->
+                            </li>
+                        </ul>
+
+                        <!-- <div class="group">
+                            <div class="field line">
+                                <label for="accstmnt_approach_other_1">Autre approche 1</label>
+                                <em>(Exemple : un processus d'assurance qualité tout au long du processus de conception et de développement a été formalisé)</em>
+                                <input type="text" id="accstmnt_approach_other_1" name="accstmnt_approach"/>
+                            </div>
+
+                            <div class="field proto">
+                                <label for="accstmnt_approach_other_[n]">Autre approche [n]</label>
+                                <input type="text" id="accstmnt_approach_other_[n]" name="accstmnt_approach"/>
+                            </div>
+
+                            <button type="button" class="add-line">Ajouter une autre approche</button>
+                        </div> -->
+                    </fieldset>
+            </div>
+
+                <h3 class="label">Documents associées
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_related" data-target="#support_related" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
+                </h3>
+                <div class="information" id="support_related" hidden="hidden">
+                    <p>Des documents connexes peuvent apporter plus de transparence et de crédibilité à cette déclaration d'accessibilité. Il peut s'agir d'un rapport d'évaluation, d'une déclaration d'évaluation ou d'une certification.</p>
+                </div>
+
+                <div class="group">
+                    <div class="field">
+                        <label for="accstmnt_audit_url">Lien vers un rapport d'évaluation
+                            <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_url" data-target="#info_audit_url" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
+                        </label>
+                        <em>(Exemple : « https://example.org/accessibility-evaluation-report »)</em>
+
+                        <div class="information" id="info_audit_url" hidden="hidden">
+                            <p>Un rapport d'évaluation fournit des détails sur les critères qui sont respectées et ceux qui ne le sont pas exigences en matière d'accessibilité. Bien qu'il soit généralement assez technique, il peut aider certains utilisateurs à comprendre les problèmes qu'ils ont observés. Le W3C propose un outil pour créer un rapport d'évaluation : <a href="https://www.w3.org/WAI/eval/report-tool/" lang="en">WCAG-EM Evaluation Report Tool</a>.</p>
+                        </div>
+
+                        <input type="url" id="accstmnt_audit_url"/>
                     </div>
 
                     <div class="field">
-                        <label for="accstmt_additions">Exigences supplémentaires</label>
-                        <textarea id="accstmt_additions" rows="3"></textarea>
+                        <label for="accstmnt_audit_wcagem">Lien vers une déclaration d'évaluation
+                            <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_statement" data-target="#info_audit_statement" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
+                        </label>
+                        <em>(Exemple : « https://example.org/accessibility-evaluation-statement »)</em>
+
+                        <div class="information" id="info_audit_statement" hidden="hidden">
+                            <p>Une déclaration d'évaluation résume les résultats essentiels d'un rapport d'évaluation. Ce document peut être fourni à la place ou en complément d'un rapport d'évaluation fourni ci-dessus.</p>
+                        </div>
+
+                        <input type="url" id="accstmnt_audit_wcagem"/>
                     </div>
+
+                    <div class="field line">
+                        <label for="accstmnt_audit_other_1">Autre document 1</label>
+                        <em>(Exemple : « https://example.org/accessibility-evaluation-certificate »)</em>
+                        <input type="text" id="accstmnt_audit_other_1" name="accstmnt_audit_other"/>
+                    </div>
+
+                    <div class="field proto">
+                        <label for="accstmnt_audit_other_[n]">Autre document [n]</label>
+                        <input type="text" id="accstmnt_audit_other_[n]" name="accstmnt_audit_other"/>
+                    </div>
+
+                    <button type="button" class="add-line">
+                        Ajouter un autre document
+                    </button>
                 </div>
 
                 <div class="group">
@@ -514,92 +604,6 @@
                     <button class="add-line" type="button">Ajouter une autre technologie</button>
                 </fieldset>
 
-                <h3 class="label">Réalisation de l'audit
-                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_accstmnt_approach" data-target="#info_accstmnt_approach" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
-                </h3>
-                <div class="information" id="info_accstmnt_approach" hidden="hidden">
-                    <p>Comment le site a-t-il été audité ? Cette information aide les utilisateurs à comprendre la qualité de cette déclaration d'accessibilité.</p>
-                </div>
-
-                <fieldset id="accstmnt_assessment" class="group">
-                    <legend class="visuallyhidden">Réalisation de l'audit</legend>
-                    <ul class="nolist">
-                        <li class="radio-field">
-                            <input id="accstmnt_approach_1" name="accstmnt_approach" type="checkbox" value="Auto-évaluation"/>
-                            <label for="accstmnt_approach_1">Auto-évaluation : le contenu a été évalué par votre organisation.</label>
-                        </li>
-                        <li class="radio-field">
-                            <input id="accstmnt_approach_2" name="accstmnt_approach" type="checkbox" value="Évaluation externe"/>
-                            <label for="accstmnt_approach_2">Évaluation externe : le contenu a été évalué par une entité externe n'ayant pas participé au processus de conception et de développement du service.</label>
-                        </li>
-                    </ul>
-
-                    <div class="group">
-                        <div class="field line">
-                            <label for="accstmnt_approach_other_1">Autre approche 1</label>
-                            <em>(Exemple : un processus d'assurance qualité tout au long du processus de conception et de développement a été formalisé)</em>
-                            <input type="text" id="accstmnt_approach_other_1" name="accstmnt_approach"/>
-                        </div>
-
-                        <div class="field proto">
-                            <label for="accstmnt_approach_other_[n]">Autre approche [n]</label>
-                            <input type="text" id="accstmnt_approach_other_[n]" name="accstmnt_approach"/>
-                        </div>
-
-                        <button type="button" class="add-line">Ajouter une autre approche</button>
-                    </div>
-                </fieldset>
-
-                <h3 class="label">Documents associées
-                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_related" data-target="#support_related" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
-                </h3>
-                <div class="information" id="support_related" hidden="hidden">
-                    <p>Des documents connexes peuvent apporter plus de transparence et de crédibilité à cette déclaration d'accessibilité. Il peut s'agir d'un rapport d'évaluation, d'une déclaration d'évaluation ou d'une certification.</p>
-                </div>
-
-                <div class="group">
-                    <div class="field">
-                        <label for="accstmnt_audit_url">Lien vers un rapport d'évaluation
-                            <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_url" data-target="#info_audit_url" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
-                        </label>
-                        <em>(Exemple : « https://example.org/accessibility-evaulation-report »)</em>
-
-                        <div class="information" id="info_audit_url" hidden="hidden">
-                            <p>Un rapport d'évaluation fournit des détails sur les critères qui sont respectées et ceux qui ne le sont pas exigences en matière d'accessibilité. Bien qu'il soit généralement assez technique, il peut aider certains utilisateurs à comprendre les problèmes qu'ils ont observés. Le W3C propose un outil pour créer un rapport d'évaluation : <a href="https://www.w3.org/WAI/eval/report-tool/" lang="en">WCAG-EM Evaluation Report Tool</a>.</p>
-                        </div>
-
-                        <input type="url" id="accstmnt_audit_url"/>
-                    </div>
-
-                    <div class="field">
-                        <label for="accstmnt_audit_wcagem">Lien vers une déclaration d'évaluation
-                            <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_statement" data-target="#info_audit_statement" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
-                        </label>
-                        <em>(Exemple : « https://example.org/accessibility-evaulation-statement »)</em>
-
-                        <div class="information" id="info_audit_statement" hidden="hidden">
-                            <p>Une déclaration d'évaluation résume les résultats essentiels d'un rapport d'évaluation. Ce document peut être fourni à la place ou en complément d'un rapport d'évaluation fourni ci-dessus.</p>
-                        </div>
-
-                        <input type="url" id="accstmnt_audit_wcagem"/>
-                    </div>
-
-                    <div class="field line">
-                        <label for="accstmnt_audit_other_1">Autre document 1</label>
-                        <em>(Exemple : « https://example.org/accessibility-evaulation-certificate »)</em>
-                        <input type="text" id="accstmnt_audit_other_1" name="accstmnt_audit_other"/>
-                    </div>
-
-                    <div class="field proto">
-                        <label for="accstmnt_audit_other_[n]">Autre document [n]</label>
-                        <input type="text" id="accstmnt_audit_other_[n]" name="accstmnt_audit_other"/>
-                    </div>
-
-                    <button type="button" class="add-line">
-                        Ajouter un autre document
-                    </button>
-                </div>
-
                 </div>
 </details>
 
@@ -676,14 +680,15 @@
 
         <div id="statement_generated">
             <div id="statement_header">
-                <h2>Déclaration d'accessibilité de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="ce service"></span></h2>
-                <p>
-                    <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="Notre organisation"></span>
-                    s’engage à rendre son service accessible à tous les internautes, y compris aux personnes qui présentent un handicap et utilisent des logiciels ou matériels spécialisés.
-                </p>
+                <h2>Déclaration d'accessibilité</h2>
+                <p><span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="Notre organisation"></span> s’engage à rendre son service accessible, conformément à l’article 47 de la loi n° 2005-102 du 11 février 2005.</p>
+
+                <!-- <p>À cette fin, il met en œuvre la stratégie et les actions suivantes [liens vers le schéma pluriannuel et vers le plan d’action de l’année en cours incluant le bilan des actions réalisées l’année précédente].</p> -->
+
+                <p>Cette déclaration d’accessibilité s’applique à <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="ce service"></span>.</p>
             </div>
 
-            <div id="statement-measures-block" data-if="accstmnt_orginfo_measures">
+            <!-- <div id="statement-measures-block" data-if="accstmnt_orginfo_measures">
                 <h3>Moyens mis en place </h3>
                 <p>
                     <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="Notre organisation"></span>
@@ -691,25 +696,71 @@
                     <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="notre site"></span>:
                 </p>
                 <ul id="statement-measures" class="organizational-effort accessibility-measures" data-print="accstmnt_orginfo_measures" data-printfilter="capitalize"></ul>
-            </div>
+            </div> -->
 
             <div id="statement-conformance" data-if="accstmnt_conformance">
                 <h3>État de conformité</h3>
                 <p>
-                    En France, le <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite">référentiel général d’amélioration de l’accessibilité (RGAA)</a> établi les critères à respecter pour concevoir une service accessible.
-
-                    <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="Notre site">Notre site</span>
-                    est
-                    <b><span class="basic-information conformance-status" data-print="accstmnt_conformance" data-printfilter="lowercase"></span>
-                    aux critères du  
-                    <span class="basic-information conformance-standard"><span data-print="accstmnt_standard" data-if="accstmnt_standard_other_name" data-negate></span><span data-print="accstmnt_standard_other_name" data-if="accstmnt_standard_other_name"></span></b>.</span>
-                    <span data-if="accstmnt_conformance_meaning">
-                        <span class="basic-information conformance-status" data-print="accstmnt_conformance"></span>
-                        veut dire que
-                        <span class="basic-information conformance-meaning" data-print="accstmnt_conformance_meaning" data-printdefault="CONFORMANCE_MEANING"></span>.
-                    </span>
+                    <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="Notre site">Notre site</span> est 
+                    <b>
+                        <span class="basic-information conformance-status" data-print="accstmnt_conformance" data-printfilter="lowercase"></span>
+                    avec le <span class="basic-information conformance-standard"><span data-print="accstmnt_standard" data-if="accstmnt_standard_other_name" data-negate></span><span data-print="accstmnt_standard_other_name" data-if="accstmnt_standard_other_name"></span></span></b>.
+                        <span data-if="accstmnt_conformance_meaning">
+                            <span class="basic-information conformance-status" data-print="accstmnt_conformance"></span>
+                            veut dire que
+                            <span class="basic-information conformance-meaning" data-print="accstmnt_conformance_meaning" data-printdefault="CONFORMANCE_MEANING"></span>.
+                        </span>
                 </p>
             </div>
+
+            <div id="statement-assessment-block" data-if="accstmnt_approach">
+                <h3>Résultats des tests</h3>
+                <p>L’audit de conformité réalisé <span id="statement-assessments" class="technical-information assessment-approaches" data-print="accstmnt_approach"></span> révèle que :</p>
+                <ul>
+                    <li>[TODO pourcentage de critères RGAA respectés] des critères RGAA sont respectés.</li>
+                    <li>[TODO Facultatif] Le taux moyen de conformité du service en ligne s’élève à [taux moyen de conformité du service en ligne].</li>
+                </ul>
+
+                <div data-if="accstmnt_audit_url">
+                    <h4>Rapport d'évaluation</h4>
+                    <p>
+                        Un rapport d'évaluation de 
+                        <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
+                        est disponible :
+                        <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_url"></a>.
+                    </p>
+                </div>
+
+                <div data-if="accstmnt_audit_wcagem">
+                    <h4>Déclaration d'évaluation</h4>
+                    <p>
+                        Une déclaration d'évaluation de 
+                        <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
+                        est disponible :
+                        <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_wcagem"></a>.
+                    </p>
+                </div>
+
+                <div data-if="accstmnt_audit_other">
+                    <h4>Autres documents</h4>
+                    <p>D'autres documents ou rapports sont disponibles <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span> :</p>
+                    <ul data-print="accstmnt_audit_other" class="technical-information related-evidence-other"></ul>
+                </div>
+
+<!--                 <div id="statement-approval-block" data-if="accstmnt_orginfo_approved_name, accstmnt_orginfo_approved_function">
+                    <h3>Formal approval of this accessibility statement</h3>
+
+                    <p>This Accessibility Statement is approved by:</p>
+                    <p class="approval">
+                        <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="ORGANIZATION"></span><br/>
+                        <span class="approved-by" data-print="accstmnt_orginfo_approved_name" data-printdefault="APPROVED_BY"></span><br/>
+                        <span class="approved-by-jobtitle" data-print="accstmnt_orginfo_approved_function" data-if="accstmnt_orginfo_approved_function"></span>
+                    </p>
+                </div> -->
+
+            </div>
+
+
 
             <div id="statement-additions" data-if="accstmt_additions">
                 <h4>Exigences supplémentaires</h4>
@@ -783,54 +834,6 @@
                     <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> :
                 </p>
                 <ol id="statement-limitations" class="technical-information accessibility-limitations"></ol>
-            </div>
-
-            <div id="statement-assessment-block" data-if="accstmnt_approach">
-                <h3>Méthode d'audit</h3>
-                <p>
-                    <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="Notre organisation">Notre organisation</span>
-                    a audité 
-                    <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
-                    en suivant les approches suivantes :
-                </p>
-                <ul id="statement-assessments" class="technical-information assessment-approaches" data-print="accstmnt_approach"></ul>
-            </div>
-
-            <div data-if="accstmnt_audit_url">
-                <h3>Rapport d'évaluation</h3>
-                <p>
-                    Un rapport d'évaluation de 
-                    <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
-                    est disponible :
-                    <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_url"></a>.
-                </p>
-            </div>
-
-            <div data-if="accstmnt_audit_wcagem">
-                <h3>Evaluation statement</h3>
-                <p>
-                    An evaluation statement for
-                    <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
-                    is available at:
-                    <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_wcagem"></a>.
-                </p>
-            </div>
-
-            <div data-if="accstmnt_audit_other">
-                <h3>Autres documents</h3>
-                <p>Other related evidence for <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span> is available at:</p>
-                <ul data-print="accstmnt_audit_other" class="technical-information related-evidence-other"></ul>
-            </div>
-
-            <div id="statement-approval-block" data-if="accstmnt_orginfo_approved_name, accstmnt_orginfo_approved_function">
-                <h3>Formal approval of this accessibility statement</h3>
-
-                <p>This Accessibility Statement is approved by:</p>
-                <p class="approval">
-                    <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="ORGANIZATION"></span><br/>
-                    <span class="approved-by" data-print="accstmnt_orginfo_approved_name" data-printdefault="APPROVED_BY"></span><br/>
-                    <span class="approved-by-jobtitle" data-print="accstmnt_orginfo_approved_function" data-if="accstmnt_orginfo_approved_function"></span>
-                </p>
             </div>
 
             <div data-if="accstmt_complaints">
