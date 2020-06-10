@@ -559,157 +559,151 @@
                 <h3>État de conformité</h3>
                 <p>
                     <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="Notre site">Notre site</span> est 
-                    <b>
-                        <span class="basic-information conformance-status" data-print="accstmnt_conformance" data-printfilter="lowercase"></span>
-                        avec le <span class="basic-information conformance-standard"><span data-print="accstmnt_standard" data-if="accstmnt_standard_other_name" data-negate></span><span data-print="accstmnt_standard_other_name" data-if="accstmnt_standard_other_name"></span></span></b>.
-                        <span data-if="accstmnt_conformance_meaning">
-                            <span class="basic-information conformance-status" data-print="accstmnt_conformance"></span>
-                            veut dire que
-                            <span class="basic-information conformance-meaning" data-print="accstmnt_conformance_meaning" data-printdefault="CONFORMANCE_MEANING"></span>.
-                        </span>
+                    <b><span class="basic-information conformance-status" data-print="accstmnt_conformance" data-printfilter="lowercase"></span> avec le <span class="basic-information conformance-standard"><span data-print="accstmnt_standard" data-if="accstmnt_standard_other_name" data-negate></span><span data-print="accstmnt_standard_other_name" data-if="accstmnt_standard_other_name"></span></span></b>.
+                    <span data-if="accstmnt_conformance_meaning"><span class="basic-information conformance-status" data-print="accstmnt_conformance"></span> veut dire que <span class="basic-information conformance-meaning" data-print="accstmnt_conformance_meaning" data-printdefault="CONFORMANCE_MEANING"></span>.</span>
+                </p>
+            </div>
+
+            <div id="statement-assessment-block" data-if="accstmnt_approach">
+                <h3>Résultats des tests</h3>
+                <p>L’audit de conformité réalisé <span id="statement-assessments" class="technical-information assessment-approaches" data-print="accstmnt_approach"></span> révèle que :</p>
+                <ul>
+                    <li>[TODO pourcentage de critères RGAA respectés] des critères RGAA sont respectés.</li>
+                    <li>[TODO Facultatif] Le taux moyen de conformité du service en ligne s’élève à [taux moyen de conformité du service en ligne].</li>
+                </ul>
+
+                <div data-if="accstmnt_audit_url">
+                    <h4>Rapport d'évaluation</h4>
+                    <p>
+                        Un rapport d'évaluation de 
+                        <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
+                        est disponible :
+                        <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_url"></a>.
                     </p>
                 </div>
 
-                <div id="statement-assessment-block" data-if="accstmnt_approach">
-                    <h3>Résultats des tests</h3>
-                    <p>L’audit de conformité réalisé <span id="statement-assessments" class="technical-information assessment-approaches" data-print="accstmnt_approach"></span> révèle que :</p>
-                    <ul>
-                        <li>[TODO pourcentage de critères RGAA respectés] des critères RGAA sont respectés.</li>
-                        <li>[TODO Facultatif] Le taux moyen de conformité du service en ligne s’élève à [taux moyen de conformité du service en ligne].</li>
-                    </ul>
-
-                    <div data-if="accstmnt_audit_url">
-                        <h4>Rapport d'évaluation</h4>
-                        <p>
-                            Un rapport d'évaluation de 
-                            <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
-                            est disponible :
-                            <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_url"></a>.
-                        </p>
-                    </div>
-
-                    <div data-if="accstmnt_audit_wcagem">
-                        <h4>Déclaration d'évaluation</h4>
-                        <p>
-                            Une déclaration d'évaluation de 
-                            <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
-                            est disponible :
-                            <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_wcagem"></a>.
-                        </p>
-                    </div>
-
-                    <div data-if="accstmnt_audit_other">
-                        <h4>Autres documents</h4>
-                        <p>D'autres documents ou rapports sont disponibles <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span> :</p>
-                        <ul data-print="accstmnt_audit_other" class="technical-information related-evidence-other"></ul>
-                    </div>
+                <div data-if="accstmnt_audit_wcagem">
+                    <h4>Déclaration d'évaluation</h4>
+                    <p>
+                        Une déclaration d'évaluation de 
+                        <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
+                        est disponible :
+                        <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_wcagem"></a>.
+                    </p>
                 </div>
 
-                <div id="statement-additions" data-if="accstmt_additions">
-                    <h4>Exigences supplémentaires</h4>
-                    <p class="basic-information conformance-additions" data-print="accstmt_additions" data-printfilter="capitalize"></p>
+                <div data-if="accstmnt_audit_other">
+                    <h4>Autres documents</h4>
+                    <p>D'autres documents ou rapports sont disponibles <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span> :</p>
+                    <ul data-print="accstmnt_audit_other" class="technical-information related-evidence-other"></ul>
                 </div>
+            </div>
+
+            <div>
+                <h3>Contenus non accessibles</h3>
+
+                <p>Les contenus listés ci-dessous ne sont pas accessibles pour les raisons suivantes.</p>
 
                 <div id="statement-limitations-block">
-                    <h3>Limites et alternatives</h3>
-                    <p>
-                        Despite our best efforts to ensure accessibility of
-                        <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>, there may be some limitations. Below is a description of known limitations, and potential solutions. Please contact us if you observe an issue not listed below.
-                    </p>
-
-                    <p>
-                        Limitations connues pour 
-                        <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> :
-                    </p>
+                    <h4>Non conformité</h4>
+                    <p>Malgré nos efforts, certains contenus sont inaccessibles. Vous trouverez ci-dessous une liste des limitations connues et des solutions potentielles :</p>
+                    
                     <ol id="statement-limitations" class="technical-information accessibility-limitations"></ol>
                 </div>
 
-                <div>
-                    <h3>Établissement de cette déclaration d'accessibilité</h3>
-                    <p>Cette déclaration a été établie le <b><span class="basic-information statement-created-date" data-print="accstmt_date" data-printdefault="DATE"></span></b>.</p>
+                <h4>Dérogations pour charge disproportionnée</h4>
+
+                <p>[TODO Lister la/le/les section(s)/contenu(s)/fonction(s) non accessible(s) pour laquelle/lequel/lesquels la dérogation pour charge disproportionnée est temporairement invoquée, indiquer les alternatives s’il y a lieu].</p>
+
+                <h4>Contenus non soumis à l’obligation d’accessibilité</h4>
+
+                <p>[TODO Lister la/le/les section(s)/contenu(s)/fonction(s) non accessible(s) qui n’entre(nt) pas dans le champ d’application de la législation applicable, indiquer les alternatives s’il y a lieu].</p>
+            </div>
 
 
-                    <div id="statement-conftech" data-if="accstmnt_tech">
-                        <h4>Technologies utilisées</h4>
+            <div>
+                <h3>Établissement de cette déclaration d'accessibilité</h3>
+                <p>Cette déclaration a été établie le <b><span class="basic-information statement-created-date" data-print="accstmt_date" data-printdefault="DATE"></span></b>.</p>
 
-                        <p>L'accessibilité de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span> s'appuie sur les technologies suivantes :</p>
-    
-                        <ul id="statement-tech" class="technical-information technologies-used" data-print="accstmnt_tech"></ul>
-                   </div>
+                <div id="statement-conftech" data-if="accstmnt_tech">
+                    <h4>Technologies utilisées</h4>
 
-                    <div id="statement-asstech" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
-                        <h4>Agents utilisateurs, technologies d’assistance et outils utilisés pour vérifier l’accessibilité</h4>
-                        <div id="statement-asstech-compatible-block">
-                            <p>Les tests des pages web ont été effectués avec les combinaisons de navigateurs web et lecteurs d’écran suivants :</p>
-                            <ul id="statement-asstech-compatible" class="technical-information compatible-environments" data-print="accstmnt_asstech_compatible" data-printdefault="COMPATIBLE_LIST"></ul>
-                        </div>
+                    <p>L'accessibilité de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span> s'appuie sur les technologies suivantes :</p>
 
-                        <div id="statement-asstech-incompatible-block" data-if="accstmnt_asstech_incompatible">
-                            <p><span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>
-                                n'est pas compatible avec :</p>
-                            <ul id="statement-asstech-incompatible" class="technical-information incompatible-environments" data-print="accstmnt_asstech_incompatible"></ul>
-                        </div>
+                    <ul id="statement-tech" class="technical-information technologies-used" data-print="accstmnt_tech"></ul>
+                </div>
+
+                <div id="statement-asstech" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
+                    <h4>Agents utilisateurs, technologies d’assistance et outils utilisés pour vérifier l’accessibilité</h4>
+                    <div id="statement-asstech-compatible-block">
+                        <p>Les tests des pages web ont été effectués avec les combinaisons de navigateurs web et lecteurs d’écran suivants :</p>
+                        <ul id="statement-asstech-compatible" class="technical-information compatible-environments" data-print="accstmnt_asstech_compatible" data-printdefault="COMPATIBLE_LIST"></ul>
                     </div>
 
-<!--                     <p>Les outils suivants ont été utilisés lors de l’évaluation :</p>
-
-                    <p>[TODO Indiquer les outils utilisés]</p>
- -->
-                    <div data-if="accstmnt_tested_pages">
-                        <h4>Pages auditées</h4>
-
-                        <p>Les pages suivantes ont fait l'objet de la vérification de confirmité :</p>
-                        <ul data-print="accstmnt_tested_pages"></ul>
+                    <div id="statement-asstech-incompatible-block" data-if="accstmnt_asstech_incompatible">
+                        <p><span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>
+                            n'est pas compatible avec :</p>
+                        <ul id="statement-asstech-incompatible" class="technical-information incompatible-environments" data-print="accstmnt_asstech_incompatible"></ul>
                     </div>
                 </div>
 
-                <div data-if="accstmnt_contact_phone, accstmnt_contact_email, accstmnt_contact_visit, accstmnt_contact_write, accstmnt_contact_other">
-                    <h3>Amélioration et contact</h3>
-                    <p>Si vous n’arrivez pas à accéder à un contenu ou à un service, vous pouvez contacter le responsable de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme.</p>
 
-                    <!-- TODO : formulaire en ligne -->
-                    <ul class="basic-information feedback h-card">
-                        <li data-if="accstmnt_contact_phone">
-                            Téléphone :
-                            <span class="phone-number p-tel" data-print="accstmnt_contact_phone"></span>
-                        </li>
-                        <li data-if="accstmnt_contact_email">
-                            E-mail :
-                            <a class="email u-email" href="mailto:" data-print="accstmnt_contact_email"></a>
-                        </li>
-                        <li data-if="accstmnt_contact_visit">
-                            Adresse :
-                            <span class="visitor-address p-extended-address" data-print="accstmnt_contact_visit"></span>
-                        </li>
-                        <li class="contact-other p-note" data-if="accstmnt_contact_other" data-print="accstmnt_contact_other"></li>
-                    </ul>
-                    <p data-if="accstmnt_contact_responsetime">
-                        Nous essayons de répondre dans les <span class="feedback responsetime" data-print="accstmnt_contact_responsetime"></span>.
-                    </p>
+
+                <div data-if="accstmnt_tested_pages">
+                    <h4>Pages auditées</h4>
+
+                    <p>Les pages suivantes ont fait l'objet de la vérification de confirmité :</p>
+                    <ul data-print="accstmnt_tested_pages"></ul>
                 </div>
+            </div>
 
-                <div>
-                    <h3>Voie de recours</h3>
+            <div data-if="accstmnt_contact_phone, accstmnt_contact_email, accstmnt_contact_visit, accstmnt_contact_write, accstmnt_contact_other">
+                <h3>Amélioration et contact</h3>
+                <p>Si vous n’arrivez pas à accéder à un contenu ou à un service, vous pouvez contacter le responsable de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme.</p>
 
-                    <p>Cette procédure est à utiliser dans le cas suivant : vous avez signalé au responsable du site internet un défaut d’accessibilité qui vous empêche d’accéder à un contenu ou à un des services du portail et vous n’avez pas obtenu de réponse satisfaisante.</p>
-
-                    <p>Vous pouvez :</p>
-
-                    <ul>
-                        <li>Écrire un message au <a href="https://formulaire.defenseurdesdroits.fr/">Défenseur des droits</a></li>
-                        <li>Contacter <a href="https://www.defenseurdesdroits.fr/saisir/delegues">le délégué du Défenseur des droits dans votre région</a></li>
-                        <li>Envoyer un courrier par la poste (gratuit, ne pas mettre de timbre) :<br />
-                            Défenseur des droits<br />
-                        Libre réponse 71120 75342 Paris CEDEX 07</li>
-                    </ul>
-                </div>
-
-                <hr noshade="noshade"/>
-
-                <p>
-                    Cette déclaration d'accessibilité a été créé le <span class="basic-information statement-created-date" data-print="accstmt_date" data-printdefault="DATE"></span> grâce au <a href="https://betagouv.github.io/a11y-generateur-declaration/#create">Générateur de Déclaration d'Accessibilité de BetaGouv</a>.
+                <!-- TODO : formulaire en ligne -->
+                <ul class="basic-information feedback h-card">
+                    <li data-if="accstmnt_contact_phone">
+                        Téléphone :
+                        <span class="phone-number p-tel" data-print="accstmnt_contact_phone"></span>
+                    </li>
+                    <li data-if="accstmnt_contact_email">
+                        E-mail :
+                        <a class="email u-email" href="mailto:" data-print="accstmnt_contact_email"></a>
+                    </li>
+                    <li data-if="accstmnt_contact_visit">
+                        Adresse :
+                        <span class="visitor-address p-extended-address" data-print="accstmnt_contact_visit"></span>
+                    </li>
+                    <li class="contact-other p-note" data-if="accstmnt_contact_other" data-print="accstmnt_contact_other"></li>
+                </ul>
+                <p data-if="accstmnt_contact_responsetime">
+                    Nous essayons de répondre dans les <span class="feedback responsetime" data-print="accstmnt_contact_responsetime"></span>.
                 </p>
             </div>
+
+            <div>
+                <h3>Voie de recours</h3>
+
+                <p>Cette procédure est à utiliser dans le cas suivant : vous avez signalé au responsable du site internet un défaut d’accessibilité qui vous empêche d’accéder à un contenu ou à un des services du portail et vous n’avez pas obtenu de réponse satisfaisante.</p>
+
+                <p>Vous pouvez :</p>
+
+                <ul>
+                    <li>Écrire un message au <a href="https://formulaire.defenseurdesdroits.fr/">Défenseur des droits</a></li>
+                    <li>Contacter <a href="https://www.defenseurdesdroits.fr/saisir/delegues">le délégué du Défenseur des droits dans votre région</a></li>
+                    <li>Envoyer un courrier par la poste (gratuit, ne pas mettre de timbre) :<br />
+                        Défenseur des droits<br />
+                    Libre réponse 71120 75342 Paris CEDEX 07</li>
+                </ul>
+            </div>
+
+            <hr noshade="noshade"/>
+
+            <p>
+                Cette déclaration d'accessibilité a été créé le <span class="basic-information statement-created-date" data-print="accstmt_date" data-printdefault="DATE"></span> grâce au <a href="https://betagouv.github.io/a11y-generateur-declaration/#create">Générateur de Déclaration d'Accessibilité de BetaGouv</a>.
+            </p>
+        </div>
 
 
         </div>
