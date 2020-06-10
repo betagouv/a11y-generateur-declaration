@@ -610,25 +610,6 @@
                     <p class="basic-information conformance-additions" data-print="accstmt_additions" data-printfilter="capitalize"></p>
                 </div>
 
-                <div id="statement-asstech" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
-                    <h3>Compatibilité avec les navigateurs et les technologies d'assistance</h3>
-                    <div id="statement-asstech-compatible-block">
-                        <p>
-                            <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>
-                            est conçu pour être compatible avec les technologies d'assistances suivantes :
-                        </p>
-                        <ul id="statement-asstech-compatible" class="technical-information compatible-environments" data-print="accstmnt_asstech_compatible" data-printdefault="COMPATIBLE_LIST"></ul>
-                    </div>
-
-                    <div id="statement-asstech-incompatible-block" data-if="accstmnt_asstech_incompatible">
-                        <p>
-                            <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>
-                            n'est pas compatible avec :
-                        </p>
-                        <ul id="statement-asstech-incompatible" class="technical-information incompatible-environments" data-print="accstmnt_asstech_incompatible"></ul>
-                    </div>
-                </div>
-
                 <div id="statement-limitations-block">
                     <h3>Limites et alternatives</h3>
                     <p>
@@ -656,19 +637,30 @@
                         <ul id="statement-tech" class="technical-information technologies-used" data-print="accstmnt_tech"></ul>
                    </div>
 
-                    <h4>Agents utilisateurs, technologies d’assistance et outils utilisés pour vérifier l’accessibilité</h4>
+                    <div id="statement-asstech" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
+                        <h4>Agents utilisateurs, technologies d’assistance et outils utilisés pour vérifier l’accessibilité</h4>
+                        <div id="statement-asstech-compatible-block">
+                            <p>Les tests des pages web ont été effectués avec les combinaisons de navigateurs web et lecteurs d’écran suivants :</p>
+                            <ul id="statement-asstech-compatible" class="technical-information compatible-environments" data-print="accstmnt_asstech_compatible" data-printdefault="COMPATIBLE_LIST"></ul>
+                        </div>
 
-                    <p>Les tests des pages web ont été effectués avec les combinaisons de navigateurs web et lecteurs d’écran suivants :</p>
+                        <div id="statement-asstech-incompatible-block" data-if="accstmnt_asstech_incompatible">
+                            <p><span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>
+                                n'est pas compatible avec :</p>
+                            <ul id="statement-asstech-incompatible" class="technical-information incompatible-environments" data-print="accstmnt_asstech_incompatible"></ul>
+                        </div>
+                    </div>
 
-                    <p>[TODO Indiquer les combinaisons utilisées pour effectuer les vérifications de conformité]</p>
-
-                    <p>Les outils suivants ont été utilisés lors de l’évaluation :</p>
+<!--                     <p>Les outils suivants ont été utilisés lors de l’évaluation :</p>
 
                     <p>[TODO Indiquer les outils utilisés]</p>
+ -->
+                    <div data-if="accstmnt_tested_pages">
+                        <h4>Pages auditées</h4>
 
-                    <p>Pages du site ayant fait l’objet de la vérification de conformité</p>
-
-                    <p>[TODO Indiquer la liste des pages qui ont été testées]</p>
+                        <p>Les pages suivantes ont fait l'objet de la vérification de confirmité :</p>
+                        <ul data-print="accstmnt_tested_pages"></ul>
+                    </div>
                 </div>
 
                 <div data-if="accstmnt_contact_phone, accstmnt_contact_email, accstmnt_contact_visit, accstmnt_contact_write, accstmnt_contact_other">
