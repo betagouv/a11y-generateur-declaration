@@ -469,7 +469,7 @@
                     </button>
                 </fieldset>
 
-                <h3 class="label">Technologies nécessaires
+                <h3 class="label">Technologies utilisées
                     <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_tech" data-target="#support_tech" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                 </h3>
                 <div class="information" id="support_tech" hidden="hidden">
@@ -543,8 +543,7 @@
 <section class="page preview" hidden="hidden">
 
 
-    <aside class="box box-example"><header class="box-h  box-h-example">Prévisualisation de votre déclaration d'accessibilité</header><div class="box-i">
-
+    <aside class="box box-example"><header class="box-h box-h-example">Prévisualisation de votre déclaration d'accessibilité</header><div class="box-i">
 
         <div id="statement_generated">
             <div id="statement_header">
@@ -630,17 +629,6 @@
                     </div>
                 </div>
 
-                <div id="statement-conftech" data-if="accstmnt_tech">
-                    <h3>Spécificités techiques</h3>
-                    <p>
-                        L'accessibilité de 
-                        <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>
-                        s'appuie sur les technologies suivantes :
-                    </p>
-                    <ul id="statement-tech" class="technical-information technologies-used" data-print="accstmnt_tech"></ul>
-                    <p>Ces technologies sont nécessaires pour assurer la conformité du service.</p>
-                </div>
-
                 <div id="statement-limitations-block">
                     <h3>Limites et alternatives</h3>
                     <p>
@@ -653,6 +641,34 @@
                         <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> :
                     </p>
                     <ol id="statement-limitations" class="technical-information accessibility-limitations"></ol>
+                </div>
+
+                <div>
+                    <h3>Établissement de cette déclaration d'accessibilité</h3>
+                    <p>Cette déclaration a été établie le <b><span class="basic-information statement-created-date" data-print="accstmt_date" data-printdefault="DATE"></span></b>.</p>
+
+
+                    <div id="statement-conftech" data-if="accstmnt_tech">
+                        <h4>Technologies utilisées</h4>
+
+                        <p>L'accessibilité de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span> s'appuie sur les technologies suivantes :</p>
+    
+                        <ul id="statement-tech" class="technical-information technologies-used" data-print="accstmnt_tech"></ul>
+                   </div>
+
+                    <h4>Agents utilisateurs, technologies d’assistance et outils utilisés pour vérifier l’accessibilité</h4>
+
+                    <p>Les tests des pages web ont été effectués avec les combinaisons de navigateurs web et lecteurs d’écran suivants :</p>
+
+                    <p>[TODO Indiquer les combinaisons utilisées pour effectuer les vérifications de conformité]</p>
+
+                    <p>Les outils suivants ont été utilisés lors de l’évaluation :</p>
+
+                    <p>[TODO Indiquer les outils utilisés]</p>
+
+                    <p>Pages du site ayant fait l’objet de la vérification de conformité</p>
+
+                    <p>[TODO Indiquer la liste des pages qui ont été testées]</p>
                 </div>
 
                 <div data-if="accstmnt_contact_phone, accstmnt_contact_email, accstmnt_contact_visit, accstmnt_contact_write, accstmnt_contact_other">
@@ -710,8 +726,8 @@
 
     <div class="button-group statement-actions">
         <button type="button" class="primary" data-action="preview_save_as_html">Télécharger en tant que page HTML</button>
-<!--             <button type="button" class="primary" data-action="copy_clipboard">Copier la déclaration dans le presse papier</button>
--->        </div>
+        <!-- <button type="button" class="primary" data-action="copy_clipboard">Copier la déclaration dans le presse papier</button> -->
+    </div>
 <div class="button-group statement-actions">
     <a class="button" href="#create">Modifier la déclaration</a>
 </div>
