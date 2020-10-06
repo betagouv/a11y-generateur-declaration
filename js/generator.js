@@ -481,7 +481,7 @@
         if(element || description || reason || us || you) {
           html += '\t<li>'
             + '<strong>' + element + '</strong>: '
-            + description + ' because '
+            + description + ' parce que '
             + reason + '. ' + us + '. ' + you
             + '.</li>\n';
         }
