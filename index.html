@@ -251,7 +251,7 @@
                         <div class="field line">
                             <label for="accstmnt_audit_schema">Lien vers le schéma pluriannuel de mise en accessibilité de votre entité</label>
                             <em>(Exemple : « https://example.org/schema-pluriannuel »)</em>
-                            <input type="text" id="accstmnt_audit_schema" name="accstmnt_audit_schema"/>
+                            <input type="url" id="accstmnt_audit_schema" />
                         </div>
 
                         <div class="field line">
@@ -583,7 +583,7 @@
                 </div>
                 <div data-if="accstmnt_audit_schema">
                     <h3>Schéma pluriannuel d'accessibilité</h3>
-                    <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_schema"></a>.
+                    <p>Le schéma de <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="Notre organisation"></span> est disponible : <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_schema"></a></p>.
                 </div>
                 <div data-if="accstmnt_audit_other">
                     <h3>Autres documents</h3>
