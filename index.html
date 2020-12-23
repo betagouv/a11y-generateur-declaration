@@ -172,35 +172,24 @@
                             <div class="radio-field">
                                 <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_full" value="Totalement conforme"/>
                                 <label for="accstmnt_conformance_full">
-                                    <span class="status">Totalement conforme</span> :
-                                    <span class="meaning">le contenu est entièrement conforme aux standards d'accessibilité, sans aucune exception.</span>
+                                    <span class="status"><strong>Totalement conforme</strong></span> :
+                                    <span class="meaning">Le contenu est entièrement conforme aux critères RGAA applicables.</span>
                                 </label>
                             </div>
                             <div class="radio-field">
-                                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" value="Partiellement conforme" checked="checked"/>
+                                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" value="Partiellement conforme" />
                                 <label for="accstmnt_conformance_partial">
-                                    <span class="status">Partiellement conforme</span> :
-                                    <span class="meaning">certaines sections du contenu ne sont pas entièrement conformes aux standards d'accessibilités</span>
-                                    <span>(vous pourrez indiquer les exceptions dans la section dédiée de ce formulaire)</span>
+                                    <span class="status"><strong>Partiellement conforme</strong></span> :
+                                    <span class="meaning">Si au moins 50 % des critères de contrôle du RGAA sont respectés.</span>
+                                    <span>(Vous devrez indiquer la liste des contenus non-conformes dans la section dédiée de ce formulaire)</span>
                                 </label>
                             </div>
                             <div class="radio-field">
-                                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" value="Non conforme"/>
+                                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" value="Non conforme" checked/>
                                 <label for="accstmnt_conformance_nonconformant">
-                                    <span class="status">Non conforme</span> :
-                                    <span class="meaning">le contenu n'est pas conforme aux standards d'accessibilité</span>
+                                    <span class="status"><strong>Non conforme</strong></span> :
+                                    <span class="meaning">Si moins de 50 % des critères de contrôle du RGAA sont respectés ou si le site n'a pas été audité.</span>
                                 </label>
-                            </div>
-                            <div class="radio-field">
-                                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_unknown" value="Non audité"/>
-                                <label for="accstmnt_conformance_unknown">
-                                    <span class="status">Non audité</span> :
-                                    <span class="meaning">le contenu n'a pas été audité (ou les résultats de l'audit ne sont pas encore disponibles).</span>
-                                </label>
-                            </div>
-                            <div class="radio-field">
-                                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_inapplicable" value=""/>
-                                <label for="accstmnt_conformance_inapplicable">Aucun</label>
                             </div>
                             <input id="accstmnt_conformance_meaning" type="hidden" value="">
                         </fieldset>
