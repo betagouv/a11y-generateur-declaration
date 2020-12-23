@@ -542,7 +542,7 @@
 
         <div id="statement_generated">
             <div id="statement_header">
-                <h2>Déclaration d'accessibilité</h2>
+                <h1>Déclaration d'accessibilité</h1>
                 <p><span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="Notre organisation"></span> s’engage à rendre son service accessible, conformément à l’article 47 de la loi n° 2005-102 du 11 février 2005.</p>
 
                 <!-- <p>À cette fin, il met en œuvre la stratégie et les actions suivantes [liens vers le schéma pluriannuel et vers le plan d’action de l’année en cours incluant le bilan des actions réalisées l’année précédente].</p> -->
@@ -551,7 +551,7 @@
             </div>
 
             <div id="statement-conformance" data-if="accstmnt_conformance">
-                <h3>État de conformité</h3>
+                <h2>État de conformité</h2>
                 <p>
                     <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="Notre site">Notre site</span> est 
                     <b><span class="basic-information conformance-status" data-print="accstmnt_conformance" data-printfilter="lowercase"></span> avec le <span class="basic-information conformance-standard"><span data-print="accstmnt_standard" data-if="accstmnt_standard_other_name" data-negate></span><span data-print="accstmnt_standard_other_name" data-if="accstmnt_standard_other_name"></span></span></b>.
@@ -560,7 +560,7 @@
             </div>
 
             <div id="statement-assessment-block" data-if="accstmnt_approach">
-                <h3>Résultats des tests</h3>
+                <h2>Résultats des tests</h2>
                 <p>L’audit de conformité réalisé <span id="statement-assessments" class="technical-information assessment-approaches" data-print="accstmnt_approach"></span> révèle que :</p>
                 <ul>
                     <li>[TODO pourcentage de critères RGAA respectés] des critères RGAA sont respectés.</li>
@@ -568,7 +568,7 @@
                 </ul>
 
                 <div data-if="accstmnt_audit_url">
-                    <h4>Rapport d'évaluation</h4>
+                    <h3>Rapport d'évaluation</h3>
                     <p>
                         Un rapport d'évaluation de 
                         <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
@@ -578,7 +578,7 @@
                 </div>
 
                 <div data-if="accstmnt_audit_wcagem">
-                    <h4>Déclaration d'évaluation</h4>
+                    <h3>Déclaration d'évaluation</h3>
                     <p>
                         Une déclaration d'évaluation de 
                         <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
@@ -586,42 +586,45 @@
                         <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_wcagem"></a>.
                     </p>
                 </div>
-
+                <div data-if="accstmnt_audit_schema">
+                    <h3>Schéma pluriannuel d'accessibilité</h3>
+                    <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_schema"></a>.
+                </div>
                 <div data-if="accstmnt_audit_other">
-                    <h4>Autres documents</h4>
+                    <h3>Autres documents</h3>
                     <p>D'autres documents ou rapports sont disponibles <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span> :</p>
                     <ul data-print="accstmnt_audit_other" class="technical-information related-evidence-other"></ul>
                 </div>
             </div>
 
             <div>
-                <h3>Contenus non accessibles</h3>
+                <h2>Contenus non accessibles</h2>
 
                 <p>Les contenus listés ci-dessous ne sont pas accessibles pour les raisons suivantes.</p>
 
                 <div id="statement-limitations-block">
-                    <h4>Non conformité</h4>
+                    <h3>Non conformité</h3>
                     <p>Malgré nos efforts, certains contenus sont inaccessibles. Vous trouverez ci-dessous une liste des limitations connues et des solutions potentielles :</p>
                     
                     <ol id="statement-limitations" class="technical-information accessibility-limitations"></ol>
                 </div>
 
-                <h4>Dérogations pour charge disproportionnée</h4>
+                <h3>Dérogations pour charge disproportionnée</h3>
 
                 <p>[TODO Lister la/le/les section(s)/contenu(s)/fonction(s) non accessible(s) pour laquelle/lequel/lesquels la dérogation pour charge disproportionnée est temporairement invoquée, indiquer les alternatives s’il y a lieu].</p>
 
-                <h4>Contenus non soumis à l’obligation d’accessibilité</h4>
+                <h3>Contenus non soumis à l’obligation d’accessibilité</h3>
 
                 <p>[TODO Lister la/le/les section(s)/contenu(s)/fonction(s) non accessible(s) qui n’entre(nt) pas dans le champ d’application de la législation applicable, indiquer les alternatives s’il y a lieu].</p>
             </div>
 
 
             <div>
-                <h3>Établissement de cette déclaration d'accessibilité</h3>
+                <h2>Établissement de cette déclaration d'accessibilité</h2>
                 <p>Cette déclaration a été établie le <b><span class="basic-information statement-created-date" data-print="accstmt_date" data-printdefault="DATE"></span></b>.</p>
 
                 <div id="statement-conftech" data-if="accstmnt_tech">
-                    <h4>Technologies utilisées</h4>
+                    <h3>Technologies utilisées</h3>
 
                     <p>L'accessibilité de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span> s'appuie sur les technologies suivantes :</p>
 
@@ -629,7 +632,7 @@
                 </div>
 
                 <div id="statement-asstech" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
-                    <h4>Agents utilisateurs, technologies d’assistance et outils utilisés pour vérifier l’accessibilité</h4>
+                    <h3>Agents utilisateurs, technologies d’assistance et outils utilisés pour vérifier l’accessibilité</h3>
                     <div id="statement-asstech-compatible-block">
                         <p>Les tests des pages web ont été effectués avec les combinaisons de navigateurs web et lecteurs d’écran suivants :</p>
                         <ul id="statement-asstech-compatible" class="technical-information compatible-environments" data-print="accstmnt_asstech_compatible" data-printdefault="COMPATIBLE_LIST"></ul>
@@ -645,7 +648,7 @@
 
 
                 <div data-if="accstmnt_tested_pages">
-                    <h4>Pages auditées</h4>
+                    <h3>Pages auditées</h3>
 
                     <p>Les pages suivantes ont fait l'objet de la vérification de confirmité :</p>
                     <ul data-print="accstmnt_tested_pages"></ul>
@@ -653,7 +656,7 @@
             </div>
 
             <div data-if="accstmnt_contact_phone, accstmnt_contact_email, accstmnt_contact_visit, accstmnt_contact_write, accstmnt_contact_other">
-                <h3>Amélioration et contact</h3>
+                <h2>Amélioration et contact</h2>
                 <p>Si vous n’arrivez pas à accéder à un contenu ou à un service, vous pouvez contacter le responsable de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme.</p>
 
                 <!-- TODO : formulaire en ligne -->
@@ -678,7 +681,7 @@
             </div>
 
             <div>
-                <h3>Voie de recours</h3>
+                <h2>Voie de recours</h2>
 
                 <p>Cette procédure est à utiliser dans le cas suivant : vous avez signalé au responsable du site internet un défaut d’accessibilité qui vous empêche d’accéder à un contenu ou à un des services du portail et vous n’avez pas obtenu de réponse satisfaisante.</p>
 
