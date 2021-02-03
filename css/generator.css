@@ -1,10 +1,12 @@
 #accstatement form .information
 {
-  font-size: 1rem;
+  font-size: .8rem;
   padding: 1px 15px;
-  background-color: #edf4fa;
-  border: solid 1px #2D6197;
+  background-color:  #ebeff3 ;
+  border: solid 1px  #c9d3df ;
   margin-bottom: 1em;
+  border-radius: 5px;
+  margin-left: 2rem;
 }
 
 #accstatement form .information a
