@@ -172,6 +172,14 @@
                             </div>
                             <input id="accstmnt_conformance_meaning" type="hidden" value="">
                         </fieldset>
+
+
+                    <div class="field">
+                        <label for="accstmt_taux">Pourcentage de critères RGAA respectés</label>
+                        <em>(Exemple : « 78 % »)</em>
+                        <input type="text" id="accstmt_taux"/>
+                    </div>
+
                     </div>
 
                     <div class="group">
@@ -202,7 +210,8 @@
                         <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_related" data-target="#support_related" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                     </h3>
                     <div class="information" id="support_related" hidden="hidden">
-                        <p>Des documents connexes peuvent apporter plus de transparence et de crédibilité à cette déclaration d'accessibilité. Il peut s'agir d'un rapport d'évaluation, d'une déclaration d'évaluation ou d'une certification.</p>
+                        <p>Le schéma pluriannuel doit contenir le plan d’action de l’année en cours et inclure le bilan des actions réalisées l’année précédente.</p>
+                        <p>D'autres documents connexes peuvent apporter plus de transparence et de crédibilité à cette déclaration d'accessibilité. Il peut s'agir d'un rapport d'évaluation, d'une déclaration d'évaluation ou d'une certification.</p>
                     </div>
 
                     <div class="group">
@@ -519,11 +528,11 @@
                 </p>
             </div>
 
-            <div id="statement-assessment-block" data-if="accstmnt_approach">
+            <div id="statement-assessment-block" data-if="accstmt_taux">
                 <h2>Résultats des tests</h2>
-                <p>L’audit de conformité réalisé <span id="statement-assessments" class="technical-information assessment-approaches" data-print="accstmnt_approach"></span> révèle que [TODO pourcentage de critères RGAA respectés] des critères RGAA sont respectés.</p>
+                <p>L’audit de conformité réalisé <span id="statement-assessments" class="technical-information assessment-approaches" data-print="accstmnt_approach"></span> révèle que <span data-print="accstmt_taux"></span> des critères RGAA sont respectés.</p>
 
-                <!-- [TODO Détailler ici les résultats des tests ou insérer un lien vers le rapport de test] -->
+                <!-- [TODO Détailler ici les résultats des tests] -->
                 <div data-if="accstmnt_audit_other">
                     <h3>Autres documents</h3>
                     <p>D'autres documents ou rapports sont disponibles :</p>
