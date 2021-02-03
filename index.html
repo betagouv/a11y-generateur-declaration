@@ -206,52 +206,17 @@
                     </div>
 
                     <div class="group">
-                        <div class="field">
-                            <label for="accstmnt_audit_url">Lien vers un rapport d'évaluation
-                                <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_url" data-target="#info_audit_url" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
-                            </label>
-                            <em>(Exemple : « https://example.org/accessibility-evaluation-report »)</em>
-
-                            <div class="information" id="info_audit_url" hidden="hidden">
-                                <p>Un rapport d'évaluation fournit des détails sur les critères qui sont respectées et ceux qui ne le sont pas exigences en matière d'accessibilité. Bien qu'il soit généralement assez technique, il peut aider certains utilisateurs à comprendre les problèmes qu'ils ont observés. Le W3C propose un outil pour créer un rapport d'évaluation : <a href="https://www.w3.org/WAI/eval/report-tool/" lang="en">WCAG-EM Evaluation Report Tool</a>.</p>
-                            </div>
-
-                            <input type="url" id="accstmnt_audit_url"/>
-                        </div>
-
-                        <div class="field">
-                            <label for="accstmnt_audit_wcagem">Lien vers une déclaration d'évaluation
-                                <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_statement" data-target="#info_audit_statement" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
-                            </label>
-                            <em>(Exemple : « https://example.org/accessibility-evaluation-statement »)</em>
-
-                            <div class="information" id="info_audit_statement" hidden="hidden">
-                                <p>Une déclaration d'évaluation résume les résultats essentiels d'un rapport d'évaluation. Ce document peut être fourni à la place ou en complément d'un rapport d'évaluation fourni ci-dessus.</p>
-                            </div>
-
-                            <input type="url" id="accstmnt_audit_wcagem"/>
-                        </div>
-
                         <div class="field line">
                             <label for="accstmnt_audit_schema">Lien vers le schéma pluriannuel de mise en accessibilité de votre entité</label>
-                            <em>(Exemple : « https://example.org/schema-pluriannuel »)</em>
+                            <em>(Exemple : « https://gouvernement.fr/schema-pluriannuel »)</em>
                             <input type="url" id="accstmnt_audit_schema" />
                         </div>
 
-                        <div class="field line">
-                            <label for="accstmnt_audit_other_1">Autre document 1</label>
-                            <em>(Exemple : « https://example.org/accessibility-evaluation-certificate »)</em>
-                            <input type="text" id="accstmnt_audit_other_1" name="accstmnt_audit_other"/>
-                        </div>
-
-                        <div class="field proto">
-                            <label for="accstmnt_audit_other_[n]">Autre document [n]</label>
-                            <input type="text" id="accstmnt_audit_other_[n]" name="accstmnt_audit_other"/>
-                        </div>
-
+                        <!-- TODO fix ce bouton 
                         <button type="button" class="add-line">
                             Ajouter un autre document
                         </button>
+                        -->
                     </div>
 
                     <div class="group">
