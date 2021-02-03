@@ -102,7 +102,7 @@
 
                     <div class="field">
                         <label for="accstmt_org">Nom du ministère ou de l'opérateur qui pilote la startup d'État</label>
-                        <em>(Exemple : « Ministère de l'Écologie »)</em>
+                        <em>(Exemple : « Le ministère de l'Écologie »)</em>
                         <input type="text" id="accstmt_org"/>
                     </div>
 
@@ -167,7 +167,7 @@
                                 <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" value="Non conforme" checked/>
                                 <label for="accstmnt_conformance_nonconformant">
                                     <span class="status"><strong>Non conforme</strong></span> :
-                                    <span class="meaning">moins de 50 % des critères de contrôle du RGAA sont respectés ou si le site n'a pas été audité.</span>
+                                    <span class="meaning">moins de 50 % des critères de contrôle du RGAA sont respectés ou le site n'a pas été audité.</span>
                                 </label>
                             </div>
                             <input id="accstmnt_conformance_meaning" type="hidden" value="">
@@ -502,8 +502,10 @@
             <div id="statement_header">
                 <h1>Déclaration d'accessibilité</h1>
                 <p><span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="Notre organisation"></span> s’engage à rendre son service accessible, conformément à l’article 47 de la loi n° 2005-102 du 11 février 2005.</p>
-
-                <!-- <p>À cette fin, il met en œuvre la stratégie et les actions suivantes [liens vers le schéma pluriannuel et vers le plan d’action de l’année en cours incluant le bilan des actions réalisées l’année précédente].</p> -->
+                
+                <div data-if="accstmnt_audit_schema">
+                    <p>À cette fin, il met en œuvre la stratégie et les actions suivantes : <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_schema">Schéma pluriannuel</a>.</p>
+                </div>
 
                 <p>Cette déclaration d’accessibilité s’applique à <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="ce service"></span>.</p>
             </div>
@@ -519,38 +521,12 @@
 
             <div id="statement-assessment-block" data-if="accstmnt_approach">
                 <h2>Résultats des tests</h2>
-                <p>L’audit de conformité réalisé <span id="statement-assessments" class="technical-information assessment-approaches" data-print="accstmnt_approach"></span> révèle que :</p>
-                <ul>
-                    <li>[TODO pourcentage de critères RGAA respectés] des critères RGAA sont respectés.</li>
-                    <li>[TODO Facultatif] Le taux moyen de conformité du service en ligne s’élève à [taux moyen de conformité du service en ligne].</li>
-                </ul>
+                <p>L’audit de conformité réalisé <span id="statement-assessments" class="technical-information assessment-approaches" data-print="accstmnt_approach"></span> révèle que [TODO pourcentage de critères RGAA respectés] des critères RGAA sont respectés.</p>
 
-                <div data-if="accstmnt_audit_url">
-                    <h3>Rapport d'évaluation</h3>
-                    <p>
-                        Un rapport d'évaluation de 
-                        <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
-                        est disponible :
-                        <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_url"></a>.
-                    </p>
-                </div>
-
-                <div data-if="accstmnt_audit_wcagem">
-                    <h3>Déclaration d'évaluation</h3>
-                    <p>
-                        Une déclaration d'évaluation de 
-                        <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
-                        est disponible :
-                        <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_wcagem"></a>.
-                    </p>
-                </div>
-                <div data-if="accstmnt_audit_schema">
-                    <h3>Schéma pluriannuel d'accessibilité</h3>
-                    <p>Le schéma de <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="Notre organisation"></span> est disponible : <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_schema"></a></p>.
-                </div>
+                <!-- [TODO Détailler ici les résultats des tests ou insérer un lien vers le rapport de test] -->
                 <div data-if="accstmnt_audit_other">
                     <h3>Autres documents</h3>
-                    <p>D'autres documents ou rapports sont disponibles <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span> :</p>
+                    <p>D'autres documents ou rapports sont disponibles :</p>
                     <ul data-print="accstmnt_audit_other" class="technical-information related-evidence-other"></ul>
                 </div>
             </div>
@@ -584,7 +560,7 @@
                 <div id="statement-conftech" data-if="accstmnt_tech">
                     <h3>Technologies utilisées</h3>
 
-                    <p>L'accessibilité de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span> s'appuie sur les technologies suivantes :</p>
+                    <p>L'accessibilité de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="ce service"></span> s'appuie sur les technologies suivantes :</p>
 
                     <ul id="statement-tech" class="technical-information technologies-used" data-print="accstmnt_tech"></ul>
                 </div>
@@ -597,7 +573,7 @@
                     </div>
 
                     <div id="statement-asstech-incompatible-block" data-if="accstmnt_asstech_incompatible">
-                        <p><span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>
+                        <p><span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="ce service"></span>
                             n'est pas compatible avec :</p>
                         <ul id="statement-asstech-incompatible" class="technical-information incompatible-environments" data-print="accstmnt_asstech_incompatible"></ul>
                     </div>
@@ -615,7 +591,7 @@
 
             <div data-if="accstmnt_contact_phone, accstmnt_contact_email, accstmnt_contact_visit, accstmnt_contact_write, accstmnt_contact_other">
                 <h2>Amélioration et contact</h2>
-                <p>Si vous n’arrivez pas à accéder à un contenu ou à un service, vous pouvez contacter le responsable de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme.</p>
+                <p>Si vous n’arrivez pas à accéder à un contenu ou à un service, vous pouvez contacter le responsable de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="ce service">ce service</span> pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme.</p>
 
                 <!-- TODO : formulaire en ligne -->
                 <ul class="basic-information feedback h-card">
