@@ -120,6 +120,24 @@
                 </div>
 
                 <div class="group">
+                    <h3 class="label">Documents associées
+                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_related" data-target="#support_related" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
+                    </h3>
+                    <div class="information" id="support_related" hidden="hidden">
+                        <p>Le schéma pluriannuel doit contenir le plan d’action de l’année en cours et inclure le bilan des actions réalisées l’année précédente.</p>
+                        <p>D'autres documents connexes peuvent apporter plus de transparence et de crédibilité à cette déclaration d'accessibilité. Il peut s'agir d'un rapport d'évaluation, d'une déclaration d'évaluation ou d'une certification.</p>
+                    </div>
+
+                    <div class="group">
+                        <div class="field line">
+                            <label for="accstmnt_audit_schema">Lien vers le schéma pluriannuel de mise en accessibilité de votre entité</label>
+                            <em>(Exemple : « https://gouvernement.fr/schema-pluriannuel »)</em>
+                            <input type="url" id="accstmnt_audit_schema" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group">
                     <h3 class="label">Norme de référence
                         <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_standards" data-target="#info_standards" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                     </h3>
@@ -200,32 +218,10 @@
                                 <li class="radio">
                                     <input id="accstmnt_approach_2" name="accstmnt_approach" type="radio" value="par évaluation externe"/>
                                     <label for="accstmnt_approach_2">Évaluation externe : le contenu a été évalué par une entité externe n'ayant pas participé au processus de conception et de développement du service.</label>
-                                    <!-- TODO : nom de l'entreprise -->
+                                    <!-- TODO : demander le nom de l'entreprise -->
                                 </li>
                             </ul>
                         </fieldset>
-                    </div>
-
-                    <h3 class="label">Documents associées
-                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_related" data-target="#support_related" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
-                    </h3>
-                    <div class="information" id="support_related" hidden="hidden">
-                        <p>Le schéma pluriannuel doit contenir le plan d’action de l’année en cours et inclure le bilan des actions réalisées l’année précédente.</p>
-                        <p>D'autres documents connexes peuvent apporter plus de transparence et de crédibilité à cette déclaration d'accessibilité. Il peut s'agir d'un rapport d'évaluation, d'une déclaration d'évaluation ou d'une certification.</p>
-                    </div>
-
-                    <div class="group">
-                        <div class="field line">
-                            <label for="accstmnt_audit_schema">Lien vers le schéma pluriannuel de mise en accessibilité de votre entité</label>
-                            <em>(Exemple : « https://gouvernement.fr/schema-pluriannuel »)</em>
-                            <input type="url" id="accstmnt_audit_schema" />
-                        </div>
-
-                        <!-- TODO fix ce bouton 
-                        <button type="button" class="add-line">
-                            Ajouter un autre document
-                        </button>
-                        -->
                     </div>
 
                     <div class="group">
@@ -531,13 +527,6 @@
             <div id="statement-assessment-block" data-if="accstmt_taux">
                 <h2>Résultats des tests</h2>
                 <p>L’audit de conformité réalisé <span id="statement-assessments" class="technical-information assessment-approaches" data-print="accstmnt_approach"></span> révèle que <span data-print="accstmt_taux"></span> des critères RGAA sont respectés.</p>
-
-                <!-- [TODO Détailler ici les résultats des tests] -->
-                <div data-if="accstmnt_audit_other">
-                    <h3>Autres documents</h3>
-                    <p>D'autres documents ou rapports sont disponibles :</p>
-                    <ul data-print="accstmnt_audit_other" class="technical-information related-evidence-other"></ul>
-                </div>
             </div>
 
             <div>
@@ -657,6 +646,8 @@
     </div>
 <div class="button-group statement-actions">
     <a class="button" href="#create">Modifier la déclaration</a>
+
+    <!-- TODO guide sur quoi en faire -->
 </div>
 </section>
 </div>
