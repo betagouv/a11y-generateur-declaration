@@ -43,47 +43,42 @@
     <div id="accstatement">
 
         <section class="page create" hidden="hidden">
-            <div class="container">
+            <aside class="box">
+                <header class="box-h ">Comment utiliser ce générateur ?</header>
+                <div class="box-i">
+                    <p>La déclaration d'accessibilité est une <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/">obligation du Référentiel Général d'Amélioration de l'Accessibilité</a> (RGAA) concernant le service public.</p>    
 
-                <aside class="box warning">
-                  <header class="box-h ">Outil en cours de développement</header><div class="box-i">
-                    <p>Contacter <a href="mailto:design@beta.gouv.fr?subject=Générateur de déclaration d'accessibilité">l'équipe de Designer Transverses</a> pour plus d'informations.</p>            
+                    <p>Les informations fournies ci-dessous génèrent une <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/#contenu-de-la-d%C3%A9claration-daccessibilit%C3%A9">déclaration d'accessibilité conforme</a> que vous pouvez télécharger et affiner. Aucun des champs n'est obligatoire.</p>
+
+                    <p>Aucune des informations que vous saisissez n'est stockée en dehors de votre navigateur web.</p>
                 </div>
             </aside>
 
-            <aside class="box">
-              <header class="box-h ">Comment utiliser cet outil de génération d'accessibilité</header><div class="box-i">
-                <p>Les informations que vous fournissez ci-dessous génèrent une déclaration d'accessibilité <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/#contenu-de-la-d%C3%A9claration-daccessibilit%C3%A9">conforme</a> que vous pouvez télécharger et affiner. </p>
-                <p>La déclaration d'accessibilité est une <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/">obligation du Référentiel général d'amélioration de l'accessibilité</a> (RGAA) concernant les services de communication au public en ligne.</p>    
-                <p>Aucun des champs n'est obligatoire. Aucune des informations que vous saisissez n'est stockée en dehors de votre navigateur web.</p>            
+            <nav class="box box-simple box-full" aria-labelledby="tocheading" id="toc">
+                <header id="tocheading" class="box-h box-h-simple box-h-full">Sections du générateur</header>
+          
+                <div class="box-i">
+                    <ul>
+                        <li>
+                            <a href="#create-basic">Informations générales</a>
+                        </li>
+                        <li>
+                            <a href="#create-technical">Informations techniques</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+            <div style="display: flex; align-items: center;">
+                <div class="excol-all">
+                </div>
+                <div style="text-align: right; flex:1">
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" data-target=".information" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
+                </div>
             </div>
-        </aside>
-
-        <nav class="box box-simple box-full" aria-labelledby="tocheading" id="toc">
-          <header id="tocheading" class="box-h box-h-simple box-h-full">Contenu de la page</header>
-          <div class="box-i">
 
 
-            <ul>
-                <li>
-                    <a href="#create-basic">Informations générales</a>
-                </li>
-                <li>
-                    <a href="#create-technical">Informations techniques</a>
-                </li>
-            </ul>
-            
-
-        </div>
-    </nav>
-
-
-    <div style="display: flex; align-items: center;">
-        <div class="excol-all"></div>
-        <div style="text-align: right; flex:1">
-            <button type="button" class="showhidebutton button-small" aria-expanded="false" data-target=".information" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
-        </div>
-    </div>
     <form name="create_accessibility_statement_form">
         <details open>
             <summary markdown="block">
@@ -114,7 +109,7 @@
                 </div>
 
                 <div class="group">
-                    <h3 class="label">Documents associées
+                    <h3 class="label">Documents associés
                         <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_related" data-target="#support_related" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                     </h3>
                     <div class="information" id="support_related" hidden="hidden">
@@ -555,12 +550,12 @@
 
                 <div id="statement-derogations-block" data-if="accstmt_derogation">
                     <h3>Dérogations pour charge disproportionnée</h3>
-                    <p data-if="accstmt_derogation" data-print="accstmt_derogation"></li>
+                    <p data-print="accstmt_derogation"></li>
                 </div>
 
                 <div id="statement-exempt-block" data-if="accstmt_exempt">
                     <h3>Contenus non soumis à l’obligation d’accessibilité</h3>
-                    <p data-if="accstmt_exempt" data-print="accstmt_exempt"></li>
+                    <p data-print="accstmt_exempt"></li>
                 </div>
             </div>
 
@@ -585,7 +580,7 @@
                     </div>
 
                     <div id="statement-asstech-incompatible-block" data-if="accstmnt_asstech_incompatible">
-                        <p><span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="ce service"></span>
+                        <p><span data-print="accstmt_namesite" data-printdefault="ce service"></span>
                             n'est pas compatible avec :</p>
                         <ul id="statement-asstech-incompatible" data-print="accstmnt_asstech_incompatible"></ul>
                     </div>
@@ -603,27 +598,24 @@
 
             <div data-if="accstmnt_contact_phone, accstmnt_contact_email, accstmnt_contact_form, accstmnt_contact_visit, accstmnt_contact_other">
                 <h2>Amélioration et contact</h2>
-                <p>Si vous n’arrivez pas à accéder à un contenu ou à un service, vous pouvez contacter le responsable de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="ce service">ce service</span> pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme.</p>
+                <p>Si vous n’arrivez pas à accéder à un contenu ou à un service, vous pouvez contacter le responsable de <span data-print="accstmt_namesite" data-printdefault="ce service">ce service</span> pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme.</p>
 
                 <ul class="basic-information feedback h-card">
                     <li data-if="accstmnt_contact_phone">
-                        Téléphone :
-                        <span class="phone-number p-tel" data-print="accstmnt_contact_phone"></span>
+                        Téléphone : <span data-print="accstmnt_contact_phone"></span>
                     </li>
                     <li data-if="accstmnt_contact_email">
-                        E-mail :
-                        <a class="email u-email" href="mailto:" data-print="accstmnt_contact_email"></a>
+                        E-mail : <a href="mailto:" data-print="accstmnt_contact_email"></a>
                     </li>
                     
+                    <!-- TODO : corriger l'URL -->
                     <li data-if="accstmnt_contact_form">
-                        Formulaire de contact :
-                        <a class="" data-print="accstmnt_contact_form"></a>
+                        Formulaire de contact : <a data-print="accstmnt_contact_form"></a>
                     </li>
                     <li data-if="accstmnt_contact_visit">
-                        Adresse :
-                        <span class="visitor-address p-extended-address" data-print="accstmnt_contact_visit"></span>
+                        Adresse : <span data-print="accstmnt_contact_visit"></span>
                     </li>
-                    <li class="contact-other p-note" data-if="accstmnt_contact_other" data-print="accstmnt_contact_other"></li>
+                    <li data-if="accstmnt_contact_other" data-print="accstmnt_contact_other"></li>
                 </ul>
                 <p data-if="accstmnt_contact_responsetime">
                     Nous essayons de répondre dans les <span data-print="accstmnt_contact_responsetime"></span>.
@@ -649,7 +641,7 @@
             <hr noshade="noshade"/>
 
             <p>
-                Cette déclaration d'accessibilité a été créé le <span class="basic-information statement-created-date" data-print="accstmt_date" data-printdefault="DATE"></span> grâce au <a href="https://betagouv.github.io/a11y-generateur-declaration/#create">Générateur de Déclaration d'Accessibilité de BetaGouv</a>.
+                Cette déclaration d'accessibilité a été créé le <span data-print="accstmt_date" data-printdefault="DATE"></span> grâce au <a href="https://betagouv.github.io/a11y-generateur-declaration/#create">Générateur de Déclaration d'Accessibilité de BetaGouv</a>.
             </p>
         </div>
 
