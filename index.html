@@ -107,12 +107,6 @@
                     </div>
 
                     <div class="field">
-                        <label for="accstmt_url">Adresse de votre site ou de votre application mobile</label>
-                        <em>(Exemple : « https://www.demarches-simplifiees.fr/ »)</em>
-                        <input type="url" id="accstmt_url"/>
-                    </div>
-
-                    <div class="field">
                         <label for="accstmt_namesite">Nom de votre site ou de votre application mobile</label>
                         <em>(Exemple : « Démarches Simplifiées »)</em>
                         <input type="text" id="accstmt_namesite"/>
@@ -242,6 +236,11 @@
                                 <label for="accstmnt_contact_email">E-mail</label>
                                 <em>(Exemple : « julien@beta.gouv.fr »)</em>
                                 <input type="email" id="accstmnt_contact_email"/>
+                            </div>
+                            <div class="field">
+                                <label for="accstmnt_contact_form">Formulaire de contact</label>
+                                <em>(Exemple : « https://acceslibre.beta.gouv.fr/contact »)</em>
+                                <input type="url" id="accstmnt_contact_form"/>
                             </div>
                             <div class="field">
                                 <label for="accstmnt_contact_visit">Adresse</label>
@@ -602,11 +601,10 @@
                 </div>
             </div>
 
-            <div data-if="accstmnt_contact_phone, accstmnt_contact_email, accstmnt_contact_visit, accstmnt_contact_write, accstmnt_contact_other">
+            <div data-if="accstmnt_contact_phone, accstmnt_contact_email, accstmnt_contact_form, accstmnt_contact_visit, accstmnt_contact_other">
                 <h2>Amélioration et contact</h2>
                 <p>Si vous n’arrivez pas à accéder à un contenu ou à un service, vous pouvez contacter le responsable de <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="ce service">ce service</span> pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme.</p>
 
-                <!-- TODO : formulaire en ligne -->
                 <ul class="basic-information feedback h-card">
                     <li data-if="accstmnt_contact_phone">
                         Téléphone :
@@ -615,6 +613,11 @@
                     <li data-if="accstmnt_contact_email">
                         E-mail :
                         <a class="email u-email" href="mailto:" data-print="accstmnt_contact_email"></a>
+                    </li>
+                    
+                    <li data-if="accstmnt_contact_form">
+                        Formulaire de contact :
+                        <a class="" data-print="accstmnt_contact_form"></a>
                     </li>
                     <li data-if="accstmnt_contact_visit">
                         Adresse :
