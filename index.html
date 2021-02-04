@@ -359,6 +359,39 @@
                     </div>
                 </fieldset>
 
+
+
+                <h3 class="label">Dérogations pour charge disproportionnée
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_derogation" data-target="#info_derogation" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
+                </h3>
+
+                <div class="information" id="info_derogation" hidden="hidden">
+                    <!-- <p>TODO expliquer la dérogation</p> -->
+                </div>
+
+                <fieldset class="group" id="form-derogation">
+                    <div class="field">
+                        <label for="accstmt_derogation">Dérogation pour charge disproportionnée :</label>
+                        <em>(Exemple : « Les vidéos n'ont pas d'audio description, sous-titres ou transcription textuelle. La cellule ayant en charge la mise en ligne de ces animations n'est pas en mesure actuellement de fournir ces éléments pour l'ensemble de ces vidéos. »)</em>
+                        <textarea id="accstmt_derogation"></textarea>
+                    </div>
+                </fieldset>
+
+
+                <h3 class="label">Contenus non soumis à l’obligation d’accessibilité
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_exempt" data-target="#info_exempt" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
+                </h3>
+                <div class="information" id="info_exempt" hidden="hidden">
+                    <p>Certaines sections ou contenus non accessibles n'entrent pas dans le champ d'application de la législation appliquable. Il n'y a donc pas d'obligations sur ces contenus. Il est toutefois utile d'indiquer aux utilisateurs les alternatives possibles.</p>
+                </div>
+                <fieldset class="group" id="form-exempt">
+                    <div class="field">
+                        <label for="accstmt_exempt">Contenus non soumis à l’obligation d’accessibilité :</label>
+                        <em>(Exemple : « Le système de cartographie Open Street map est un service externe non soumis à obligation. »)</em>
+                        <textarea id="accstmt_exempt"></textarea>
+                    </div>
+                </fieldset>
+
                 <h3 class="label">Compatibilité avec l'environnement de l'utilisateur
                     <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_asstech" data-target="#support_asstech" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
                 </h3>
@@ -512,7 +545,7 @@
             <div>
                 <h2>Contenus non accessibles</h2>
 
-                <p>Les contenus listés ci-dessous ne sont pas accessibles pour les raisons suivantes.</p>
+                <p data-if="accstmt_limitations">Les contenus listés ci-dessous ne sont pas accessibles pour les raisons suivantes.</p>
 
                 <div id="statement-limitations-block">
                     <h3>Non conformité</h3>
@@ -521,13 +554,15 @@
                     <ol id="statement-limitations" class="technical-information accessibility-limitations"></ol>
                 </div>
 
-                <h3>Dérogations pour charge disproportionnée</h3>
+                <div id="statement-derogations-block" data-if="accstmt_derogation">
+                    <h3>Dérogations pour charge disproportionnée</h3>
+                    <p data-if="accstmt_derogation" data-print="accstmt_derogation"></li>
+                </div>
 
-                <p>[TODO Lister la/le/les section(s)/contenu(s)/fonction(s) non accessible(s) pour laquelle/lequel/lesquels la dérogation pour charge disproportionnée est temporairement invoquée, indiquer les alternatives s’il y a lieu].</p>
-
-                <h3>Contenus non soumis à l’obligation d’accessibilité</h3>
-
-                <p>[TODO Lister la/le/les section(s)/contenu(s)/fonction(s) non accessible(s) qui n’entre(nt) pas dans le champ d’application de la législation applicable, indiquer les alternatives s’il y a lieu].</p>
+                <div id="statement-exempt-block" data-if="accstmt_exempt">
+                    <h3>Contenus non soumis à l’obligation d’accessibilité</h3>
+                    <p data-if="accstmt_exempt" data-print="accstmt_exempt"></li>
+                </div>
             </div>
 
 
