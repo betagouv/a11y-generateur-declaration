@@ -38,7 +38,7 @@ body {
   margin: 2em auto;
   padding: 2em 5em;
   border: 1px #D1D3DE;
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: "Marianne", Arial, sans-serif;
   color: #26353f;
   line-height: 1.5;
 	font-size: 16px;
@@ -74,9 +74,10 @@ textarea:focus {
 }
 
 h1, h2, h3, h4, header {
-  font-family: "Evolventa", "Trebuchet MS", sans-serif;	
+  font-family: "Marianne", sans-serif;	
   color: #0053b3;
 }
+h1 { color: black; }
 
 nav {
 	margin-top: 1em;
@@ -224,11 +225,8 @@ aside.warning {
     border-left: 8px solid #ff9947;
 }
 
-aside.box {
-	font-size: .8em;
-}
 aside.box header {
-	padding: 1em 0 0;
+	padding: 1em 0;
 	text-transform: uppercase;
 	letter-spacing: .1em;
 	font-size: 1em;
@@ -312,7 +310,6 @@ details h3 {
 	font-weight: normal;
 }
 .intro {
-	font-size: .825em;
 	color:  #53657d ;
 }
 
