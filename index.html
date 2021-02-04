@@ -82,12 +82,11 @@
 
     <form name="create_accessibility_statement_form">
         <details open>
-            <summary markdown="block">
+            <summary>
                 <h2 id="create-basic">Informations générales</h2>
                 <p class="intro">Cette section contient le minimum recommandé pour votre déclaration d'accessibilité. Cela comprend des informations sur votre organisation, les normes d'accessibilité que vous avez appliquées et vos coordonnées pour recevoir du feedback.</p>
             </summary>
-            <div markdown="block">
-
+            <div>
                 <div class="group">
                     <h3 class="label">À propos de votre déclaration
                         <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_about" data-target="#info_about" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
@@ -275,11 +274,12 @@
                 </div>
             </details>
 
-            <details ><summary markdown="block">
-                <h2 id="create-technical">Informations techniques</h2>
-                <p class="intro">Dans cette section, vous pouvez fournir des détails techniques supplémentaires pour aider les utilisateurs à comprendre les problèmes qu'ils peuvent observer. Il s'agit notamment d'informations sur la compatibilité avec les navigateurs web et les technologies d'assistance.</p>
-            </summary>
-            <div markdown="block">
+            <details >
+                <summary>
+                    <h2 id="create-technical">Informations techniques</h2>
+                    <span class="intro">Dans cette section, vous pouvez fournir des détails techniques supplémentaires pour aider les utilisateurs à comprendre les problèmes qu'ils peuvent observer. Il s'agit notamment d'informations sur la compatibilité avec les navigateurs web et les technologies d'assistance.</span>
+                </summary>
+            <div>
 
                 <h3 class="label">Contenus non accessibles
                     <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_limitations" data-target="#info_limitations" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
@@ -552,12 +552,12 @@
 
                 <div id="statement-derogations-block" data-if="accstmt_derogation">
                     <h3>Dérogations pour charge disproportionnée</h3>
-                    <p data-print="accstmt_derogation"></li>
+                    <p data-print="accstmt_derogation"></p>
                 </div>
 
                 <div id="statement-exempt-block" data-if="accstmt_exempt">
                     <h3>Contenus non soumis à l’obligation d’accessibilité</h3>
-                    <p data-print="accstmt_exempt"></li>
+                    <p data-print="accstmt_exempt"></p>
                 </div>
             </div>
 
@@ -640,7 +640,7 @@
                 </ul>
             </div>
 
-            <hr noshade="noshade"/>
+            <hr />
 
             <p>
                 Cette déclaration d'accessibilité a été créé le <span data-print="accstmt_date" data-printdefault="DATE"></span> grâce au <a href="https://betagouv.github.io/a11y-generateur-declaration/#create">Générateur de Déclaration d'Accessibilité de BetaGouv</a>.
