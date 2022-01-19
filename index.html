@@ -526,6 +526,7 @@
         <div id="statement_generated">
             <div id="statement_header">
                 <h1>Déclaration d'accessibilité</h1>
+                <p>Établie le <span data-print="accstmt_date" data-printdefault="DATE"></span>.</p>
                 <p><span data-print="accstmt_org" data-printdefault="Notre organisation"></span> s’engage à rendre son service accessible, conformément à l’article 47 de la loi n° 2005-102 du 11 février 2005.</p>
                 
                 <div data-if="accstmnt_audit_schema">
@@ -533,6 +534,7 @@
                 </div>
 
                 <p>Cette déclaration d’accessibilité s’applique à <span data-print="accstmt_namesite" data-printdefault="ce service"></span>.</p>
+
             </div>
 
             <div id="statement-conformance" data-if="accstmnt_conformance">
@@ -549,7 +551,7 @@
                 <p>L’audit de conformité réalisé <span data-print="accstmnt_approach"></span> révèle que <span data-print="accstmt_taux"></span> des critères sont respectés.</p>
             </div>
 
-            <div>
+            <div data-if="accstmt_taux">
                 <h2>Contenus non accessibles</h2>
 
                 <p data-if="accstmt_limitations">Les contenus listés ci-dessous ne sont pas accessibles pour les raisons suivantes.</p>
@@ -570,14 +572,10 @@
                     <h3>Contenus non soumis à l’obligation d’accessibilité</h3>
                     <p data-print="accstmt_exempt"></p>
                 </div>
-            </div>
-
-
-            <div>
-                <h2>Établissement de cette déclaration d'accessibilité</h2>
-                <p>Cette déclaration a été établie le <b><span data-print="accstmt_date" data-printdefault="DATE"></span></b>.</p>
 
                 <div id="statement-conftech" data-if="accstmnt_tech">
+                    <h2>Établissement de cette déclaration d'accessibilité</h2>
+                    <p>Cette déclaration a été établie le <span data-print="accstmt_date" data-printdefault="DATE"></span>.</p>
                     <h3>Technologies utilisées</h3>
 
                     <p>L'accessibilité de <span data-print="accstmt_namesite" data-printdefault="ce service"></span> s'appuie sur les technologies suivantes :</p>
