@@ -47,7 +47,7 @@
             <aside class="box">
                 <h2>Comment utiliser ce générateur ?</h2>
                 <div class="box-i">
-                    <p>La déclaration d'accessibilité est une <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/">obligation du Référentiel Général d'Amélioration de l'Accessibilité</a> (RGAA) concernant le service public.</p>    
+                    <p>La déclaration d'accessibilité est une <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/">obligation du Référentiel Général d'Amélioration de l'Accessibilité</a> (RGAA) concernant le service public.</p>
 
                     <p>Les informations fournies ci-dessous génèrent une <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/#contenu-de-la-d%C3%A9claration-daccessibilit%C3%A9">déclaration d'accessibilité conforme</a> que vous pouvez télécharger et affiner. Aucun des champs n'est obligatoire.</p>
 
@@ -124,35 +124,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="group">
-                    <h3 class="label">Norme de référence
-                        <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_standards" data-target="#info_standards" data-showtext="Afficher l'aide" data-hidetext="Cacher l'aide">Afficher l'aide</button>
-                    </h3>
-                    <div class="information" id="info_standards" hidden="hidden">
-                        <p>Quels standards avez vous appliqués ? Le RGAA est la norme française. Sa dernière version est le RGAA 4.1.</p>
-                        </div>
-
-                        <fieldset class="field" id="standard-applied">
-                            <legend class="label">Critères de référence :</legend>
-                            <div class="radio-field">
-                                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_rgaa40aa" value="RGAA 4.0"/>
-                                <label for="accstmnt_standard_rgaa40aa"><abbr title="référentiel général d'amélioration de l'accessibilité">RGAA</abbr> 4.0</label>
-                            </div>
-                            <div class="radio-field">
-                                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_rgaa40aa" checked="checked" value="RGAA 4.1"/>
-                                <label for="accstmnt_standard_rgaa40aa"><abbr title="référentiel général d'amélioration de l'accessibilité">RGAA</abbr> 4.1</label>
-                            </div>
-                            <div class="radio-field">
-                                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_other" value="another standard"/>
-                                <label for="accstmnt_standard_other">Autre</label>
-                                <input aria-label="Nom du standard" type="text" id="accstmnt_standard_other_name">
-                            </div>
-                        </fieldset>
-                    </div>
-
-
-
                     <div class="group">
                         <h3 class="label">État de conformité
                         </h3>
@@ -541,8 +512,7 @@
                 <h2>État de conformité</h2>
                 <p>
                     <span data-print="accstmt_namesite" data-printdefault="Notre site">Notre site</span> est 
-                    <b><span data-print="accstmnt_conformance" data-printfilter="lowercase"></span> avec le <span data-print="accstmnt_standard" data-if="accstmnt_standard_other_name" data-negate></span><span data-print="accstmnt_standard_other_name" data-if="accstmnt_standard_other_name"></span></b>.
-                    <span data-if="accstmnt_conformance_meaning"><span data-print="accstmnt_conformance_meaning"></span></span>
+                    <strong><span data-print="accstmnt_conformance" data-printfilter="lowercase"></span></strong> avec le <abbr title="Référentiel général d’amélioration de l’accessibilité">RGAA</abbr>.
                 </p>
             </div>
 
