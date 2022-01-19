@@ -106,6 +106,11 @@
                         <em>(Exemple : «&nbsp;Démarches Simplifiées&nbsp;»)</em>
                         <input type="text" id="accstmt_namesite"/>
                     </div>
+                    <div class="field">
+                        <label for="accstmt_urlsite">Adresse de votre site ou de votre application mobile</label>
+                        <em>(Exemple : « https://design.numerique.gouv.fr »)</em>
+                        <input type="url" id="accstmt_urlsite"/>
+                    </div>
                 </div>
 
                 <div class="group">
@@ -504,14 +509,14 @@
                     <p>À cette fin, nous mettons en œuvre la stratégie et les actions suivantes : <a href="" data-print="accstmnt_audit_schema">Schéma pluriannuel</a>.</p>
                 </div>
 
-                <p>Cette déclaration d’accessibilité s’applique à <span data-print="accstmt_namesite" data-printdefault="ce service"></span>.</p>
+                <p>Cette déclaration d’accessibilité s’applique à <strong data-print="accstmt_namesite" data-printdefault="ce service"></strong><span data-if="accstmt_urlsite"> (<span data-print="accstmt_urlsite"></span>)</span>.</p>
 
             </div>
 
             <div id="statement-conformance" data-if="accstmnt_conformance">
                 <h2>État de conformité</h2>
                 <p>
-                    <span data-print="accstmt_namesite" data-printdefault="Notre site">Notre site</span> est 
+                  <strong data-print="accstmt_namesite" data-printdefault="Notre site">Notre site</strong> est 
                     <strong><span data-print="accstmnt_conformance" data-printfilter="lowercase"></span></strong> avec le <abbr title="Référentiel général d’amélioration de l’accessibilité">RGAA</abbr>.
                 </p>
             </div>
