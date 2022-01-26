@@ -137,25 +137,25 @@
                             <div class="radio-field">
                                 <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonaudit" value="Non conforme" checked/>
                                 <label for="accstmnt_conformance_nonaudit">
-                                    <span class="status"><strong>Le site n’a encore pas été audité</strong></span>.
+                                    <span class="status meaning"><strong>Le site n’a encore pas été audité.</strong></span>
                                 </label>
                             </div>
                             <div class="radio-field">
-                                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" value="Non conforme" checked/>
+                                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" value="Non conforme"/>
                                 <label for="accstmnt_conformance_nonconformant">
-                                    <span class="status">Le résultat de l’audit donne un <strong>taux de conformité inférieur à 50 %</strong></span>.
+                                    <span class="status">Le résultat de l’audit donne un <strong>taux de conformité inférieur à 50 %</strong>.</span>
                                 </label>
                             </div>
                             <div class="radio-field">
                                 <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" value="Partiellement conforme" />
                                 <label for="accstmnt_conformance_partial">
-                                    <span class="status">Le résultat de l’audit donne un <strong>taux de conformité supérieur à 50 %</strong></span>.
+                                    <span class="status">Le résultat de l’audit donne un <strong>taux de conformité supérieur à 50 %</strong>.</span>
                                 </label>
                             </div>
                             <div class="radio-field">
                                 <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_full" value="Totalement conforme"/>
                                 <label for="accstmnt_conformance_full">
-                                    <span class="status">Le résultat de l’audit donne un <strong>taux de conformité égal à 100 %</strong></span>.
+                                    <span class="status">Le résultat de l’audit donne un <strong>taux de conformité égal à 100 %</strong>.</span>
                                 </label>
                             </div>
                             <input id="accstmnt_conformance_meaning" type="hidden" value="">
@@ -511,8 +511,8 @@
             <div id="statement-conformance" data-if="accstmnt_conformance">
                 <h2>État de conformité</h2>
                 <p>
-                  <strong data-print="accstmt_namesite" data-printdefault="Notre site">Notre site</strong> est 
-                    <strong><span data-print="accstmnt_conformance" data-printfilter="lowercase"></span></strong> avec le <abbr title="Référentiel général d’amélioration de l’accessibilité">RGAA</abbr>.
+                    <strong data-print="accstmt_namesite" data-printdefault="Notre site">Notre site</strong> est 
+                    <strong><span data-print="accstmnt_conformance" data-printfilter="lowercase"></span></strong> avec le <abbr title="Référentiel général d’amélioration de l’accessibilité">RGAA</abbr>. <span data-print="accstmnt_conformance_meaning"></span>
                 </p>
             </div>
 
