@@ -210,85 +210,90 @@
 
                         <div class="group fr-mt-8w">
                             <h3 class="label">Réalisation de l’audit
-                                <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_accstmnt_approach" data-target="#info_accstmnt_approach" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
+                                <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_accstmnt_approach" data-target="#info_accstmnt_approach" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
                             </h3>
                             <div class="information" id="info_accstmnt_approach" hidden="hidden">
                                 <p>Comment le site a-t-il été audité ? Cette information aide les utilisateurs à comprendre la qualité de cette déclaration d’accessibilité.</p>
                             </div>
 
-                            <fieldset id="accstmnt_assessment" class="field">
-                                <legend class="visuallyhidden">Réalisation de l’audit</legend>
-                                <ul class="nolist">
-                                    <li class="radio">
+                            <div class="fr-form-group">
+                            <fieldset id="accstmnt_assessment" class="fr-fieldset">
+                                <legend class="fr-fieldset__legend fr-text--regular visuallyhidden">Qui a réalisé l’audit ?</legend>
+                                <div class="fr-fieldset__content">
+                                    <div class="fr-radio-group">
                                         <input id="accstmnt_approach_1" name="accstmnt_approach" type="radio" value="en auto-évaluation"/>
-                                        <label for="accstmnt_approach_1">Auto-évaluation : le contenu a été évalué par votre organisation.</label>
-                                    </li>
-                                    <li class="radio">
+                                        <label for="accstmnt_approach_1" class="fr-label">Auto-évaluation 
+                                            <span class="fr-hint-text">Le sité a été évalué par votre organisation.</span></label>
+                                    </div>
+                                    <div class="fr-radio-group">
                                         <input id="accstmnt_approach_2" name="accstmnt_approach" type="radio" value="par évaluation externe"/>
-                                        <label for="accstmnt_approach_2">Évaluation externe : le contenu a été évalué par une entité externe n’ayant pas participé au processus de conception et de développement du service.</label>
+                                        <label for="accstmnt_approach_2" class="fr-label">Évaluation externe
+                                            <span class="fr-hint-text">Le contenu a été évalué par une entité externe n’ayant pas participé au processus de conception et de développement du service.</span></label>
                                         <!-- TODO : demander le nom de l’entreprise auditrice -->
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </fieldset>
+                            </div>
                         </div>
 
-                        <div class="group">
-                            <h3 class="label">Moyen de contact
-                                <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_feedback" data-target="#info_feedback" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
+                        <div class="group  fr-mt-8w">
+                            <h3 class="label">Moyens de contact
+                                <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_feedback" data-target="#info_feedback" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
                             </h3>
                             <div class="information" id="info_feedback" hidden="hidden">
                                 <p>De quelle manière les utilisateurs peuvent-ils contacter votre organisation lorsqu’ils rencontrent un obstacle à l’accessibilité ? Idéalement, vous devriez proposer plusieurs options. Indiquez également la durée après laquelle les utilisateurs peuvent s’attendre à une réponse de votre organisation.</p>
                             </div>
 
-                            <fieldset class="group" id="form-feedback">
-                                <legend class="visuallyhidden">Moyens de contact</legend>
-                                <div class="field">
-                                    <label for="accstmnt_contact_phone">Téléphone</label>
-                                    <em>(Exemple : « +33 34 567 89 00 »)</em>
-                                    <input type="tel" id="accstmnt_contact_phone"/>
+                            <fieldset class="fr-fieldset" id="form-feedback">
+                                <legend class="fr-fieldset__legend fr-text--regular visuallyhidden">Quels moyens de contacts sont proposés ?</legend>
+                                <div class="fr-fieldset__content">
+                                <div class="fr-radio-group">
+                                    <label for="accstmnt_contact_phone">Téléphone
+                                        <span class="fr-hint-text">Exemple : « +33 34 567 89 00 »</span></label>
+                                    <input type="tel" class="fr-input" id="accstmnt_contact_phone"/>
                                 </div>
-                                <div class="field">
-                                    <label for="accstmnt_contact_email">E-mail</label>
-                                    <em>(Exemple : « julien@beta.gouv.fr »)</em>
-                                    <input type="email" id="accstmnt_contact_email"/>
+                                <div class="fr-radio-group">
+                                    <label for="accstmnt_contact_email">E-mail
+                                        <span class="fr-hint-text">Exemple : « julien@beta.gouv.fr »</span></label>
+                                    <input type="email" class="fr-input"  id="accstmnt_contact_email"/>
                                 </div>
-                                <div class="field">
-                                    <label for="accstmnt_contact_form">Formulaire de contact</label>
-                                    <em>(Exemple : « https://acceslibre.beta.gouv.fr/contact »)</em>
-                                    <input type="url" id="accstmnt_contact_form"/>
+                                <div class="fr-radio-group">
+                                    <label for="accstmnt_contact_form">Formulaire de contact
+                                    <span class="fr-hint-text">Exemple : « https://acceslibre.beta.gouv.fr/contact »</span></label>
+                                    <input type="url" class="fr-input" id="accstmnt_contact_form"/>
                                 </div>
-                                <div class="field">
-                                    <label for="accstmnt_contact_visit">Adresse</label>
-                                    <em>(Exemple : « DINUM, Ségur, Paris »)</em>
-                                    <input type="text" id="accstmnt_contact_visit"/>
-                                </div>
-
-                                <div class="field">
-                                    <label for="accstmnt_contact_other">Autres moyens de contact</label>
-                                    <em>(Exemple : sur les réseaux sociaux ; Twitter : @MaSuperStartupDetat)</em>
-                                    <textarea id="accstmnt_contact_other"></textarea>
+                                <div class="fr-radio-group">
+                                    <label for="accstmnt_contact_visit">Adresse
+                                    <span class="fr-hint-text">Exemple : « DINUM, Ségur, Paris »</span></label>
+                                    <input type="text" class="fr-input"  id="accstmnt_contact_visit"/>
                                 </div>
 
-                                <div class="field">
-                                    <label for="accstmnt_contact_responsetime">Délai de réponse moyen</label>
-                                    <em>(Exemple : « 2 jours ouvrés »)</em>
-                                    <input type="text" id="accstmnt_contact_responsetime"/>
+                                <div class="fr-radio-group">
+                                    <label for="accstmnt_contact_other">Autres moyens de contact
+                                        <span class="fr-hint-text">Exemple : « Sur Twitter : @MaStartupDetat »</span></label>
+                                    <textarea class="fr-input" id="accstmnt_contact_other"></textarea>
                                 </div>
 
+                                <div class="fr-radio-group">
+                                    <label for="accstmnt_contact_responsetime">Délai de réponse moyen
+                                        <span class="fr-hint-text">Exemple : « 2 jours ouvrés »</span></label>
+                                    <input type="text" class="fr-input"  id="accstmnt_contact_responsetime"/>
+                                </div>
+                                </div>
                             </fieldset>
                         </div>
 
-                        <div class="group">
+                        <div class="group fr-mt-8w">
                             <h3 class="label">Date de publication
-                                <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_date" data-target="#info_date" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
+                                <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_date" data-target="#info_date" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
                             </h3>
                             <div class="information" id="info_date" hidden="hidden">
                                 <p>Fournir une date aide les utilisateurs à comprendre si la déclaration d’accessibilité est activement tenue à jour ou si elle est dépassée. Idéalement, la date d’une déclaration d’accessibilité ne devrait pas dépasser un an, sinon elle peut être considérée comme non tenue à jour. La mention du mois rend la date plus claire au niveau international (par exemple, "1er février 2019" au lieu de "01/02/2019", qui est ambigu).</p>
                             </div>
 
-                            <div class="field">
-                                <label for="accstmt_date">Date de publication de cette déclaration d’accessibilité</label>
-                                <input type="text" id="accstmt_date" class="today"/>
+                            <div class="fr-fieldset">
+                                <label for="accstmt_date" class="fr-label">Date de publication de cette déclaration d’accessibilité</label>
+                                <input type="text" id="accstmt_date" class="fr-input today"/>
                             </div>
                         </div>
                     </div>
