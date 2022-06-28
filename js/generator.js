@@ -471,6 +471,7 @@
       var list = statementPreview.querySelector('#statement-limitations');
       var html = '';
 
+      console.log("coucou");
       Array.prototype.forEach.call(limitations, function print(limitation) {
         var element = limitation.querySelector('input[name=element]').value;
         var description = limitation.querySelector('input[name=description]').value;
