@@ -15,7 +15,7 @@
     <link rel="manifest" href="favicon/manifest.webmanifest" crossorigin="use-credentials">
 </head>
 
-<body id="top" class="page-generate-an-accessibility-statement">
+<body>
 
 <div class="fr-skiplinks">
   <nav class="fr-container" role="navigation" aria-label="Accès rapide">
@@ -57,67 +57,61 @@
 </header>
 
   <main id="main" class="fr-container fr-py-6w" >
-    <div id="accstatement">
 
+    <div id="accstatement">
         <section class="page create" hidden="hidden">
             <aside class="box">
                 <h1>Générateur de déclaration d'accessibilité</h1>
                 <div class="fr-container fr-mb-6w">
                     <div class="fr-callout">
                         <p class="fr-callout__text">La déclaration d’accessibilité est une <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/">obligation du Référentiel Général d’Amélioration de l’Accessibilité</a> (RGAA) concernant le service public.</p>
-
-                    <p class="fr-callout__text">Ce générateur permet d'obtenir une <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/#contenu-de-la-d%C3%A9claration-daccessibilit%C3%A9">déclaration d’accessibilité conforme</a> que vous pouvez télécharger et affiner si besoin.</p>
+                        <p class="fr-callout__text">Ce générateur permet d'obtenir une <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/#contenu-de-la-d%C3%A9claration-daccessibilit%C3%A9">déclaration d’accessibilité conforme</a> que vous pouvez télécharger et affiner si besoin.</p>
+                    </div>
                 </div>
             </aside>
 
             <div class="fr-container fr-mb-8w">
                 <div class="fr-grid-row fr-grid-row--gutters">
                     <div class="fr-col-12 fr-col-md-4">
-                    <nav class="fr-sidemenu fr-sidemenu--sticky" aria-label="Menu latéral">
-                        <div class="fr-sidemenu__inner">
-                            <button class="fr-sidemenu__btn" hidden aria-controls="fr-sidemenu-wrapper" aria-expanded="false">Dans cette rubrique</button>
-                            <div class="fr-collapse" id="fr-sidemenu-wrapper">
-                                <ul class="fr-sidemenu__list">
-                                    <li class="fr-sidemenu__item fr-sidemenu__item--active">
-                                        <a class="fr-sidemenu__link" href="#create-basic" target="_self" aria-current="page">Information générales</a>
-                                    </li>
-                                    <li class="fr-sidemenu__item">
-                                        <a class="fr-sidemenu__link" href="#create-technical" target="_self">Informations techniques</a>
-                                    </li>
-                                </ul>
+                        <nav class="fr-sidemenu fr-sidemenu--sticky" aria-label="Menu latéral">
+                            <div class="fr-sidemenu__inner">
+                                <button class="fr-sidemenu__btn" hidden aria-controls="fr-sidemenu-wrapper" aria-expanded="false">Dans cette rubrique</button>
+                                <div class="fr-collapse" id="fr-sidemenu-wrapper">
+                                    <ul class="fr-sidemenu__list">
+                                        <li class="fr-sidemenu__item fr-sidemenu__item--ative">
+                                            <a class="fr-sidemenu__link" href="#create-basic" target="_self" aria-current="page">Information générales</a>
+                                        </li>
+                                        <li class="fr-sidemenu__item">
+                                            <a class="fr-sidemenu__link" href="#create-technical" target="_self">Informations techniques</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                    </nav>
+                        </nav>
                     </div>
 
+                    <!-- TODO réparer l'affichage de l'aide avec un Toggle
+                        <button type="button" class="showhidebutton button-small" aria-expanded="false" data-target=".information" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
+                    -->
+
                     <div class="fr-grid-row fr-col-12 fr-col-md-8">
-                        
-            <!-- TODO réparer 
-                <div style="display: flex; align-items: center;">
-                <div class="excol-all">
-                </div>
-                <div style="text-align: right; flex:1">
-                    <button type="button" class="showhidebutton button-small" aria-expanded="false" data-target=".information" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
-                </div>
-            </div> -->
-
-
             <form name="create_accessibility_statement_form">
-                <section open>
-                    <summary>
-                        <h2 id="create-basic">Informations générales</h2>
-                        <p class="intro">Ce sont les <b>informations minimales pour votre déclaration d’accessibilité</b>.</p>
-                    </summary>
-                    <div>
-                        <div class="group">
-                            <h3 class="label">À propos de votre déclaration</h3>
-<!--                                 TODO réparer
-                                <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_about" data-target="#info_about" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
-                            
+                <section id="create-basic">
+                    <h2>Informations générales</h2>
+
+                    <div class="fr-callout">
+                        <p class="fr-callout__text">
+                            Ce sont les <b>informations minimales</b> pour votre <b>déclaration d’accessibilité</b>.
+                        </p>
+                    </div>
+
+                        <div class="fr-mt-8w">
+                            <h3>À propos de votre déclaration</h3>
+                            <!--
                             <div class="information" id="info_about" hidden="hidden">
                                 <p>Vous pouvez renseigner le nom de votre organisation, l’adresse web et le nom de votre site ou application. Pour les applications mobiles, inclure le numéro de version et la date de sortie permettant d’identifier une version spécifique.</p>
                             </div>
- -->
+                            -->
                             <div class="fr-input-group">
                                 <label for="accstmt_org" class="fr-label">Nom du ministère ou de l’opérateur qui pilote la startup d’État
                                     <span class="fr-hint-text">Exemple : « Le ministère de l’Écologie »</span></label>
@@ -136,27 +130,26 @@
                             </div>
                         </div>
 
-                        <div class="group fr-mt-8w">
-                            <h3 class="label">Documents associés
-                                <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_related" data-target="#support_related" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
-                            </h3>
+                        <div class="fr-mt-8w">
+                            <h3>Documents associés</h3>
+                            <!-- 
                             <div class="information" id="support_related" hidden="hidden">
                                 <p>Le <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/#sch%C3%A9ma-pluriannuel-de-mise-en-accessibilit%C3%A9">schéma pluriannuel</a> est un document qui contient les efforts menés et à mener en accessibilité : le plan d’action de l’année en cours, le bilan des actions réalisées l’année précédente...</p>
-                            </div>
+                            </div> -->
 
                             <div class="fr-input-group">
-                                <label for="accstmnt_audit_schema" class="fr-label">Lien vers le schéma pluriannuel de mise en accessibilité de votre entité
+                                <label for="accstmnt_audit_schema" class="fr-label">Lien du schéma pluriannuel de mise en accessibilité de votre entité
                                 <span class="fr-hint-text">Exemple : « https://gouvernement.fr/schema-pluriannuel »</span></label>
                                 <input type="url" class="fr-input" id="accstmnt_audit_schema" />
                             </div>
                         </div>
 
-                        <div class="group fr-mt-8w">
-                            <h3 class="label">État de conformité</h3>
+                        <div class="fr-mt-8w">
+                            <h3>État de conformité</h3>
 
                             <div class="fr-form-group">
                             <fieldset class="fr-fieldset" id="conformance-status">
-                                <legend class="fr-fieldset__legend fr-text--regular visuallyhidden">État de conformité du site</legend>
+                                <legend class="fr-fieldset__legend fr-text--regular visuallyhidden">Quel est l'état de conformité du site ?</legend>
                                 <div class="fr-fieldset__content">
                                 <div class="fr-radio-group">
                                     <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonaudit" value="Non conforme" checked/>
@@ -193,16 +186,13 @@
                                     <span class="fr-hint-text">Exemple : « 78 % »</span></label>
                                 <input type="number" min="0" max="100" id="accstmt_taux" class="fr-input" />
                             </div>
-
                         </div>
 
-                        <div class="group fr-mt-8w">
-                            <h3 class="label">Réalisation de l’audit
-                                <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_accstmnt_approach" data-target="#info_accstmnt_approach" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
-                            </h3>
-                            <div class="information" id="info_accstmnt_approach" hidden="hidden">
+                        <div class="fr-mt-8w">
+                            <h3>Réalisation de l’audit</h3>
+                            <!-- <div class="information" id="info_accstmnt_approach" hidden="hidden">
                                 <p>Comment le site a-t-il été audité ? Cette information aide les utilisateurs à comprendre la qualité de cette déclaration d’accessibilité.</p>
-                            </div>
+                            </div> -->
 
                             <div class="fr-form-group">
                             <fieldset id="accstmnt_assessment" class="fr-fieldset">
@@ -216,7 +206,7 @@
                                     <div class="fr-radio-group">
                                         <input id="accstmnt_approach_2" name="accstmnt_approach" type="radio" value="par évaluation externe"/>
                                         <label for="accstmnt_approach_2" class="fr-label">Évaluation externe
-                                            <span class="fr-hint-text">Le contenu a été évalué par une entité externe n’ayant pas participé au processus de conception et de développement du service.</span></label>
+                                            <span class="fr-hint-text">Le contenu a été évalué par une entité externe. Elle n'a pas participé au processus de conception et de développement du service.</span></label>
                                         <!-- TODO : demander le nom de l’entreprise auditrice -->
                                     </div>
                                 </div>
@@ -224,45 +214,45 @@
                             </div>
                         </div>
 
-                        <div class="group  fr-mt-8w">
-                            <h3 class="label">Moyens de contact
-                                <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_feedback" data-target="#info_feedback" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
-                            </h3>
+                        <div class="fr-mt-8w">
+                            <h3>Moyens de contact</h3>
+                            <!-- 
                             <div class="information" id="info_feedback" hidden="hidden">
                                 <p>De quelle manière les utilisateurs peuvent-ils contacter votre organisation lorsqu’ils rencontrent un obstacle à l’accessibilité ? Idéalement, vous devriez proposer plusieurs options. Indiquez également la durée après laquelle les utilisateurs peuvent s’attendre à une réponse de votre organisation.</p>
                             </div>
+                            -->
 
                             <fieldset class="fr-fieldset" id="form-feedback">
                                 <legend class="fr-fieldset__legend fr-text--regular visuallyhidden">Quels moyens de contacts sont proposés ?</legend>
                                 <div class="fr-fieldset__content">
-                                <div class="fr-radio-group">
+                                <div class="fr-input-group">
                                     <label for="accstmnt_contact_phone">Téléphone
-                                        <span class="fr-hint-text">Exemple : « +33 34 567 89 00 »</span></label>
+                                        <span class="fr-hint-text">Exemple : « +33 34 56 78 90 »</span></label>
                                     <input type="tel" class="fr-input" id="accstmnt_contact_phone"/>
                                 </div>
-                                <div class="fr-radio-group">
+                                <div class="fr-input-group">
                                     <label for="accstmnt_contact_email">E-mail
                                         <span class="fr-hint-text">Exemple : « julien@beta.gouv.fr »</span></label>
                                     <input type="email" class="fr-input"  id="accstmnt_contact_email"/>
                                 </div>
-                                <div class="fr-radio-group">
+                                <div class="fr-input-group">
                                     <label for="accstmnt_contact_form">Formulaire de contact
                                     <span class="fr-hint-text">Exemple : « https://acceslibre.beta.gouv.fr/contact »</span></label>
                                     <input type="url" class="fr-input" id="accstmnt_contact_form"/>
                                 </div>
-                                <div class="fr-radio-group">
+                                <div class="fr-input-group">
                                     <label for="accstmnt_contact_visit">Adresse
                                     <span class="fr-hint-text">Exemple : « DINUM, Ségur, Paris »</span></label>
                                     <input type="text" class="fr-input"  id="accstmnt_contact_visit"/>
                                 </div>
 
-                                <div class="fr-radio-group">
+                                <div class="fr-input-group">
                                     <label for="accstmnt_contact_other">Autres moyens de contact
                                         <span class="fr-hint-text">Exemple : « Sur Twitter : @MaStartupDetat »</span></label>
                                     <textarea class="fr-input" id="accstmnt_contact_other"></textarea>
                                 </div>
 
-                                <div class="fr-radio-group">
+                                <div class="fr-input-group">
                                     <label for="accstmnt_contact_responsetime">Délai de réponse moyen
                                         <span class="fr-hint-text">Exemple : « 2 jours ouvrés »</span></label>
                                     <input type="text" class="fr-input"  id="accstmnt_contact_responsetime"/>
@@ -271,25 +261,23 @@
                             </fieldset>
                         </div>
 
-                        <div class="group fr-mt-8w">
-                            <h3 class="label">Date de publication
-                                <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_date" data-target="#info_date" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
-                            </h3>
+                        <div class="fr-mt-8w">
+                            <h3>Date de publication</h3>
+                            <!-- 
                             <div class="information" id="info_date" hidden="hidden">
                                 <p>Fournir une date aide les utilisateurs à comprendre si la déclaration d’accessibilité est activement tenue à jour ou si elle est dépassée. Idéalement, la date d’une déclaration d’accessibilité ne devrait pas dépasser un an, sinon elle peut être considérée comme non tenue à jour. La mention du mois rend la date plus claire au niveau international (par exemple, "1er février 2019" au lieu de "01/02/2019", qui est ambigu).</p>
-                            </div>
+                            </div>-->
 
                             <div class="fr-fieldset">
                                 <label for="accstmt_date" class="fr-label">Date de publication de cette déclaration d’accessibilité</label>
                                 <input type="text" id="accstmt_date" class="fr-input today"/>
                             </div>
                         </div>
-                    </div>
                 </section>
 
-                <section class="fr-mt-8w">
+                <section id="create-technical" class="fr-mt-8w">
                     <summary>
-                        <h2 id="create-technical">Informations techniques</h2>
+                        <h2>Informations techniques</h2>
                         <span class="intro">Cette section permet de fournir des détails techniques <b>pour aider les utilisateurs à comprendre les problèmes qu’ils peuvent observer</b> : par exemple, la compatibilité avec les navigateurs web et les technologies d’assistance.</span>
                     </summary>
 
