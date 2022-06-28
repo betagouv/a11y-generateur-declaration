@@ -24,7 +24,7 @@
           // document.body.appendChild(element);
       }
 
-      window.addEventListener("load", downloadJSAtOnload, false);
+      // window.addEventListener("load", downloadJSAtOnload, false);
   </script>
 </head>
 
@@ -116,21 +116,21 @@
 
 
             <form name="create_accessibility_statement_form">
-                <details open>
+                <section open>
                     <summary>
                         <h2 id="create-basic">Informations générales</h2>
                         <p class="intro">Ce sont les <b>informations minimales pour votre déclaration d’accessibilité</b>.</p>
                     </summary>
                     <div>
                         <div class="group">
-                            <h3 class="label">À propos de votre déclaration
+                            <h3 class="label">À propos de votre déclaration</h3>
 <!--                                 TODO réparer
                                 <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_about" data-target="#info_about" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
- -->                            </h3>
+                            
                             <div class="information" id="info_about" hidden="hidden">
                                 <p>Vous pouvez renseigner le nom de votre organisation, l’adresse web et le nom de votre site ou application. Pour les applications mobiles, inclure le numéro de version et la date de sortie permettant d’identifier une version spécifique.</p>
                             </div>
-
+ -->
                             <div class="fr-input-group">
                                 <label for="accstmt_org" class="fr-label">Nom du ministère ou de l’opérateur qui pilote la startup d’État
                                     <span class="fr-hint-text">Exemple : « Le ministère de l’Écologie »</span></label>
@@ -298,17 +298,18 @@
                             </div>
                         </div>
                     </div>
-                </details>
+                </section>
 
-                <details >
+                <section class="fr-mt-8w">
                     <summary>
                         <h2 id="create-technical">Informations techniques</h2>
-                        <span class="intro">Dans cette section, vous pouvez fournir des détails techniques supplémentaires pour aider les utilisateurs à comprendre les problèmes qu’ils peuvent observer. Il s’agit notamment d’informations sur la compatibilité avec les navigateurs web et les technologies d’assistance.</span>
+                        <span class="intro">Cette section permet de fournir des détails techniques <b>pour aider les utilisateurs à comprendre les problèmes qu’ils peuvent observer</b> : par exemple, la compatibilité avec les navigateurs web et les technologies d’assistance.</span>
                     </summary>
-                    <div>
+
+                    <div class="fr-mt-8w">
 
                         <h3 class="label">Contenus non accessibles
-                            <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_limitations" data-target="#info_limitations" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
+                            <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_limitations" data-target="#info_limitations" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
                         </h3>
                         <div class="information" id="info_limitations" hidden="hidden">
                             <p>Il existe de nombreuses situations dans lesquelles l’accessibilité peut être limitée. Par exemple, vous pouvez ne pas être en mesure d’assurer l’accessibilité instantanée du contenu généré par l’utilisateur. La transparence dans de telles situations aide les utilisateurs à comprendre tout problème qu’ils peuvent observer et à trouver des solutions de rechange le cas échéant. Selon la loi, les organismes publics (et dont les startups d’états) sont tenus de fournir des informations sur les parties du contenu qui ne sont pas conformes, la raison de cette non-conformité et, le cas échéant, où trouver des alternatives accessibles.</p>
@@ -403,7 +404,7 @@
 
 
                         <h3 class="label">Contenus non soumis à l’obligation d’accessibilité
-                            <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_exempt" data-target="#info_exempt" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
+                            <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_exempt" data-target="#info_exempt" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
                         </h3>
                         <div class="information" id="info_exempt" hidden="hidden">
                             <p>Certaines sections ou contenus non accessibles n’entrent pas dans le champ d’application de la législation appliquable. Il n’y a donc pas d’obligations sur ces contenus. Il est toutefois utile d’indiquer aux utilisateurs les alternatives possibles.</p>
@@ -417,7 +418,7 @@
                         </fieldset>
 
                         <h3 class="label">Compatibilité avec l’environnement de l’utilisateur
-                            <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_asstech" data-target="#support_asstech" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
+                            <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_asstech" data-target="#support_asstech" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
                         </h3>
                         <div class="information" id="support_asstech" hidden="hidden">
                             <p>Malgré tous les efforts déployés, l’accessibilité peut ne pas fonctionner correctement dans toutes les combinaisons de système d’exploitation, de navigateur web et de technologie d’assistance. Communiquer sur les environnements testés aide l’utilisateur à déterminer si les outils utilisés pourraient être la cause d’un problème observé.</p>
@@ -443,7 +444,7 @@
                         </fieldset>
 
                         <h3 class="label">Incompatibilités connues
-                            <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_incompatible" data-target="#support_incompatible" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
+                            <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_incompatible" data-target="#support_incompatible" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
                         </h3>
                         <div class="information" id="support_incompatible" hidden="hidden">
                             <p>Aidez les utilisateurs à comprendre quelles versions de systèmes d’exploitation, de navigateurs web et de technologies d’assistance ne sont pas (ou plus) prises en charge. Cela les aide à déterminer s’ils peuvent utiliser votre site web ou votre application mobile avec leur environnement actuel.</p>
