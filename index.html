@@ -157,55 +157,58 @@
                             </div>
 
                             <div class="fr-input-group">
-                                <div class="field line">
-                                    <label for="accstmnt_audit_schema" class="fr-label">Lien vers le schéma pluriannuel de mise en accessibilité de votre entité
-                                    <span class="fr-hint-text">Exemple : « https://gouvernement.fr/schema-pluriannuel »</span></label>
-                                    <input type="url" class="fr-input" id="accstmnt_audit_schema" />
-                                </div>
+                                <label for="accstmnt_audit_schema" class="fr-label">Lien vers le schéma pluriannuel de mise en accessibilité de votre entité
+                                <span class="fr-hint-text">Exemple : « https://gouvernement.fr/schema-pluriannuel »</span></label>
+                                <input type="url" class="fr-input" id="accstmnt_audit_schema" />
                             </div>
                         </div>
-                        <div class="fr-input-group">
-                            <h3 class="label">État de conformité
-                            </h3>
-                            <fieldset class="field" id="conformance-status">
-                                <legend class="visuallyhidden">État de conformité</legend>
-                                <div class="radio-field">
+
+                        <div class="group fr-mt-8w">
+                            <h3 class="label">État de conformité</h3>
+
+                            <div class="fr-form-group">
+                            <fieldset class="fr-fieldset" id="conformance-status">
+                                <legend class="fr-fieldset__legend fr-text--regular visuallyhidden">État de conformité du site</legend>
+                                <div class="fr-fieldset__content">
+                                <div class="fr-radio-group">
                                     <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonaudit" value="Non conforme" checked/>
-                                    <label for="accstmnt_conformance_nonaudit">
-                                        <span class="status meaning"><strong>Le site n’a encore pas été audité.</strong></span>
+                                    <label for="accstmnt_conformance_nonaudit" class="fr-label">
+                                        <span class="status meaning"><strong>Le site n’a encore pas été audité.</strong>
+                                        </span>
                                     </label>
                                 </div>
-                                <div class="radio-field">
+                                <div class="fr-radio-group">
                                     <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" value="Non conforme"/>
-                                    <label for="accstmnt_conformance_nonconformant">
+                                    <label for="accstmnt_conformance_nonconformant" class="fr-label">
                                         <span class="status">Le résultat de l’audit donne un <strong>taux de conformité inférieur à 50 %</strong>.</span>
                                     </label>
                                 </div>
-                                <div class="radio-field">
+                                <div class="fr-radio-group">
                                     <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" value="Partiellement conforme" />
-                                    <label for="accstmnt_conformance_partial">
+                                    <label for="accstmnt_conformance_partial" class="fr-label">
                                         <span class="status">Le résultat de l’audit donne un <strong>taux de conformité supérieur à 50 %</strong>.</span>
                                     </label>
                                 </div>
-                                <div class="radio-field">
+                                <div class="fr-radio-group">
                                     <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_full" value="Totalement conforme"/>
-                                    <label for="accstmnt_conformance_full">
+                                    <label for="accstmnt_conformance_full" class="fr-label">
                                         <span class="status">Le résultat de l’audit donne un <strong>taux de conformité égal à 100 %</strong>.</span>
                                     </label>
                                 </div>
                                 <input id="accstmnt_conformance_meaning" type="hidden" value="">
+                                </div>
                             </fieldset>
-
+                            </div>
 
                             <div class="fr-input-group">
-                                <label for="accstmt_taux">Pourcentage de critères RGAA respectés</label>
-                                <em>(Exemple : « 78 % »)</em>
-                                <input type="number" min="0" max="100" id="accstmt_taux"/>
+                                <label for="accstmt_taux" class="fr-label">Pourcentage de critères RGAA respectés
+                                    <span class="fr-hint-text">Exemple : « 78 % »</span></label>
+                                <input type="number" min="0" max="100" id="accstmt_taux" class="fr-input" />
                             </div>
 
                         </div>
 
-                        <div class="fr-input-group">
+                        <div class="group fr-mt-8w">
                             <h3 class="label">Réalisation de l’audit
                                 <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_accstmnt_approach" data-target="#info_accstmnt_approach" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
                             </h3>
