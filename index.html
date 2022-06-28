@@ -1,35 +1,27 @@
 <!DOCTYPE html>
-<html class="no-js" lang="fr">
+<html lang="fr" data-fr-scheme="system" class="no-js">
 <head>
-    <!--
-    source: https://github.com/w3c/wai-statements/edit/master/generator.html
-    project: WAI-Tools 
-    I changed the source code accordingly to make this standalone page. I did:
-    HTML: planning/statements/generator/index.html -> index.html
-    CSS: content-images/wai-statements/generator.css -> css/generator.css
-    JS: content-images/wai-statements/generator.js -> js/generator.js note: is near the bottom of the body
-    WAI Theme Assets: assets/css/style.css -> assets-wai/style.css
-                      assets/scripts/main.js -> assets-wai/main.js note: this file is referenced in the script below
-    delete all <head> elements related w/ WAI Theme
-    -->
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000091"><!-- Défini la couleur de thème du navigateur (Safari/Android) -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Générateur de déclaration d’accessibilité</title>
-    <link rel="stylesheet" href="css/dse-fr.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/dsfr.min.css">
+    <!-- <link rel="stylesheet" href="css/custom.css"> -->
 
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon"><!-- 32×32 -->
+    <link rel="manifest" href="favicon/manifest.webmanifest" crossorigin="use-credentials">
 
-    <!-- contains the 'assets-wai/main.js' -->
+
     <script>
         document.documentElement.className = document.documentElement.className.replace('no-js', 'has-js');
 
         function downloadJSAtOnload() {
           var element = document.createElement("script");
-          element.src = "assets-wai/main.js";
-          document.body.appendChild(element);
+          // element.src = "js/wai.js";
+          // document.body.appendChild(element);
       }
 
       window.addEventListener("load", downloadJSAtOnload, false);
