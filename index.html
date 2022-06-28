@@ -517,20 +517,15 @@
                             </fieldset>
 
                         </div>
-                    </details>
+                    </section>
 
-                    <aside class="box actions"><div class="box-i">
-
-
-                        <div class="statement-actions">
-                            <a class="button primary" href="#preview" data-action="statement_preview">
-                                Prévisualiser votre déclaration d’accessibilité
-                            </a>
-                        </div>
-
-
+                    
+                    <div class="statement-actions">                        
+                        <a class="fr-btn" href="#preview" data-action="statement_preview">
+                            Prévisualiser votre déclaration d’accessibilité
+                        </a>
                     </div>
-                </aside>
+
 
             </form>
 
@@ -542,9 +537,7 @@
 
         <section class="page preview" hidden="hidden">
 
-            <h2>Prévisualisation de votre déclaration d’accessibilité</h2>
-
-            <aside class="box box-example"><div class="box-i">
+            <h1>Prévisualisation de votre déclaration d’accessibilité</h1>
 
                 <div id="statement_generated">
                     <div id="statement_header">
@@ -676,21 +669,27 @@
                     </p>
                 </div>
 
+                <ul class="statement-actions fr-btns-group fr-btns-group--inline">
+                    <li>
+                        <button class="fr-btn" type="button" data-action="preview_save_as_html">
+                            Télécharger au format HTML
+                        </button>
+                    </li>
+                    <li>
+                        <a class="fr-btn fr-btn--secondary" href="#create">Modifier la déclaration</a>
+                    </li>
+                </ul>
 
-            </div>
-        </aside>
+                <!-- TODO guider l'utilisateur sur quoi en faire -->
+        </section>
+
+        <div class="fr-mt-8w">
+            <h2>À propos de la démarche</h2>
+            <p><a href="https://voxusagers.numerique.gouv.fr/Demarches/3378?&view-mode=formulaire-avis&nd_mode=en-ligne-enti%C3%A8rement&nd_source=button&key=4b006cb7dbf748e5d4b38cde532722e0">
+          <img src="https://voxusagers.numerique.gouv.fr/static/bouton-bleu.svg" alt="Je donne mon avis" /></a></p>
+      </div>
 
 
-        <div class="button-group statement-actions">
-            <button type="button" class="primary" data-action="preview_save_as_html">Télécharger en tant que page HTML</button>
-            <!-- <button type="button" class="primary" data-action="copy_clipboard">Copier la déclaration dans le presse papier</button> -->
-        </div>
-        <div class="button-group statement-actions">
-            <a class="button" href="#create">Modifier la déclaration</a>
-
-            <!-- TODO guide sur quoi en faire -->
-        </div>
-    </section>
 </div>
 
 <!-- generator standalone js -->
@@ -699,11 +698,6 @@
 <script type="module" src="js/dsfr.module.min.js"></script>
 <script type="text/javascript" nomodule src="js/dsfr.nomodule.min.js"></script>
 
-<a class="button button-backtotop" href="#top"><span>↑ Retourner en haut</span></a>
-
-<p><a href="https://voxusagers.numerique.gouv.fr/Demarches/3378?&view-mode=formulaire-avis&nd_mode=en-ligne-enti%C3%A8rement&nd_source=button&key=4b006cb7dbf748e5d4b38cde532722e0">
-      <img src="https://voxusagers.numerique.gouv.fr/static/bouton-bleu.svg" alt="Je donne mon avis" />
-  </a></p>
 
 </main>
 
