@@ -524,65 +524,59 @@
                         <p>L’audit de conformité réalisé <span data-print="accstmnt_approach"></span> révèle que <span data-print="accstmt_taux"></span>% des critères sont respectés.</p>
                     </div>
 
-                    <!-- TODO informations techniques : 
-                        - contenus non accessibles
-                        - 
-                     -->
-                     
-                    <div data-if="accstmt_taux">
-                        <h2>Contenus non accessibles</h2>
+                    <h2>Contenus non accessibles</h2>
 
-                        <p data-if="accstmt_limitations">Les contenus listés ci-dessous ne sont pas accessibles pour les raisons suivantes.</p>
+                    <div id="statement-limitations-block" data-if="accstmt_limitations">
+                        <p>Les contenus listés ci-dessous ne sont pas accessibles pour les raisons suivantes.</p>
 
-                        <div id="statement-limitations-block">
+                        <div>
                             <h3>Non conformité</h3>
                             <p>Malgré nos efforts, certains contenus sont inaccessibles. Vous trouverez ci-dessous une liste des limitations connues et des solutions potentielles :</p>
 
                             <ol id="statement-limitations" class="technical-information accessibility-limitations"></ol>
                         </div>
+                    </div>
 
-                        <div id="statement-derogations-block" data-if="accstmt_derogation">
-                            <h3>Dérogations pour charge disproportionnée</h3>
-                            <p data-print="accstmt_derogation"></p>
+                    <div id="statement-derogations-block" data-if="accstmt_derogation">
+                        <h3>Dérogations pour charge disproportionnée</h3>
+                        <p data-print="accstmt_derogation"></p>
+                    </div>
+
+                    <div id="statement-exempt-block" data-if="accstmt_exempt">
+                        <h3>Contenus non soumis à l’obligation d’accessibilité</h3>
+                        <p data-print="accstmt_exempt"></p>
+                    </div>
+
+                    <div id="statement-conftech" data-if="accstmnt_tech">
+                        <h2>Établissement de cette déclaration d’accessibilité</h2>
+                        <p>Cette déclaration a été établie le <span data-print="accstmt_date" data-printdefault="DATE"></span>.</p>
+                        <h3>Technologies utilisées</h3>
+
+                        <p>L’accessibilité de <span data-print="accstmt_namesite" data-printdefault="ce service"></span> s’appuie sur les technologies suivantes :</p>
+
+                        <ul id="statement-tech" class="technical-information technologies-used" data-print="accstmnt_tech"></ul>
+                    </div>
+
+                    <div id="statement-asstech" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
+                        <h3>Agents utilisateurs, technologies d’assistance et outils utilisés pour vérifier l’accessibilité</h3>
+                        <div id="statement-asstech-compatible-block">
+                            <p>Les tests des pages web ont été effectués avec les combinaisons de navigateurs web et lecteurs d’écran suivants :</p>
+                            <ul id="statement-asstech-compatible" data-print="accstmnt_asstech_compatible" data-printdefault="COMPATIBLE_LIST"></ul>
                         </div>
 
-                        <div id="statement-exempt-block" data-if="accstmt_exempt">
-                            <h3>Contenus non soumis à l’obligation d’accessibilité</h3>
-                            <p data-print="accstmt_exempt"></p>
+                        <div id="statement-asstech-incompatible-block" data-if="accstmnt_asstech_incompatible">
+                            <p><span data-print="accstmt_namesite" data-printdefault="ce service"></span>
+                            n’est pas compatible avec :</p>
+                            <ul id="statement-asstech-incompatible" data-print="accstmnt_asstech_incompatible"></ul>
                         </div>
-
-                        <div id="statement-conftech" data-if="accstmnt_tech">
-                            <h2>Établissement de cette déclaration d’accessibilité</h2>
-                            <p>Cette déclaration a été établie le <span data-print="accstmt_date" data-printdefault="DATE"></span>.</p>
-                            <h3>Technologies utilisées</h3>
-
-                            <p>L’accessibilité de <span data-print="accstmt_namesite" data-printdefault="ce service"></span> s’appuie sur les technologies suivantes :</p>
-
-                            <ul id="statement-tech" class="technical-information technologies-used" data-print="accstmnt_tech"></ul>
-                        </div>
-
-                        <div id="statement-asstech" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
-                            <h3>Agents utilisateurs, technologies d’assistance et outils utilisés pour vérifier l’accessibilité</h3>
-                            <div id="statement-asstech-compatible-block">
-                                <p>Les tests des pages web ont été effectués avec les combinaisons de navigateurs web et lecteurs d’écran suivants :</p>
-                                <ul id="statement-asstech-compatible" data-print="accstmnt_asstech_compatible" data-printdefault="COMPATIBLE_LIST"></ul>
-                            </div>
-
-                            <div id="statement-asstech-incompatible-block" data-if="accstmnt_asstech_incompatible">
-                                <p><span data-print="accstmt_namesite" data-printdefault="ce service"></span>
-                                n’est pas compatible avec :</p>
-                                <ul id="statement-asstech-incompatible" data-print="accstmnt_asstech_incompatible"></ul>
-                            </div>
-                        </div>
+                    </div>
 
 
+                    <div data-if="accstmnt_tested_pages">
+                        <h3>Pages auditées</h3>
 
-                        <div data-if="accstmnt_tested_pages">
-                            <h3>Pages auditées</h3>
-
-                            <p>Les pages suivantes ont fait l’objet de la vérification de confirmité :</p>
-                            <ul data-print="accstmnt_tested_pages"></ul>
-                        </div>
+                        <p>Les pages suivantes ont fait l’objet de la vérification de confirmité :</p>
+                        <ul data-print="accstmnt_tested_pages"></ul>
                     </div>
 
                     <div data-if="accstmnt_contact_phone, accstmnt_contact_email, accstmnt_contact_form, accstmnt_contact_visit, accstmnt_contact_other">
