@@ -226,34 +226,34 @@
                                 <legend class="fr-fieldset__legend fr-text--regular visuallyhidden">Quels moyens de contacts sont proposés ?</legend>
                                 <div class="fr-fieldset__content">
                                 <div class="fr-input-group">
-                                    <label for="accstmnt_contact_phone">Téléphone
+                                    <label for="accstmnt_contact_phone" class="fr-label">Téléphone
                                         <span class="fr-hint-text">Exemple : « +33 34 56 78 90 »</span></label>
                                     <input type="tel" class="fr-input" id="accstmnt_contact_phone"/>
                                 </div>
                                 <div class="fr-input-group">
-                                    <label for="accstmnt_contact_email">E-mail
+                                    <label for="accstmnt_contact_email" class="fr-label">E-mail
                                         <span class="fr-hint-text">Exemple : « julien@beta.gouv.fr »</span></label>
                                     <input type="email" class="fr-input"  id="accstmnt_contact_email"/>
                                 </div>
                                 <div class="fr-input-group">
-                                    <label for="accstmnt_contact_form">Formulaire de contact
+                                    <label for="accstmnt_contact_form" class="fr-label">Formulaire de contact
                                     <span class="fr-hint-text">Exemple : « https://acceslibre.beta.gouv.fr/contact »</span></label>
                                     <input type="url" class="fr-input" id="accstmnt_contact_form"/>
                                 </div>
                                 <div class="fr-input-group">
-                                    <label for="accstmnt_contact_visit">Adresse
+                                    <label for="accstmnt_contact_visit" class="fr-label">Adresse
                                     <span class="fr-hint-text">Exemple : « DINUM, Ségur, Paris »</span></label>
                                     <input type="text" class="fr-input"  id="accstmnt_contact_visit"/>
                                 </div>
 
                                 <div class="fr-input-group">
-                                    <label for="accstmnt_contact_other">Autres moyens de contact
+                                    <label for="accstmnt_contact_other" class="fr-label">Autres moyens de contact
                                         <span class="fr-hint-text">Exemple : « Sur Twitter : @MaStartupDetat »</span></label>
                                     <textarea class="fr-input" id="accstmnt_contact_other"></textarea>
                                 </div>
 
                                 <div class="fr-input-group">
-                                    <label for="accstmnt_contact_responsetime">Délai de réponse moyen
+                                    <label for="accstmnt_contact_responsetime" class="fr-label">Délai de réponse moyen
                                         <span class="fr-hint-text">Exemple : « 2 jours ouvrés »</span></label>
                                     <input type="text" class="fr-input"  id="accstmnt_contact_responsetime"/>
                                 </div>
@@ -276,128 +276,120 @@
                 </section>
 
                 <section id="create-technical" class="fr-mt-8w">
-                    <summary>
-                        <h2>Informations techniques</h2>
-                        <span class="intro">Cette section permet de fournir des détails techniques <b>pour aider les utilisateurs à comprendre les problèmes qu’ils peuvent observer</b> : par exemple, la compatibilité avec les navigateurs web et les technologies d’assistance.</span>
-                    </summary>
+                    <h2>Informations techniques</h2>
+
+                    <div class="fr-callout">
+                        <p class="fr-callout__text">Les détails techniques <b>aident les utilisateurs à comprendre les problèmes qu’ils peuvent observer</b> : par exemple, la compatibilité avec les navigateurs web et les technologies d’assistance.
+                        </p>
+                    </div>
 
                     <div class="fr-mt-8w">
 
-                        <h3 class="label">Contenus non accessibles
-                            <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_limitations" data-target="#info_limitations" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
-                        </h3>
+                        <h3>Contenus non accessibles</h3>
+                        <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_limitations" data-target="#info_limitations" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> 
                         <div class="information" id="info_limitations" hidden="hidden">
                             <p>Il existe de nombreuses situations dans lesquelles l’accessibilité peut être limitée. Par exemple, vous pouvez ne pas être en mesure d’assurer l’accessibilité instantanée du contenu généré par l’utilisateur. La transparence dans de telles situations aide les utilisateurs à comprendre tout problème qu’ils peuvent observer et à trouver des solutions de rechange le cas échéant. Selon la loi, les organismes publics (et dont les startups d’états) sont tenus de fournir des informations sur les parties du contenu qui ne sont pas conformes, la raison de cette non-conformité et, le cas échéant, où trouver des alternatives accessibles.</p>
                         </div>
+                        -->
 
-                        <fieldset class="group">
-                            <legend class="visuallyhidden">Limites d’accessibilités</legend>
-                            <p class="expl">Listez les contenus qui ont des limitations d’accessibilité, une description du problème 
-                                que peut rencontrer un utilisateur, une explication brève de pourquoi le problème peut arriver, et
-                            ce qu’il peut faire en attendant, comme par exemple contacter quelqu’un ou utiliser telle ou telle alternative.</p>
+                        <div class="fr-form-group">
+                        <fieldset class="fr-fieldset">
+                            <legend class="fr-fieldset__legend fr-text--regular visuallyhidden">Quelles sont les limites d’accessibilités ?</legend>
+                            <p class="fr-hint-text">Listez les contenus qui ne sont pas accessibles : quel problème peut rencontrer un utilisateur, pourquoi le problème peut arriver, que peut-on faire en attendant... ?</p>
 
                             <div id="accstmnt_issues">
-                                <fieldset id="accstmnt_limitation_1" class="group line">
-                                    <legend>Limitation d’accessibilité</legend>
-                                    <div class="field">
-                                        <label for="accstmnt_limitation_1_element">Contenu</label>
-                                        <em>(Exemple : Commentaire des utilisateurs »)</em>
-                                        <input type="text" id="accstmnt_limitation_1_element" name="element"/>
+                                <fieldset id="accstmnt_limitation_1" class="fr-fieldset">
+                                    <legend class="fr-fieldset__legend fr-text--bold">Limitation d’accessibilité</legend>
+                                    <div class="fr-fieldset__content">
+                                    <div class="fr-input-group">
+                                        <label for="accstmnt_limitation_1_element" class="fr-label">Contenu
+                                            <span class="fr-hint-text">Exemple : Commentaire des utilisateurs »</span></label>
+                                        <input type="text" class="fr-input" id="accstmnt_limitation_1_element" name="element"/>
                                     </div>
-                                    <div class="field">
-                                        <label for="accstmnt_limitation_1_description">Description du problème</label>
-                                        <em>(Exemple : « Les images uploadées peuvent ne pas avoir de texte alternatif »)</em>
-                                        <input type="text" id="accstmnt_limitation_1_description" name="description"/>
+                                    <div class="fr-input-group">
+                                        <label for="accstmnt_limitation_1_description" class="fr-label">Description du problème
+                                            <span class="fr-hint-text">Exemple : « Les images uploadées peuvent ne pas avoir de texte alternatif »</span></label>
+                                        <input type="text" class="fr-input" id="accstmnt_limitation_1_description" name="description"/>
                                     </div>
-                                    <div class="field">
-                                        <label for="accstmnt_limitation_1_reason">Pourquoi le problème arrive</label>
-                                        <em>(Exemple : « Nous ne pouvons garantir la qualité des contributions. »)</em>
-                                        <input type="text" id="accstmnt_limitation_1_reason" name="reason"/>
+                                    <div class="fr-input-group">
+                                        <label for="accstmnt_limitation_1_reason" class="fr-label">Pourquoi le problème arrive
+                                            <span class="fr-hint-text">Exemple : « Nous ne pouvons garantir la qualité des contributions. »</span></label>
+                                        <input type="text" class="fr-input" id="accstmnt_limitation_1_reason" name="reason"/>
                                     </div>
-                                    <div class="field">
-                                        <label for="accstmnt_limitation_1_us">Ce que nous faisons pour y pallier</label>
-                                        <em>(Exemple : « Nous monitorons les commentaires et essayons de les corriger dans la semaine suivant leur publication. »)</em>
-                                        <input type="text" id="accstmnt_limitation_1_us" name="us"/>
+                                    <div class="fr-input-group">
+                                        <label for="accstmnt_limitation_1_us" class="fr-label">Ce que nous faisons pour y pallier
+                                            <span class="fr-hint-text">Exemple : « Nous monitorons les commentaires et essayons de les corriger dans la semaine suivant leur publication. »</span></label>
+                                        <input type="text" class="fr-input" id="accstmnt_limitation_1_us" name="us"/>
                                     </div>
-                                    <div class="field">
-                                        <label for="accstmnt_limitation_1_you">Ce qui peut être fait en attendant</label>
-                                        <em>(Exemple : « Merci d’utiliser le formulaire de contact si vous rencontrez un problème »)</em>
-                                        <input type="text" id="accstmnt_limitation_1_you" name="you"/>
+                                    <div class="fr-input-group">
+                                        <label for="accstmnt_limitation_1_you" class="fr-label">Ce qui peut être fait en attendant
+                                            <span class="fr-hint-text">Exemple : « Merci d’utiliser le formulaire de contact si vous rencontrez un problème »</span></label>
+                                        <input type="text" class="fr-input" id="accstmnt_limitation_1_you" name="you"/>
                                     </div>
-                                </fieldset>
-
-                                <fieldset id="accstmnt_limitation_[n]" class="group proto">
-                                    <legend>Limite d’accessibilité [n]</legend>
-                                    <div class="field">
-                                        <label for="accstmnt_limitation_[n]_element">Contenu</label>
-                                        <input type="text" id="accstmnt_limitation_[n]_element" name="element"/>
-                                    </div>
-                                    <div class="field">
-                                        <label for="accstmnt_limitation_[n]_description">Description du problème</label>
-                                        <input type="text" id="accstmnt_limitation_[n]_description" name="description"/>
-                                    </div>
-                                    <div class="field">
-                                        <label for="accstmnt_limitation_[n]_reason">Pourquoi le problème arrive</label>
-                                        <input type="text" id="accstmnt_limitation_[n]_reason" name="reason"/>
-                                    </div>
-                                    <div class="field">
-                                        <label for="accstmnt_limitation_[n]_us">Ce que l’équipe fait pour y pallier</label>
-                                        <input type="text" id="accstmnt_limitation_[n]_us" name="us"/>
-                                    </div>
-                                    <div class="field">
-                                        <label for="accstmnt_limitation_[n]_you">Ce que l’utilisateur peut faire en attendant</label>
-                                        <input type="text" id="accstmnt_limitation_[n]_you" name="you"/>
                                     </div>
                                 </fieldset>
 
-                                <button type="button" class="add-line">
-                                    Ajouter une autre limite d’accessibilité
-                                </button>
+                                <fieldset id="accstmnt_limitation_[n]" class="fr-fieldset proto fr-mt-4w">
+                                    <legend class="fr-fieldset__legend fr-text--bold">Limite d’accessibilité [n]</legend>
+                                    <div class="fr-fieldset__content">
+                                    <div class="fr-input-group">
+                                        <label for="accstmnt_limitation_[n]_element" class="fr-label">Contenu</label>
+                                        <input type="text" class="fr-input" id="accstmnt_limitation_[n]_element" name="element"/>
+                                    </div>
+                                    <div class="fr-input-group">
+                                        <label for="accstmnt_limitation_[n]_description" class="fr-label">Description du problème</label>
+                                        <input type="text" class="fr-input" id="accstmnt_limitation_[n]_description" name="description"/>
+                                    </div>
+                                    <div class="fr-input-group">
+                                        <label for="accstmnt_limitation_[n]_reason" class="fr-label">Pourquoi le problème arrive</label>
+                                        <input type="text" class="fr-input" id="accstmnt_limitation_[n]_reason" name="reason"/>
+                                    </div>
+                                    <div class="fr-input-group">
+                                        <label for="accstmnt_limitation_[n]_us" class="fr-label">Ce que l’équipe fait pour y pallier</label>
+                                        <input type="text" class="fr-input" id="accstmnt_limitation_[n]_us" name="us"/>
+                                    </div>
+                                    <div class="fr-input-group">
+                                        <label for="accstmnt_limitation_[n]_you" class="fr-label">Ce que l’utilisateur peut faire en attendant</label>
+                                        <input type="text" class="fr-input" id="accstmnt_limitation_[n]_you" name="you"/>
+                                    </div>
+                                    </div>
+                                </fieldset>
+
+                                <button type="button" class="add-line fr-mt-4w fr-btn fr-btn--sm fr-btn--secondary">Ajouter une autre limite d’accessibilité</button>
                             </div>
                         </fieldset>
-
-
-                        
-                        <h3 class="label">Dérogations pour charge disproportionnée
-                            <!-- TODO expliquer la dérogation
-                            <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_derogation" data-target="#info_derogation" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
-                            -->
-                        </h3>
-
-                        <div class="information" id="info_derogation" hidden="hidden">
-                             <p></p> 
                         </div>
+
                         
+                        <h3>Dérogations pour charge disproportionnée</h3>
+                        
+                        <div class="fr-input-group">
+                            <label for="accstmt_derogation" class="fr-label">Dérogation pour charge disproportionnée
+                                <span class="fr-hint-text">Exemple : « Les vidéos n’ont pas d’audio description, sous-titres ou transcription textuelle. La cellule ayant en charge la mise en ligne de ces animations n’est pas en mesure actuellement de fournir ces éléments pour l’ensemble de ces vidéos. »</span></label>
+                            <textarea id="accstmt_derogation" class="fr-input"></textarea>
+                        </div>
 
-                        <fieldset class="group" id="form-derogation">
-                            <div class="field">
-                                <label for="accstmt_derogation">Dérogation pour charge disproportionnée :</label>
-                                <em>(Exemple : « Les vidéos n’ont pas d’audio description, sous-titres ou transcription textuelle. La cellule ayant en charge la mise en ligne de ces animations n’est pas en mesure actuellement de fournir ces éléments pour l’ensemble de ces vidéos. »)</em>
-                                <textarea id="accstmt_derogation"></textarea>
-                            </div>
-                        </fieldset>
 
+                        <h3>Contenus non soumis à l’obligation d’accessibilité</h3>
+                        <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_exempt" data-target="#info_exempt" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> 
 
-                        <h3 class="label">Contenus non soumis à l’obligation d’accessibilité
-                            <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_exempt" data-target="#info_exempt" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
-                        </h3>
                         <div class="information" id="info_exempt" hidden="hidden">
                             <p>Certaines sections ou contenus non accessibles n’entrent pas dans le champ d’application de la législation appliquable. Il n’y a donc pas d’obligations sur ces contenus. Il est toutefois utile d’indiquer aux utilisateurs les alternatives possibles.</p>
                         </div>
-                        <fieldset class="group" id="form-exempt">
-                            <div class="field">
-                                <label for="accstmt_exempt">Contenus non soumis à l’obligation d’accessibilité :</label>
-                                <em>(Exemple : « Le système de cartographie Open Street map est un service externe non soumis à obligation. »)</em>
-                                <textarea id="accstmt_exempt"></textarea>
-                            </div>
-                        </fieldset>
+                        -->
 
-                        <h3 class="label">Compatibilité avec l’environnement de l’utilisateur
-                            <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_asstech" data-target="#support_asstech" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
-                        </h3>
+                        <div class="fr-input-group">
+                            <label for="accstmt_exempt" class="fr-label">Contenus non soumis à l’obligation  d’accessibilité
+                                <span class="fr-hint-text">Exemple : « Le système de cartographie Open Street map est un service externe non soumis à obligation. »</span></label>
+                            <textarea id="accstmt_exempt" class="fr-input"></textarea>
+                        </div>
+
+                        <h3>Compatibilité avec l’environnement de l’utilisateur</h3>
+                            <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_asstech" data-target="#support_asstech" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> 
                         <div class="information" id="support_asstech" hidden="hidden">
                             <p>Malgré tous les efforts déployés, l’accessibilité peut ne pas fonctionner correctement dans toutes les combinaisons de système d’exploitation, de navigateur web et de technologie d’assistance. Communiquer sur les environnements testés aide l’utilisateur à déterminer si les outils utilisés pourraient être la cause d’un problème observé.</p>
                         </div>
+                        -->
 
                         <fieldset class="group" id="compatible_tech">
                             <legend class="visuallyhidden">Compatibilité avec l’environnement utilisateur</legend>
@@ -418,12 +410,12 @@
                             <button class="add-line" type="button">Ajouter un environnement testé</button>
                         </fieldset>
 
-                        <h3 class="label">Incompatibilités connues
-                            <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_incompatible" data-target="#support_incompatible" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> -->
-                        </h3>
+                        <h3>Incompatibilités connues</h3>
+                        <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_incompatible" data-target="#support_incompatible" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> 
+
                         <div class="information" id="support_incompatible" hidden="hidden">
                             <p>Aidez les utilisateurs à comprendre quelles versions de systèmes d’exploitation, de navigateurs web et de technologies d’assistance ne sont pas (ou plus) prises en charge. Cela les aide à déterminer s’ils peuvent utiliser votre site web ou votre application mobile avec leur environnement actuel.</p>
-                        </div>
+                        </div>-->
 
                         <fieldset class="group" id="incompatible_tech">
                             <legend class="visuallyhidden">Environnements incompatibles</legend>
