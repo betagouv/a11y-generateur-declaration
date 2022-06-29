@@ -224,7 +224,7 @@
     var DEFAULTS = {
       MIMETYPE: 'text/plain',
       ENCODING: 'utf-8',
-      FILENAME: 'accessibility-statement',
+      FILENAME: 'declaration-accessibilite',
       XMLNS: 'http://www.w3.org/1999/xhtml',
     };
 
