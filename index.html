@@ -284,7 +284,6 @@
                     </div>
 
                     <div class="fr-mt-8w">
-
                         <h3>Contenus non accessibles</h3>
                         <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_limitations" data-target="#info_limitations" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> 
                         <div class="information" id="info_limitations" hidden="hidden">
@@ -295,7 +294,7 @@
                         <div class="fr-form-group">
                         <fieldset class="fr-fieldset">
                             <legend class="fr-fieldset__legend fr-text--regular visuallyhidden">Quelles sont les limites d’accessibilités ?</legend>
-                            <p class="fr-hint-text">Listez les contenus qui ne sont pas accessibles : quel problème peut rencontrer un utilisateur, pourquoi le problème peut arriver, que peut-on faire en attendant... ?</p>
+                            <p class="fr-text--regular">Listez les contenus qui ne sont pas accessibles : quel problème peut rencontrer un utilisateur, pourquoi le problème peut arriver, que peut-on faire en attendant... ?</p>
 
                             <div id="accstmnt_issues">
                                 <fieldset id="accstmnt_limitation_1" class="fr-fieldset">
@@ -355,12 +354,13 @@
                                     </div>
                                 </fieldset>
 
-                                <button type="button" class="add-line fr-mt-4w fr-btn fr-btn--sm fr-btn--secondary">Ajouter une autre limite d’accessibilité</button>
+                                <button type="button" class="add-line fr-mt-2w fr-btn fr-btn--sm fr-btn--secondary">Ajouter une autre limite d’accessibilité</button>
                             </div>
                         </fieldset>
                         </div>
+                    </div>
 
-                        
+                    <div class="fr-mt-8w">                        
                         <h3>Dérogations pour charge disproportionnée</h3>
                         
                         <div class="fr-input-group">
@@ -368,8 +368,9 @@
                                 <span class="fr-hint-text">Exemple : « Les vidéos n’ont pas d’audio description, sous-titres ou transcription textuelle. La cellule ayant en charge la mise en ligne de ces animations n’est pas en mesure actuellement de fournir ces éléments pour l’ensemble de ces vidéos. »</span></label>
                             <textarea id="accstmt_derogation" class="fr-input"></textarea>
                         </div>
+                    </div>
 
-
+                    <div class="fr-mt-8w">
                         <h3>Contenus non soumis à l’obligation d’accessibilité</h3>
                         <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_exempt" data-target="#info_exempt" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> 
 
@@ -383,7 +384,9 @@
                                 <span class="fr-hint-text">Exemple : « Le système de cartographie Open Street map est un service externe non soumis à obligation. »</span></label>
                             <textarea id="accstmt_exempt" class="fr-input"></textarea>
                         </div>
+                    </div>
 
+                    <div class="fr-mt-8w">
                         <h3>Compatibilité avec l’environnement de l’utilisateur</h3>
                             <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_asstech" data-target="#support_asstech" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> 
                         <div class="information" id="support_asstech" hidden="hidden">
@@ -391,25 +394,27 @@
                         </div>
                         -->
 
-                        <fieldset class="group" id="compatible_tech">
-                            <legend class="visuallyhidden">Compatibilité avec l’environnement utilisateur</legend>
+                        <fieldset class="fr-fieldset" id="compatible_tech">
+                            <legend class="fr-fieldset__legend visuallyhidden">Compatibilité avec l’environnement utilisateur</legend>
 
-                            <p class="expl">Décrivez les environnements (combinaisons de navigateurs web, de technologies d’assistance et de systèmes d’exploitation) avec lesquels le contenu est censé fonctionner.</p>
+                            <p class="fr-text--regular">Décrivez les environnements (combinaisons de navigateurs web, de technologies d’assistance et de systèmes d’exploitation) avec lesquels le contenu est censé fonctionner.</p>
 
-                            <div class="field line">
-                                <label for="accstmnt_asstech_compatible_1">Environnement 1</label>
-                                <em>(Exemple : « navigateur X avec la technologie d’assistance Y et le système d’exploitation Z »)</em>
-                                <input type="text" id="accstmnt_asstech_compatible_1" name="accstmnt_asstech_compatible"/>
+                            <div class="fr-input-group line">
+                                <label for="accstmnt_asstech_compatible_1" class="fr-label">Environnement 1
+                                    <span class="fr-hint-text">Exemple : « navigateur X avec la technologie d’assistance Y et le système d’exploitation Z »</span></label>
+                                <input type="text" class="fr-input" id="accstmnt_asstech_compatible_1" name="accstmnt_asstech_compatible"/>
                             </div>
 
-                            <div class="field proto">
-                                <label for="accstmnt_asstech_compatible_[n]">Environnement [n]</label>
-                                <input type="text" id="accstmnt_asstech_compatible_[n]" name="accstmnt_asstech_compatible"/>
+                            <div class="fr-input-group proto">
+                                <label for="accstmnt_asstech_compatible_[n]" class="fr-label">Environnement [n]</label>
+                                <input type="text" class="fr-input" id="accstmnt_asstech_compatible_[n]" name="accstmnt_asstech_compatible"/>
                             </div>
 
-                            <button class="add-line" type="button">Ajouter un environnement testé</button>
+                            <button class="add-line fr-btn fr-btn--sm fr-btn--secondary" type="button">Ajouter un environnement testé</button>
                         </fieldset>
+                    </div>
 
+                    <div class="fr-mt-8w">
                         <h3>Incompatibilités connues</h3>
                         <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_incompatible" data-target="#support_incompatible" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> 
 
@@ -417,8 +422,8 @@
                             <p>Aidez les utilisateurs à comprendre quelles versions de systèmes d’exploitation, de navigateurs web et de technologies d’assistance ne sont pas (ou plus) prises en charge. Cela les aide à déterminer s’ils peuvent utiliser votre site web ou votre application mobile avec leur environnement actuel.</p>
                         </div>-->
 
-                        <fieldset class="group" id="incompatible_tech">
-                            <legend class="visuallyhidden">Environnements incompatibles</legend>
+                        <fieldset class="fr-fieldset">
+                            <legend class="fr-fieldset__legend visuallyhidden">Environnements incompatibles</legend>
 
                             <p class="expl">Décrivez les environnements (combinaisons de navigateurs web, de technologies d’assistance et de systèmes d’exploitation) avec lesquels le contenu n’est pas censé fonctionner.</p>
 
@@ -436,13 +441,14 @@
                                 Ajouter une autre incompatibilité connue
                             </button>
                         </fieldset>
+                    </div>
 
-                        <h3 class="label">Technologies utilisées
-                            <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_tech" data-target="#support_tech" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
-                        </h3>
+                    <div class="fr-mt-8w">
+                        <h3>Technologies utilisées</h3>
+                        <!--                             <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_tech" data-target="#support_tech" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
                         <div class="information" id="support_tech" hidden="hidden">
                             <p>Vous pouvez vous appuyer sur des technologies web spécifiques, telles que JavaScript, WAI-ARIA ou SVG, pour garantir l’accessibilité de votre contenu. Communiquer sur ces technologies indispensables peut aider les utilisateurs à comprendre la raison des problèmes qu’ils peuvent observer.</p>
-                        </div>
+                        </div> --> 
 
                         <p class="expl">Décrivez les technologies indispensables pour atteindre la conformité. Le contenu n’est pas conforme si cette technologie est désactivée ou non supportée.</p>
 
@@ -483,7 +489,8 @@
                                 <button class="add-line" type="button">Ajouter une autre technologie</button>
                             </fieldset>
 
-                        </div>
+                    </div>
+
                     </section>
 
                     
