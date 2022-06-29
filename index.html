@@ -329,7 +329,7 @@
                                 </fieldset>
 
                                 <fieldset id="accstmnt_limitation_[n]" class="fr-fieldset proto fr-mt-4w">
-                                    <legend class="fr-fieldset__legend fr-text--bold">Limite d’accessibilité [n]</legend>
+                                    <legend class="fr-fieldset__legend fr-text--bold">Limitation d’accessibilité [n]</legend>
                                     <div class="fr-fieldset__content">
                                     <div class="fr-input-group">
                                         <label for="accstmnt_limitation_[n]_element" class="fr-label">Contenu</label>
@@ -394,19 +394,19 @@
                         </div>
                         -->
 
-                        <fieldset class="fr-fieldset" id="compatible_tech">
+                        <fieldset class="fr-fieldset">
                             <legend class="fr-fieldset__legend visuallyhidden">Compatibilité avec l’environnement utilisateur</legend>
 
                             <p class="fr-text--regular">Décrivez les environnements (combinaisons de navigateurs web, de technologies d’assistance et de systèmes d’exploitation) avec lesquels le contenu est censé fonctionner.</p>
 
                             <div class="fr-input-group line">
-                                <label for="accstmnt_asstech_compatible_1" class="fr-label">Environnement 1
+                                <label for="accstmnt_asstech_compatible_1" class="fr-label">Environnement compatible 1
                                     <span class="fr-hint-text">Exemple : « navigateur X avec la technologie d’assistance Y et le système d’exploitation Z »</span></label>
                                 <input type="text" class="fr-input" id="accstmnt_asstech_compatible_1" name="accstmnt_asstech_compatible"/>
                             </div>
 
                             <div class="fr-input-group proto">
-                                <label for="accstmnt_asstech_compatible_[n]" class="fr-label">Environnement [n]</label>
+                                <label for="accstmnt_asstech_compatible_[n]" class="fr-label">Environnement compatible [n]</label>
                                 <input type="text" class="fr-input" id="accstmnt_asstech_compatible_[n]" name="accstmnt_asstech_compatible"/>
                             </div>
 
@@ -425,19 +425,19 @@
                         <fieldset class="fr-fieldset">
                             <legend class="fr-fieldset__legend visuallyhidden">Environnements incompatibles</legend>
 
-                            <p class="expl">Décrivez les environnements (combinaisons de navigateurs web, de technologies d’assistance et de systèmes d’exploitation) avec lesquels le contenu n’est pas censé fonctionner.</p>
+                            <p class="fr-text--regular">Décrivez les environnements (combinaisons de navigateurs web, de technologies d’assistance et de systèmes d’exploitation) avec lesquels le contenu n’est pas censé fonctionner.</p>
 
-                            <div class="field line">
-                                <label for="accstmnt_asstech_incompatible_1">Environnement 1</label>
-                                <em>(Exemple : « navigateurs vieux de plus de 3 versions majeures »)</em>
-                                <input type="text" id="accstmnt_asstech_incompatible_1" name="accstmnt_asstech_incompatible"/>
+                            <div class="fr-input-group line">
+                                <label for="accstmnt_asstech_incompatible_1" class="fr-label">Environnement incompatible 1
+                                    <span class="fr-hint-text">Exemple : « navigateurs vieux de plus de 3 versions majeures »</span></label>
+                                <input type="text" class="fr-input" id="accstmnt_asstech_incompatible_1" name="accstmnt_asstech_incompatible"/>
                             </div>
-                            <div class="field proto">
-                                <label for="accstmnt_asstech_incompatible_[n]">Environnement [n]</label>
-                                <input type="text" id="accstmnt_asstech_incompatible_[n]" name="accstmnt_asstech_incompatible"/>
+                            <div class="fr-input-group proto">
+                                <label for="accstmnt_asstech_incompatible_[n]" class="fr-label">Environnement incompatible [n]</label>
+                                <input type="text" class="fr-input" id="accstmnt_asstech_incompatible_[n]" name="accstmnt_asstech_incompatible"/>
                             </div>
 
-                            <button type="button" class="add-line">
+                            <button type="button" class="add-line fr-btn fr-btn--sm fr-btn--secondary">
                                 Ajouter une autre incompatibilité connue
                             </button>
                         </fieldset>
@@ -450,43 +450,43 @@
                             <p>Vous pouvez vous appuyer sur des technologies web spécifiques, telles que JavaScript, WAI-ARIA ou SVG, pour garantir l’accessibilité de votre contenu. Communiquer sur ces technologies indispensables peut aider les utilisateurs à comprendre la raison des problèmes qu’ils peuvent observer.</p>
                         </div> --> 
 
-                        <p class="expl">Décrivez les technologies indispensables pour atteindre la conformité. Le contenu n’est pas conforme si cette technologie est désactivée ou non supportée.</p>
+                        <p class="fr-text--regular">Décrivez les technologies indispensables pour atteindre la conformité. Le contenu n’est pas conforme si cette technologie est désactivée ou non supportée.</p>
 
-                        <fieldset class="field">
-                            <legend class="label">Technologies indispensables :</legend>
+                        <fieldset class="fr-fieldset">
+                            <legend class="fr-fieldset__legend">Technologies indispensables :</legend>
 
                             <ul id="tech_relied" class="nolist">
-                                <li class="radio-field">
+                                <li class="fr-checkbox-group">
                                     <input type="checkbox" id="accstmnt_tech_html" name="accstmnt_tech" value="HTML"/>
-                                    <label for="accstmnt_tech_html">HTML</label>
+                                    <label for="accstmnt_tech_html" class="fr-label">HTML</label>
                                 </li>
 
-                                <li class="radio-field">
+                                <li class="fr-checkbox-group">
                                     <input type="checkbox" id="accstmnt_tech_aria" name="accstmnt_tech" value="WAI-ARIA"/>
-                                    <label for="accstmnt_tech_aria">WAI-ARIA</label>
+                                    <label for="accstmnt_tech_aria" class="fr-label">WAI-ARIA</label>
                                 </li>
 
-                                <li class="radio-field">
+                                <li class="fr-checkbox-group">
                                     <input type="checkbox" id="accstmnt_tech_css" name="accstmnt_tech" value="CSS"/>
-                                    <label for="accstmnt_tech_css">CSS</label>
+                                    <label for="accstmnt_tech_css" class="fr-label">CSS</label>
                                 </li>
 
-                                <li class="radio-field">
+                                <li class="fr-checkbox-group">
                                     <input type="checkbox" id="accstmnt_tech_js" name="accstmnt_tech" value="JavaScript"/>
-                                    <label for="accstmnt_tech_js">JavaScript</label>
+                                    <label for="accstmnt_tech_js" class="fr-label">JavaScript</label>
                                 </li>
 
-                                <li class="radio-field proto">
+                                <li class="fr-checkbox-group proto">
                                     <input type="checkbox" id="accstmnt_tech_other_[n]" value="other" checked="checked"/>
-                                    <span id="accstmnt_tech_other_label_[n]">
-                                        <label for="accstmnt_tech_other_[n]">Autre [n]</label>
-                                        <span class="visuallyhidden">
-                                        nom</span></span>
-                                        <input id="accstmnt_tech_other_[n]_value" type="text" aria-describedby="accstmnt_tech_other_label_[n]" name="accstmnt_tech"/>
+                                    <div class="fr-input-group" id="accstmnt_tech_other_label_[n]">
+                                        <label for="accstmnt_tech_other_[n]" class="fr-label">Autre [n]</label>
+                                        <span class="visuallyhidden">nom</span>
+                                    </div>
+                                        <input id="accstmnt_tech_other_[n]_value" class="fr-input" type="text" aria-describedby="accstmnt_tech_other_label_[n]" name="accstmnt_tech"/>
                                     </li>
                                 </ul>
 
-                                <button class="add-line" type="button">Ajouter une autre technologie</button>
+                                <button class="add-line fr-btn fr-btn--sm fr-btn--secondary" type="button">Ajouter une autre technologie</button>
                             </fieldset>
 
                     </div>
@@ -494,7 +494,7 @@
                     </section>
 
                     
-                    <div class="statement-actions">                        
+                    <div class="fr-mt-8w statement-actions">                        
                         <a class="fr-btn" href="#preview" data-action="statement_preview">
                             Prévisualiser votre déclaration d’accessibilité
                         </a>
