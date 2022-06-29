@@ -100,27 +100,24 @@
                     <h2>Informations générales</h2>
 
                     <div class="fr-callout">
-                        <p class="fr-callout__text">
-                            Ce sont les <b>informations minimales</b> pour votre <b>déclaration d’accessibilité</b>.
+                        <p class="fr-callout__text fr-text--sm">
+                            Ce sont les <b>informations minimales</b> pour une <b>déclaration d’accessibilité conforme</b>.
                         </p>
                     </div>
 
                         <div class="fr-mt-8w">
-                            <h3>À propos de votre déclaration</h3>
-                            <!--
-                            <div class="information" id="info_about" hidden="hidden">
-                                <p>Vous pouvez renseigner le nom de votre organisation, l’adresse web et le nom de votre site ou application. Pour les applications mobiles, inclure le numéro de version et la date de sortie permettant d’identifier une version spécifique.</p>
-                            </div>
-                            -->
+                            <h3>Votre service</h3>
+                            
                             <div class="fr-input-group">
-                                <label for="accstmt_org" class="fr-label">Nom du ministère ou de l’opérateur qui pilote la startup d’État
+                                <label for="accstmt_org" class="fr-label">Nom du ministère ou de l’opérateur qui pilote le service
                                     <span class="fr-hint-text">Exemple : « Le ministère de l’Écologie »</span></label>
                                 <input type="text" class="fr-input" id="accstmt_org"/>
                             </div>
 
                             <div class="fr-input-group">
                                 <label for="accstmt_namesite" class="fr-label">Nom de votre site
-                                    <span class="fr-hint-text">Exemple : « Démarches Simplifiées »</span></label>
+                                    <span class="fr-hint-text">Exemple : « Démarches Simplifiées »</span>
+                                    <span class="fr-hint-text">Pour les applications mobiles, inclure le numéro de version danset la date de sortie permettant d’identifier une version spécifique.</span></label>
                                 <input type="text" class="fr-input" id="accstmt_namesite"/>
                             </div>
                             <div class="fr-input-group">
@@ -132,10 +129,8 @@
 
                         <div class="fr-mt-8w">
                             <h3>Documents associés</h3>
-                            <!-- 
-                            <div class="information" id="support_related" hidden="hidden">
-                                <p>Le <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/#sch%C3%A9ma-pluriannuel-de-mise-en-accessibilit%C3%A9">schéma pluriannuel</a> est un document qui contient les efforts menés et à mener en accessibilité : le plan d’action de l’année en cours, le bilan des actions réalisées l’année précédente...</p>
-                            </div> -->
+                            
+                            <p class="fr-text--sm">Le <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/#sch%C3%A9ma-pluriannuel-de-mise-en-accessibilit%C3%A9">schéma pluriannuel</a> est un document qui contient les efforts menés et à mener en accessibilité : le plan d’action de l’année en cours, le bilan des actions réalisées l’année précédente...</p>
 
                             <div class="fr-input-group">
                                 <label for="accstmnt_audit_schema" class="fr-label">Lien du schéma pluriannuel de mise en accessibilité de votre entité
@@ -190,9 +185,7 @@
 
                         <div class="fr-mt-8w">
                             <h3>Réalisation de l’audit</h3>
-                            <!-- <div class="information" id="info_accstmnt_approach" hidden="hidden">
-                                <p>Comment le site a-t-il été audité ? Cette information aide les utilisateurs à comprendre la qualité de cette déclaration d’accessibilité.</p>
-                            </div> -->
+                            <p class="fr-text--sm">Comment le site a-t-il été audité ? Cette information aide les utilisateurs à comprendre la qualité de cette déclaration d’accessibilité.</p>
 
                             <div class="fr-form-group">
                             <fieldset id="accstmnt_assessment" class="fr-fieldset">
@@ -216,11 +209,8 @@
 
                         <div class="fr-mt-8w">
                             <h3>Moyens de contact</h3>
-                            <!-- 
-                            <div class="information" id="info_feedback" hidden="hidden">
-                                <p>De quelle manière les utilisateurs peuvent-ils contacter votre organisation lorsqu’ils rencontrent un obstacle à l’accessibilité ? Idéalement, vous devriez proposer plusieurs options. Indiquez également la durée après laquelle les utilisateurs peuvent s’attendre à une réponse de votre organisation.</p>
-                            </div>
-                            -->
+                            
+                            <p class="fr-text--sm">De quelle manière les utilisateurs peuvent-ils contacter votre organisation lorsqu’ils rencontrent un obstacle à l’accessibilité ? Idéalement, vous devriez proposer <b>plusieurs options</b>.</p>
 
                             <fieldset class="fr-fieldset" id="form-feedback">
                                 <legend class="fr-fieldset__legend fr-text--regular visuallyhidden">Quels moyens de contacts sont proposés ?</legend>
@@ -263,10 +253,8 @@
 
                         <div class="fr-mt-8w">
                             <h3>Date de publication</h3>
-                            <!-- 
-                            <div class="information" id="info_date" hidden="hidden">
-                                <p>Fournir une date aide les utilisateurs à comprendre si la déclaration d’accessibilité est activement tenue à jour ou si elle est dépassée. Idéalement, la date d’une déclaration d’accessibilité ne devrait pas dépasser un an, sinon elle peut être considérée comme non tenue à jour. La mention du mois rend la date plus claire au niveau international (par exemple, "1er février 2019" au lieu de "01/02/2019", qui est ambigu).</p>
-                            </div>-->
+                             
+                            <p class="fr-text--sm">La date de publication aide les utilisateurs à comprendre si la déclaration d’accessibilité est activement tenue à jour, ou si elle est dépassée. Une déclaration d’accessibilité de plus d'un an peut être considérée comme non tenue à jour.</p>
 
                             <div class="fr-fieldset">
                                 <label for="accstmt_date" class="fr-label">Date de publication de cette déclaration d’accessibilité</label>
@@ -279,13 +267,18 @@
                     <h2>Informations techniques</h2>
 
                     <div class="fr-callout">
-                        <p class="fr-callout__text">Les détails techniques <b>aident les utilisateurs à comprendre les problèmes qu’ils peuvent observer</b> : par exemple, la compatibilité avec les navigateurs web et les technologies d’assistance.
+                        <p class="fr-callout__text fr-text--sm">Les détails techniques <b>aident les utilisateurs à comprendre les problèmes qu’ils peuvent observer</b> : par exemple, la compatibilité avec les navigateurs web et les technologies d’assistance.
                         </p>
                     </div>
 
-                    <div class="fr-mt-8w">
-                        <h3>Contenus non accessibles</h3>
-                        <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_limitations" data-target="#info_limitations" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> 
+                    <div class="fr-accordion-group" data-fr-js-accordions-group="true">
+                    <div class="fr-accordion">
+                        <h3 class="fr-accordion__title">
+                            <button class="fr-accordion__btn" aria-expanded="false" aria-controls="fr-accordion-non-accessible-content" data-fr-js-collapse-button="true">Contenus non accessibles</button>
+                        </h3>
+
+                        <div class="fr-collapse" id="fr-accordion-non-accessible-content" data-fr-js-collapse="true">
+                        <!-- 
                         <div class="information" id="info_limitations" hidden="hidden">
                             <p>Il existe de nombreuses situations dans lesquelles l’accessibilité peut être limitée. Par exemple, vous pouvez ne pas être en mesure d’assurer l’accessibilité instantanée du contenu généré par l’utilisateur. La transparence dans de telles situations aide les utilisateurs à comprendre tout problème qu’ils peuvent observer et à trouver des solutions de rechange le cas échéant. Selon la loi, les organismes publics (et dont les startups d’états) sont tenus de fournir des informations sur les parties du contenu qui ne sont pas conformes, la raison de cette non-conformité et, le cas échéant, où trouver des alternatives accessibles.</p>
                         </div>
@@ -358,42 +351,49 @@
                             </div>
                         </fieldset>
                         </div>
+                        </div>
                     </div>
 
-                    <div class="fr-mt-8w">                        
-                        <h3>Dérogations pour charge disproportionnée</h3>
+                    <div class="fr-accordion">                        
+                        <h3 class="fr-accordion__title">
+                            <button class="fr-accordion__btn" aria-expanded="false" aria-controls="fr-accordion-derogation" data-fr-js-collapse-button="true">Dérogations pour charge disproportionnée</button></h3>
                         
+                        <div class="fr-collapse" id="fr-accordion-derogation">
                         <div class="fr-input-group">
                             <label for="accstmt_derogation" class="fr-label">Dérogation pour charge disproportionnée
                                 <span class="fr-hint-text">Exemple : « Les vidéos n’ont pas d’audio description, sous-titres ou transcription textuelle. La cellule ayant en charge la mise en ligne de ces animations n’est pas en mesure actuellement de fournir ces éléments pour l’ensemble de ces vidéos. »</span></label>
                             <textarea id="accstmt_derogation" class="fr-input"></textarea>
                         </div>
+                        </div>
                     </div>
 
-                    <div class="fr-mt-8w">
-                        <h3>Contenus non soumis à l’obligation d’accessibilité</h3>
-                        <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_exempt" data-target="#info_exempt" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> 
-
+                    <div class="fr-accordion">
+                        <h3 class="fr-accordion__title">
+                            <button class="fr-accordion__btn" aria-expanded="false" aria-controls="fr-accordion-nonsoumis">Contenus non soumis à l’obligation d’accessibilité</button>
+                        </h3>
+                        <!-- 
                         <div class="information" id="info_exempt" hidden="hidden">
                             <p>Certaines sections ou contenus non accessibles n’entrent pas dans le champ d’application de la législation appliquable. Il n’y a donc pas d’obligations sur ces contenus. Il est toutefois utile d’indiquer aux utilisateurs les alternatives possibles.</p>
                         </div>
                         -->
-
+                        <div class="fr-collapse" id="fr-accordion-nonsoumis">
                         <div class="fr-input-group">
                             <label for="accstmt_exempt" class="fr-label">Contenus non soumis à l’obligation  d’accessibilité
                                 <span class="fr-hint-text">Exemple : « Le système de cartographie Open Street map est un service externe non soumis à obligation. »</span></label>
                             <textarea id="accstmt_exempt" class="fr-input"></textarea>
                         </div>
+                        </div>
                     </div>
 
-                    <div class="fr-mt-8w">
-                        <h3>Compatibilité avec l’environnement de l’utilisateur</h3>
-                            <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_asstech" data-target="#support_asstech" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> 
+                    <div class="fr-accordion">
+                        <h3 class="fr-accordion__title">
+                            <button class="fr-accordion__btn" aria-expanded="false" aria-controls="fr-accordion-compatibilite">Compatibilité avec l’environnement de l’utilisateur</button></h3>
+                            <!-- 
                         <div class="information" id="support_asstech" hidden="hidden">
                             <p>Malgré tous les efforts déployés, l’accessibilité peut ne pas fonctionner correctement dans toutes les combinaisons de système d’exploitation, de navigateur web et de technologie d’assistance. Communiquer sur les environnements testés aide l’utilisateur à déterminer si les outils utilisés pourraient être la cause d’un problème observé.</p>
                         </div>
                         -->
-
+                        <div class="fr-collapse" id="fr-accordion-compatibilite">
                         <fieldset class="fr-fieldset">
                             <legend class="fr-fieldset__legend visuallyhidden">Compatibilité avec l’environnement utilisateur</legend>
 
@@ -412,16 +412,17 @@
 
                             <button class="add-line fr-btn fr-btn--sm fr-btn--secondary" type="button">Ajouter un environnement testé</button>
                         </fieldset>
+                        </div>
                     </div>
 
-                    <div class="fr-mt-8w">
-                        <h3>Incompatibilités connues</h3>
-                        <!-- <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_incompatible" data-target="#support_incompatible" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button> 
-
+                    <div class="fr-accordion">
+                        <h3 class="fr-accordion__title">
+                            <button class="fr-accordion__btn" aria-expanded="false" aria-controls="fr-accordion-incomptabilite">Incompatibilités connues</button></h3>
+                        <!-- 
                         <div class="information" id="support_incompatible" hidden="hidden">
                             <p>Aidez les utilisateurs à comprendre quelles versions de systèmes d’exploitation, de navigateurs web et de technologies d’assistance ne sont pas (ou plus) prises en charge. Cela les aide à déterminer s’ils peuvent utiliser votre site web ou votre application mobile avec leur environnement actuel.</p>
                         </div>-->
-
+                        <div class="fr-collapse" id="fr-accordion-incomptabilite">
                         <fieldset class="fr-fieldset">
                             <legend class="fr-fieldset__legend visuallyhidden">Environnements incompatibles</legend>
 
@@ -441,15 +442,17 @@
                                 Ajouter une autre incompatibilité connue
                             </button>
                         </fieldset>
+                        </div>
                     </div>
 
-                    <div class="fr-mt-8w">
-                        <h3>Technologies utilisées</h3>
-                        <!--                             <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_tech" data-target="#support_tech" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
+                    <div class="fr-accordion">
+                        <h3 class="fr-accordion__title">
+                            <button class="fr-accordion__btn" aria-expanded="false" aria-controls="fr-accordion-technologies">Technologies utilisées</button></h3>
+                        <!-- 
                         <div class="information" id="support_tech" hidden="hidden">
                             <p>Vous pouvez vous appuyer sur des technologies web spécifiques, telles que JavaScript, WAI-ARIA ou SVG, pour garantir l’accessibilité de votre contenu. Communiquer sur ces technologies indispensables peut aider les utilisateurs à comprendre la raison des problèmes qu’ils peuvent observer.</p>
                         </div> --> 
-
+                        <div class="fr-collapse" id="fr-accordion-technologies">
                         <p class="fr-text--regular">Décrivez les technologies indispensables pour atteindre la conformité. Le contenu n’est pas conforme si cette technologie est désactivée ou non supportée.</p>
 
                         <fieldset class="fr-fieldset">
@@ -487,11 +490,14 @@
                                 </ul>
 
                                 <button class="add-line fr-btn fr-btn--sm fr-btn--secondary" type="button">Ajouter une autre technologie</button>
+
                             </fieldset>
+                        </div>
+                    </div>
 
                     </div>
 
-                    </section>
+                </section>
 
                     
                     <div class="fr-mt-8w statement-actions">                        
