@@ -92,3 +92,8 @@
 .nolist li {
 	list-style: none
 }
+
+#statement_generated.fr-callout {
+  --title-spacing: inherit;
+  --text-spacing: inherit;
+}
