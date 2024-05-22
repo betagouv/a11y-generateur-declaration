@@ -96,53 +96,17 @@
             </div>
           </aside>
 
-          <div class="fr-container fr-mb-8w">
+          <div class="fr-container fr-mb-12w">
             <div class="fr-grid-row fr-grid-row--gutters">
-              <div class="fr-col-12 fr-col-md-4">
-                <nav
-                  class="fr-sidemenu fr-sidemenu--sticky"
-                  aria-label="Menu latéral"
-                >
-                  <div class="fr-sidemenu__inner">
-                    <button
-                      class="fr-sidemenu__btn"
-                      hidden
-                      aria-controls="fr-sidemenu-wrapper"
-                      aria-expanded="false"
-                    >
-                      Dans cette rubrique
-                    </button>
-                    <div class="fr-collapse" id="fr-sidemenu-wrapper">
-                      <ul class="fr-sidemenu__list">
-                        <li class="fr-sidemenu__item fr-sidemenu__item--ative">
-                          <a
-                            class="fr-sidemenu__link"
-                            href="#create-basic"
-                            target="_self"
-                            aria-current="page"
-                            >Information générales</a
-                          >
-                        </li>
-                        <li class="fr-sidemenu__item">
-                          <a
-                            class="fr-sidemenu__link"
-                            href="#create-technical"
-                            target="_self"
-                            >Informations techniques</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </nav>
-              </div>
-
               <!-- TODO réparer l'affichage de l'aide avec un Toggle
                         <button type="button" class="showhidebutton button-small" aria-expanded="false" data-target=".information" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
                     -->
 
-              <div class="fr-grid-row fr-col-12 fr-col-md-8">
-                <form name="create_accessibility_statement_form">
+              <div class="fr-grid-row fr-col-12 fr-col-md-12">
+                <form
+                  name="create_accessibility_statement_form"
+                  onsubmit="event.preventDefault()"
+                >
                   <section id="create-basic">
                     <h2>Informations générales</h2>
 
@@ -551,6 +515,7 @@
                       <div class="fr-accordion">
                         <h3 class="fr-accordion__title">
                           <button
+                            type="button"
                             class="fr-accordion__btn fr-text--lg"
                             aria-expanded="false"
                             aria-controls="fr-accordion-non-accessible-content"
@@ -774,7 +739,6 @@
                                     </div>
                                   </div>
                                 </fieldset>
-
                                 <button
                                   type="button"
                                   class="add-line fr-mt-2w fr-btn fr-btn--sm fr-btn--secondary"
@@ -790,6 +754,7 @@
                       <div class="fr-accordion">
                         <h3 class="fr-accordion__title">
                           <button
+                            type="button"
                             class="fr-accordion__btn fr-text--lg"
                             aria-expanded="false"
                             aria-controls="fr-accordion-derogation"
@@ -823,6 +788,7 @@
                       <div class="fr-accordion">
                         <h3 class="fr-accordion__title">
                           <button
+                            type="button"
                             class="fr-accordion__btn fr-text--lg"
                             aria-expanded="false"
                             aria-controls="fr-accordion-nonsoumis"
@@ -861,6 +827,7 @@
                       <div class="fr-accordion">
                         <h3 class="fr-accordion__title">
                           <button
+                            type="button"
                             class="fr-accordion__btn fr-text--lg"
                             aria-expanded="false"
                             aria-controls="fr-accordion-compatibilite"
@@ -935,6 +902,7 @@
                       <div class="fr-accordion">
                         <h3 class="fr-accordion__title">
                           <button
+                            type="button"
                             class="fr-accordion__btn fr-text--lg"
                             aria-expanded="false"
                             aria-controls="fr-accordion-incomptabilite"
@@ -998,20 +966,20 @@
                                 name="accstmnt_asstech_incompatible"
                               />
                             </div>
-
-                            <button
-                              type="button"
-                              class="add-line fr-btn fr-btn--sm fr-btn--secondary"
-                            >
-                              Ajouter une autre incompatibilité connue
-                            </button>
                           </fieldset>
+                          <button
+                            type="button"
+                            class="add-line fr-btn fr-btn--sm fr-btn--secondary"
+                          >
+                            Ajouter une autre incompatibilité connue
+                          </button>
                         </div>
                       </div>
 
                       <div class="fr-accordion">
                         <h3 class="fr-accordion__title">
                           <button
+                            type="button"
                             class="fr-accordion__btn fr-text--lg"
                             aria-expanded="false"
                             aria-controls="fr-accordion-technologies"
@@ -1112,14 +1080,13 @@
                                 />
                               </li>
                             </ul>
-
-                            <button
-                              class="add-line fr-btn fr-btn--sm fr-btn--secondary"
-                              type="button"
-                            >
-                              Ajouter une autre technologie
-                            </button>
                           </fieldset>
+                          <button
+                            class="add-line fr-btn fr-btn--sm fr-btn--secondary"
+                            type="button"
+                          >
+                            Ajouter une autre technologie
+                          </button>
                         </div>
                       </div>
                     </div>
