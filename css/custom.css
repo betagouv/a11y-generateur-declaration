@@ -1,3 +1,7 @@
+#hero {
+	background-color: var(--background-alt-blue-france);
+}
+
 .no-display,
 .visuallyhidden {
 	border: 0;
