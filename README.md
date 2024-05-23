@@ -17,6 +17,6 @@ Le formulaire `#create_accessibility_statement_form` contient les différens cha
 
 La section `.preview` contient la prévisualisation de la déclaration. Elle est remplie grâce aux réponses :
 - `<span data-print="accstmt_date" data-printdefault="DATE"></span>` : affiche la réponse à la question `accstmt_date`, avec la variable `DATE` par défaut.
-- L'attribut `data-if="accstmt_date"` affiche le bloc uniquement que si une réponse existe pour la question `accstmt_date`
+- L'attribut `data-if="accstmt_date"` affiche le bloc uniquement que si une réponse existe pour la question `accstmt_date`. L'attribut `data-if="a,b"` affiche le bloc si au moins une valeur existe.
 - L'attribut `data-printfilter="filter"` transforme la réponse. Les filtres acceptés sont `capitalize` et `lowercase`.
 
