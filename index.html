@@ -476,7 +476,7 @@
 
                       <div class="fr-input-group">
                         <label for="accstmnt_audit_schema" class="fr-label"
-                          >Lien du schéma pluriannuel de mise en accessibilité
+                          >URL du schéma pluriannuel de mise en accessibilité
                           de votre sponsor
                           <span class="fr-hint-text"
                             >Exemple :
@@ -487,6 +487,36 @@
                           type="url"
                           class="fr-input"
                           id="accstmnt_audit_schema"
+                        />
+                      </div>
+
+                      <div class="fr-input-group">
+                        <label for="accstmnt_plan" class="fr-label"
+                          >URL du plan 2024
+                          <span class="fr-hint-text"
+                            >Exemple :
+                            « https://beta.gouv.fr/accessibilite/plan-2024 »</span
+                          ></label
+                        >
+                        <input
+                          type="url"
+                          class="fr-input"
+                          id="accstmnt_plan"
+                        />
+                      </div>
+
+                      <div class="fr-input-group">
+                        <label for="accstmnt_bilan" class="fr-label"
+                          >URL du bilan 2023
+                          <span class="fr-hint-text"
+                            >Exemple :
+                            « https://beta.gouv.fr/accessibilite/bilan-2023 »</span
+                          ></label
+                        >
+                        <input
+                          type="url"
+                          class="fr-input"
+                          id="accstmnt_bilan"
                         />
                       </div>
                     </div>
@@ -1135,13 +1165,15 @@
                 l’article 47 de la loi n° 2005-102 du 11 février 2005.
               </p>
 
-              <div data-if="accstmnt_audit_schema">
+              <div data-if="accstmnt_audit_schema, accstmnt_plan, accstmnt_bilan">
                 <p>
                   À cette fin, nous mettons en œuvre la stratégie et les actions
                   suivantes :
-                  <a href="" data-print="accstmnt_audit_schema"
-                    >Schéma pluriannuel</a
-                  >.
+                  <ul>
+                    <li data-if="accstmnt_audit_schema"><a href="" data-print="accstmnt_audit_schema">Schéma pluriannuel</a></li>
+                    <li data-if="accstmnt_plan"><a href="" data-print="accstmnt_plan">Plan 2024</a></li>
+                    <li data-if="accstmnt_bilan"><a href="" data-print="accstmnt_bilan">Bilan 2023</a></li>
+                  </ul>
                 </p>
               </div>
 
@@ -1322,7 +1354,7 @@
 
                 <li data-if="accstmnt_contact_form">
                   Formulaire de contact :
-                  <a href="" data-print="accstmnt_contact_form"></a>
+                  <a href="" data-print="accstmnt_contact_form">Nous contacter</a>
                 </li>
                 <li data-if="accstmnt_contact_visit">
                   Adresse : <span data-print="accstmnt_contact_visit"></span>
