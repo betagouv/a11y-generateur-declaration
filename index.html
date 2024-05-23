@@ -1151,11 +1151,11 @@
         </section>
 
         <section class="page preview" hidden="hidden">
-          <h1>Prévisualisation de votre déclaration d’accessibilité</h1>
+          <h2>Prévisualisation de votre déclaration d’accessibilité</h2>
 
           <div
             id="statement_generated"
-            class="fr-callout fr-callout--blue-cumulus fr-my-2w"
+            class="fr-callout fr-my-2w"
           >
             <div id="statement_header">
               <h1>Déclaration d’accessibilité</h1>
@@ -1443,11 +1443,51 @@
             </li>
           </ul>
 
-          <!-- TODO guider l'utilisateur sur quoi en faire -->
+          <div class="fr-mt-8w">
+            <h1>Et après ?</h1>
+
+            <fieldset class="fr-fieldset" id="checkboxes-after" aria-labelledby="checkboxes-legend-after checkboxes-messages">
+              <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="checkboxes-legend-after">
+                  Pour remplir vos obligations déclaratives :
+              </legend>
+              <div class="fr-fieldset__element">
+                  <div class="fr-checkbox-group">
+                      <input name="obligation-2" id="obligation-2" type="checkbox">
+                      <label class="fr-label" for="obligation-2">
+                          Publier cette déclaration d'accessibilité
+                          <span class="fr-hint-text">Si possible à l'adresse&nbsp;<span data-print="accstmt_urlsite"></span>/accessibilite</span>
+                      </label>
+                  </div>
+              </div>
+              <div class="fr-fieldset__element">
+                  <div class="fr-checkbox-group">
+                      <input name="obligation-1" id="obligation-1" type="checkbox">
+                      <label class="fr-label" for="obligation-1">
+                          Afficher la mention&nbsp;«&nbsp;<b>Accessibilité :&nbsp;<span data-print="accstmnt_conformance" data-printfilter="lowercase"></span></b>&nbsp;»&nbsp; sur toutes les pages
+                          <span class="fr-hint-text">En pied de page de votre service</span>
+                      </label>
+                  </div>
+              </div>
+              <div class="fr-fieldset__element">
+                  <div class="fr-checkbox-group">
+                      <input name="obligation-1" id="obligation-1" type="checkbox">
+                      <label class="fr-label" for="obligation-1">
+                          Rendre cette mention cliquable
+                          <span class="fr-hint-text">Conduire vers la page Accessibilité ou vers la déclaration d’accessibilité.</span>
+                      </label>
+                  </div>
+              </div>
+            </fieldset>
+
+            <p><a href="https://accessibilite.numerique.gouv.fr/obligations/mentions-et-pages-obligatoires/" class="fr-link" >En savoir plus sur les mentions et pages obligatoires</a></p>
+          </div>
+
         </section>
 
         <div class="fr-mt-8w">
-          <h2>À propos de la démarche</h2>
+          <h1>À propos</h1>
+
+          <p>Ce générateur de déclaration d’accessibilité est maintenu par les équipes de beta.gouv.fr. Vous pouvez contribuez en donnant votre avis sur cette démarche :</p>
           <p>
             <a
               href="https://voxusagers.numerique.gouv.fr/Demarches/3378?&view-mode=formulaire-avis&nd_mode=en-ligne-enti%C3%A8rement&nd_source=button&key=4b006cb7dbf748e5d4b38cde532722e0"
