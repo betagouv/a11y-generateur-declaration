@@ -1,720 +1,1590 @@
 <!DOCTYPE html>
 <html lang="fr" data-fr-scheme="system">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000091"><!-- Défini la couleur de thème du navigateur (Safari/Android) -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000091" />
+    <!-- Défini la couleur de thème du navigateur (Safari/Android) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Générateur de déclaration d’accessibilité</title>
-    <link rel="stylesheet" href="css/dsfr.min.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/dsfr.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
 
-    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png"><!-- 180×180 -->
-    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
-    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon"><!-- 32×32 -->
-    <link rel="manifest" href="favicon/manifest.webmanifest" crossorigin="use-credentials">
-</head>
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
+    <!-- 180×180 -->
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
+    <!-- 32×32 -->
+    <link
+      rel="manifest"
+      href="favicon/manifest.webmanifest"
+      crossorigin="use-credentials"
+    />
+  </head>
 
-<body>
-
-<div class="fr-skiplinks">
-  <nav class="fr-container" role="navigation" aria-label="Accès rapide">
-      <ul class="fr-skiplinks__list">
+  <body>
+    <div class="fr-skiplinks">
+      <nav class="fr-container" role="navigation" aria-label="Accès rapide">
+        <ul class="fr-skiplinks__list">
           <li>
-              <a class="fr-link" href="#main">Accéder au contenu</a>
+            <a class="fr-link" href="#main">Accéder au contenu</a>
           </li>
           <li>
-              <a class="fr-link" href="#footer">Accéder au pied de page</a>
+            <a class="fr-link" href="#footer">Accéder au pied de page</a>
           </li>
-      </ul>
-  </nav>
-</div>
-
-<header role="banner" class="fr-header">
-    <div class="fr-header__body">
-        <div class="fr-container">
-            <div class="fr-header__body-row">
-                <div class="fr-header__brand fr-enlarge-link">
-                    <div class="fr-header__brand-top">
-                        <div class="fr-header__logo">
-                            <p class="fr-logo">
-                                République 
-                                <br>Française
-                            </p>
-                        </div>
-                    </div>
-                    <div class="fr-header__service">
-                        <a href="/" title="Accueil - Générateur de déclaration d’accessibilité">
-                            <p class="fr-header__service-title">
-                                Générateur de déclaration d’accessibilité
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </ul>
+      </nav>
     </div>
-</header>
 
-  <main id="main" class="fr-container fr-py-6w" >
-
-    <div id="accstatement">
-        <section class="page create" hidden="hidden">
-            <aside class="box">
-                <h1>Générateur de déclaration d'accessibilité</h1>
-                <div class="fr-container fr-mb-6w">
-                    <div class="fr-callout">
-                        <p class="fr-callout__text">La déclaration d’accessibilité est une <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/">obligation du Référentiel Général d’Amélioration de l’Accessibilité</a> (RGAA) concernant le service public.</p>
-                        <p class="fr-callout__text">Ce générateur permet d'obtenir une <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/#contenu-de-la-d%C3%A9claration-daccessibilit%C3%A9">déclaration d’accessibilité conforme</a> que vous pouvez télécharger et affiner si besoin.</p>
-                    </div>
+    <header role="banner" class="fr-header">
+      <div class="fr-header__body">
+        <div class="fr-container">
+          <div class="fr-header__body-row">
+            <div class="fr-header__brand fr-enlarge-link">
+              <div class="fr-header__brand-top">
+                <div class="fr-header__logo">
+                  <p class="fr-logo">
+                    République
+                    <br />Française
+                  </p>
                 </div>
-            </aside>
+              </div>
+              <div class="fr-header__service">
+                <a
+                  href="/"
+                  title="Accueil - Générateur de déclaration d’accessibilité"
+                >
+                  <p class="fr-header__service-title">
+                    Générateur de déclaration d’accessibilité
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-            <div class="fr-container fr-mb-8w">
-                <div class="fr-grid-row fr-grid-row--gutters">
-                    <div class="fr-col-12 fr-col-md-4">
-                        <nav class="fr-sidemenu fr-sidemenu--sticky" aria-label="Menu latéral">
-                            <div class="fr-sidemenu__inner">
-                                <button class="fr-sidemenu__btn" hidden aria-controls="fr-sidemenu-wrapper" aria-expanded="false">Dans cette rubrique</button>
-                                <div class="fr-collapse" id="fr-sidemenu-wrapper">
-                                    <ul class="fr-sidemenu__list">
-                                        <li class="fr-sidemenu__item fr-sidemenu__item--ative">
-                                            <a class="fr-sidemenu__link" href="#create-basic" target="_self" aria-current="page">Information générales</a>
-                                        </li>
-                                        <li class="fr-sidemenu__item">
-                                            <a class="fr-sidemenu__link" href="#create-technical" target="_self">Informations techniques</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-
-                    <!-- TODO réparer l'affichage de l'aide avec un Toggle
+    <main id="main" >
+      <section id="hero" class="">
+        <div class="fr-container fr-py-6w">
+        <h1>Générateur de déclaration d'accessibilité</h1>    
+        <p class="fr-text--lg">La <b>déclaration d’accessibilité</b> est obligatoire pour tous les services publics. Ce générateur permet d'obtenir une <a
+                href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/#contenu-de-la-d%C3%A9claration-daccessibilit%C3%A9"
+                >déclaration d’accessibilité conforme</a
+              > au RGAA à télécharger (et affiner si besoin).
+        </p>
+      </section>
+      <div id="accstatement" class="fr-container fr-py-6w">
+        <section class="page create" hidden="hidden">
+          <div class="fr-container fr-mb-12w">
+            <div class="fr-grid-row fr-grid-row--gutters">
+              <!-- TODO réparer l'affichage de l'aide avec un Toggle
                         <button type="button" class="showhidebutton button-small" aria-expanded="false" data-target=".information" data-showtext="Afficher l’aide" data-hidetext="Cacher l’aide">Afficher l’aide</button>
                     -->
 
-                    <div class="fr-grid-row fr-col-12 fr-col-md-8">
-            <form name="create_accessibility_statement_form">
-                <section id="create-basic">
-                    <h2>Informations générales</h2>
+              <div class="fr-grid-row fr-col-8 fr-col-md-8">
+                <form
+                  name="create_accessibility_statement_form"
+                  onsubmit="event.preventDefault()"
+                >
+                  <section id="create-basic">
 
-                    <div class="fr-callout">
-                        <p class="fr-callout__text fr-text--sm">
-                            Ce sont les <b>informations minimales</b> pour une <b>déclaration d’accessibilité conforme</b>.
-                        </p>
+                    <div class="fr-stepper">
+                        <h2 class="fr-stepper__title">
+                            Informations générales
+                            <span class="fr-stepper__state">Étape 1 sur 2</span>
+                        </h2>
+                        <div class="fr-stepper__steps" data-fr-current-step="1" data-fr-steps="2"></div>
+                        <!-- <p class="fr-stepper__details">
+                            <span class="fr-text--bold">Étape suivante :</span> Informations d'accessibilité
+                        </p> -->
                     </div>
 
-                        <div class="fr-mt-8w">
-                            <h3>Votre service</h3>
-                            
-                            <div class="fr-input-group">
-                                <label for="accstmt_org" class="fr-label">Nom du ministère ou de l’opérateur qui pilote le service
-                                    <span class="fr-hint-text">Exemple : « Le ministère de l’Écologie »</span></label>
-                                <input type="text" class="fr-input" id="accstmt_org"/>
-                            </div>
-
-                            <div class="fr-input-group">
-                                <label for="accstmt_namesite" class="fr-label">Nom de votre site
-                                    <span class="fr-hint-text">Exemple : « Démarches Simplifiées »</span>
-                                    <span class="fr-hint-text">Pour les applications mobiles, inclure le numéro de version danset la date de sortie permettant d’identifier une version spécifique.</span></label>
-                                <input type="text" class="fr-input" id="accstmt_namesite"/>
-                            </div>
-                            <div class="fr-input-group">
-                                <label for="accstmt_urlsite" class="fr-label">Adresse de votre site
-                                <span class="fr-hint-text">Exemple : « https://design.numerique.gouv.fr »</span></label>
-                                <input type="url" class="fr-input" id="accstmt_urlsite"/>
-                            </div>
-                        </div>
-
-                        <div class="fr-mt-8w">
-                            <h3>Documents associés</h3>
-                            
-                            <p class="fr-text--sm">Le <a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/obligations/#sch%C3%A9ma-pluriannuel-de-mise-en-accessibilit%C3%A9">schéma pluriannuel</a> est un document qui contient les efforts menés et à mener en accessibilité : le plan d’action de l’année en cours, le bilan des actions réalisées l’année précédente...</p>
-
-                            <div class="fr-input-group">
-                                <label for="accstmnt_audit_schema" class="fr-label">Lien du schéma pluriannuel de mise en accessibilité de votre entité
-                                <span class="fr-hint-text">Exemple : « https://gouvernement.fr/schema-pluriannuel »</span></label>
-                                <input type="url" class="fr-input" id="accstmnt_audit_schema" />
-                            </div>
-                        </div>
-
-                        <div class="fr-mt-8w">
-                            <h3>État de conformité</h3>
-
-                            <div class="fr-form-group">
-                            <fieldset class="fr-fieldset" id="conformance-status">
-                                <legend class="fr-fieldset__legend fr-text--regular visuallyhidden">Quel est l'état de conformité du site ?</legend>
-                                <div class="fr-fieldset__content">
-                                <div class="fr-radio-group">
-                                    <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonaudit" value="Non conforme" checked/>
-                                    <label for="accstmnt_conformance_nonaudit" class="fr-label">
-                                        <span class="status meaning"><strong>Le site n’a encore pas été audité.</strong>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="fr-radio-group">
-                                    <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" value="Non conforme"/>
-                                    <label for="accstmnt_conformance_nonconformant" class="fr-label">
-                                        <span class="status">Le résultat de l’audit donne un <strong>taux de conformité inférieur à 50 %</strong>.</span>
-                                    </label>
-                                </div>
-                                <div class="fr-radio-group">
-                                    <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" value="Partiellement conforme" />
-                                    <label for="accstmnt_conformance_partial" class="fr-label">
-                                        <span class="status">Le résultat de l’audit donne un <strong>taux de conformité supérieur à 50 %</strong>.</span>
-                                    </label>
-                                </div>
-                                <div class="fr-radio-group">
-                                    <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_full" value="Totalement conforme"/>
-                                    <label for="accstmnt_conformance_full" class="fr-label">
-                                        <span class="status">Le résultat de l’audit donne un <strong>taux de conformité égal à 100 %</strong>.</span>
-                                    </label>
-                                </div>
-                                <input id="accstmnt_conformance_meaning" type="hidden" value="">
-                                </div>
-                            </fieldset>
-                            </div>
-
-                            <div class="fr-input-group">
-                                <label for="accstmt_taux" class="fr-label">Pourcentage de critères RGAA respectés
-                                    <span class="fr-hint-text">Exemple : « 78 % »</span></label>
-                                <input type="number" min="0" max="100" id="accstmt_taux" class="fr-input" />
-                            </div>
-                        </div>
-
-                        <div class="fr-mt-8w">
-                            <h3>Réalisation de l’audit</h3>
-                            <p class="fr-text--sm">Comment le site a-t-il été audité ? Cette information aide les utilisateurs à comprendre la qualité de cette déclaration d’accessibilité.</p>
-
-                            <div class="fr-form-group">
-                            <fieldset id="accstmnt_assessment" class="fr-fieldset">
-                                <legend class="fr-fieldset__legend fr-text--regular visuallyhidden">Qui a réalisé l’audit ?</legend>
-                                <div class="fr-fieldset__content">
-                                    <div class="fr-radio-group">
-                                        <input id="accstmnt_approach_1" name="accstmnt_approach" type="radio" value="en auto-évaluation"/>
-                                        <label for="accstmnt_approach_1" class="fr-label">Auto-évaluation 
-                                            <span class="fr-hint-text">Le sité a été évalué par votre organisation.</span></label>
-                                    </div>
-                                    <div class="fr-radio-group">
-                                        <input id="accstmnt_approach_2" name="accstmnt_approach" type="radio" value="par évaluation externe"/>
-                                        <label for="accstmnt_approach_2" class="fr-label">Évaluation externe
-                                            <span class="fr-hint-text">Le contenu a été évalué par une entité externe. Elle n'a pas participé au processus de conception et de développement du service.</span></label>
-                                        <!-- TODO : demander le nom de l’entreprise auditrice -->
-                                    </div>
-                                </div>
-                            </fieldset>
-                            </div>
-                        </div>
-
-                        <div class="fr-mt-8w">
-                            <h3>Moyens de contact</h3>
-                            
-                            <p class="fr-text--sm">De quelle manière les utilisateurs peuvent-ils contacter votre organisation lorsqu’ils rencontrent un obstacle à l’accessibilité ? Idéalement, vous devriez proposer <b>plusieurs options</b>.</p>
-
-                            <fieldset class="fr-fieldset" id="form-feedback">
-                                <legend class="fr-fieldset__legend fr-text--regular visuallyhidden">Quels moyens de contacts sont proposés ?</legend>
-                                <div class="fr-fieldset__content">
-                                <div class="fr-input-group">
-                                    <label for="accstmnt_contact_phone" class="fr-label">Téléphone
-                                        <span class="fr-hint-text">Exemple : « +33 34 56 78 90 »</span></label>
-                                    <input type="tel" class="fr-input" id="accstmnt_contact_phone"/>
-                                </div>
-                                <div class="fr-input-group">
-                                    <label for="accstmnt_contact_email" class="fr-label">E-mail
-                                        <span class="fr-hint-text">Exemple : « julien@beta.gouv.fr »</span></label>
-                                    <input type="email" class="fr-input"  id="accstmnt_contact_email"/>
-                                </div>
-                                <div class="fr-input-group">
-                                    <label for="accstmnt_contact_form" class="fr-label">Formulaire de contact
-                                    <span class="fr-hint-text">Exemple : « https://acceslibre.beta.gouv.fr/contact »</span></label>
-                                    <input type="url" class="fr-input" id="accstmnt_contact_form"/>
-                                </div>
-                                <div class="fr-input-group">
-                                    <label for="accstmnt_contact_visit" class="fr-label">Adresse
-                                    <span class="fr-hint-text">Exemple : « DINUM, Ségur, Paris »</span></label>
-                                    <input type="text" class="fr-input"  id="accstmnt_contact_visit"/>
-                                </div>
-
-                                <div class="fr-input-group">
-                                    <label for="accstmnt_contact_other" class="fr-label">Autres moyens de contact
-                                        <span class="fr-hint-text">Exemple : « Sur Twitter : @MaStartupDetat »</span></label>
-                                    <textarea class="fr-input" id="accstmnt_contact_other"></textarea>
-                                </div>
-
-                                <div class="fr-input-group">
-                                    <label for="accstmnt_contact_responsetime" class="fr-label">Délai de réponse moyen
-                                        <span class="fr-hint-text">Exemple : « 2 jours ouvrés »</span></label>
-                                    <input type="text" class="fr-input"  id="accstmnt_contact_responsetime"/>
-                                </div>
-                                </div>
-                            </fieldset>
-                        </div>
-
-                        <div class="fr-mt-8w">
-                            <h3>Date de publication</h3>
-                             
-                            <p class="fr-text--sm">La date de publication aide les utilisateurs à comprendre si la déclaration d’accessibilité est activement tenue à jour, ou si elle est dépassée. Une déclaration d’accessibilité de plus d'un an peut être considérée comme non tenue à jour.</p>
-
-                            <div class="fr-fieldset">
-                                <label for="accstmt_date" class="fr-label">Date de publication de cette déclaration d’accessibilité</label>
-                                <input type="text" id="accstmt_date" class="fr-input today"/>
-                            </div>
-                        </div>
-                </section>
-
-                <section id="create-technical" class="fr-mt-8w">
-                    <h2>Informations techniques</h2>
-
                     <div class="fr-callout">
-                        <p class="fr-callout__text fr-text--sm">Les détails techniques <b>aident les utilisateurs à comprendre les problèmes qu’ils peuvent observer</b> : par exemple, la compatibilité avec les navigateurs web et les technologies d’assistance.
-                        </p>
+                      <p class="fr-callout__text fr-text--sm">
+                        Ce sont les <b>informations minimales</b> pour une
+                        <b>déclaration d’accessibilité conforme</b>.
+                      </p>
                     </div>
 
-                    <div class="fr-accordion-group" data-fr-js-accordions-group="true">
-                    <div class="fr-accordion">
-                        <h3 class="fr-accordion__title">
-                            <button class="fr-accordion__btn fr-text--lg" aria-expanded="false" aria-controls="fr-accordion-non-accessible-content" data-fr-js-collapse-button="true">Contenus non accessibles</button>
-                        </h3>
+                    <div class="fr-mt-8w">
+                      <h3>Votre service</h3>
 
-                        <div class="fr-collapse" id="fr-accordion-non-accessible-content" data-fr-js-collapse="true">
-                        
-                        <p class="fr-text--sm">Parfois, l’accessibilité d'un service est limitée. Par exemple, vous pouvez ne pas être en mesure d’assurer l’accessibilité instantanée du contenu généré par l’utilisateur. <b>La transparence aide les utilisateurs à comprendre</b> les problèmes qu’ils peuvent observer et à trouver des solutions.</p>
+                      <div class="fr-input-group">
+                        <label for="accstmt_namesite" class="fr-label"
+                          >Nom de votre site
+                          <span class="fr-hint-text"
+                            >Exemple : « Démarches Simplifiées »</span
+                          >
+                          <!-- <span class="fr-hint-text"
+                            >Pour les applications mobiles, inclure le numéro de
+                            version danset la date de sortie permettant
+                            d’identifier une version spécifique.</span
+                          > -->
+                          </label
+                        >
+                        <input
+                          type="text"
+                          class="fr-input"
+                          id="accstmt_namesite"
+                        />
+                      </div>
 
-                        <div class="fr-form-group">
-                        <fieldset class="fr-fieldset">
-                            <legend class="fr-fieldset__legend fr-text--regular visuallyhidden">Quelles sont les limites d’accessibilités ?</legend>
-                            <p class="fr-text--regular">Listez les contenus qui ne sont pas accessibles : quel problème peut rencontrer un utilisateur, pourquoi le problème peut arriver, que peut-on faire en attendant... ?</p>
+                      <div class="fr-input-group">
+                        <label for="accstmt_urlsite" class="fr-label"
+                          >Adresse de votre site
+                          <span class="fr-hint-text"
+                            >Exemple :
+                            « https://design.numerique.gouv.fr »</span
+                          ></label
+                        >
+                        <input
+                          type="url"
+                          class="fr-input"
+                          id="accstmt_urlsite"
+                        />
+                      </div>
+                    </div>
 
-                            <div id="accstmnt_issues">
-                                <fieldset id="accstmnt_limitation_1" class="fr-fieldset">
-                                    <legend class="fr-fieldset__legend fr-text--bold">Limitation d’accessibilité</legend>
-                                    <div class="fr-fieldset__content">
-                                    <div class="fr-input-group">
-                                        <label for="accstmnt_limitation_1_element" class="fr-label">Contenu
-                                            <span class="fr-hint-text">Exemple : Commentaire des utilisateurs »</span></label>
-                                        <input type="text" class="fr-input" id="accstmnt_limitation_1_element" name="element"/>
-                                    </div>
-                                    <div class="fr-input-group">
-                                        <label for="accstmnt_limitation_1_description" class="fr-label">Description du problème
-                                            <span class="fr-hint-text">Exemple : « Les images uploadées peuvent ne pas avoir de texte alternatif »</span></label>
-                                        <input type="text" class="fr-input" id="accstmnt_limitation_1_description" name="description"/>
-                                    </div>
-                                    <div class="fr-input-group">
-                                        <label for="accstmnt_limitation_1_reason" class="fr-label">Pourquoi le problème arrive
-                                            <span class="fr-hint-text">Exemple : « Nous ne pouvons garantir la qualité des contributions. »</span></label>
-                                        <input type="text" class="fr-input" id="accstmnt_limitation_1_reason" name="reason"/>
-                                    </div>
-                                    <div class="fr-input-group">
-                                        <label for="accstmnt_limitation_1_us" class="fr-label">Ce que nous faisons pour y pallier
-                                            <span class="fr-hint-text">Exemple : « Nous monitorons les commentaires et essayons de les corriger dans la semaine suivant leur publication. »</span></label>
-                                        <input type="text" class="fr-input" id="accstmnt_limitation_1_us" name="us"/>
-                                    </div>
-                                    <div class="fr-input-group">
-                                        <label for="accstmnt_limitation_1_you" class="fr-label">Ce qui peut être fait en attendant
-                                            <span class="fr-hint-text">Exemple : « Merci d’utiliser le formulaire de contact si vous rencontrez un problème »</span></label>
-                                        <input type="text" class="fr-input" id="accstmnt_limitation_1_you" name="you"/>
-                                    </div>
-                                    </div>
-                                </fieldset>
+                    <div class="fr-mt-8w">
+                      <h3>État de conformité</h3>
 
-                                <fieldset id="accstmnt_limitation_[n]" class="fr-fieldset proto fr-mt-4w">
-                                    <legend class="fr-fieldset__legend fr-text--bold">Limitation d’accessibilité [n]</legend>
-                                    <div class="fr-fieldset__content">
-                                    <div class="fr-input-group">
-                                        <label for="accstmnt_limitation_[n]_element" class="fr-label">Contenu</label>
-                                        <input type="text" class="fr-input" id="accstmnt_limitation_[n]_element" name="element"/>
-                                    </div>
-                                    <div class="fr-input-group">
-                                        <label for="accstmnt_limitation_[n]_description" class="fr-label">Description du problème</label>
-                                        <input type="text" class="fr-input" id="accstmnt_limitation_[n]_description" name="description"/>
-                                    </div>
-                                    <div class="fr-input-group">
-                                        <label for="accstmnt_limitation_[n]_reason" class="fr-label">Pourquoi le problème arrive</label>
-                                        <input type="text" class="fr-input" id="accstmnt_limitation_[n]_reason" name="reason"/>
-                                    </div>
-                                    <div class="fr-input-group">
-                                        <label for="accstmnt_limitation_[n]_us" class="fr-label">Ce que l’équipe fait pour y pallier</label>
-                                        <input type="text" class="fr-input" id="accstmnt_limitation_[n]_us" name="us"/>
-                                    </div>
-                                    <div class="fr-input-group">
-                                        <label for="accstmnt_limitation_[n]_you" class="fr-label">Ce que l’utilisateur peut faire en attendant</label>
-                                        <input type="text" class="fr-input" id="accstmnt_limitation_[n]_you" name="you"/>
-                                    </div>
-                                    </div>
-                                </fieldset>
-
-                                <button type="button" class="add-line fr-mt-2w fr-btn fr-btn--sm fr-btn--secondary">Ajouter une autre limite d’accessibilité</button>
+                      <div class="fr-form-group">
+                        <fieldset class="fr-fieldset" id="conformance-status">
+                          <legend
+                            class="fr-fieldset__legend fr-text--regular visuallyhidden"
+                          >
+                            Quel est l'état de conformité du site ?
+                          </legend>
+                          <div class="fr-fieldset__content">
+                            <div class="fr-radio-group">
+                              <input
+                                type="radio"
+                                name="accstmnt_conformance"
+                                id="accstmnt_conformance_nonaudit"
+                                value="Non conforme"
+                                checked
+                              />
+                              <label
+                                for="accstmnt_conformance_nonaudit"
+                                class="fr-label"
+                              >
+                                <span class="status meaning"
+                                  ><strong
+                                    >Le site n’a encore pas été audité.</strong
+                                  >
+                                </span>
+                              </label>
                             </div>
+                            <div class="fr-radio-group">
+                              <input
+                                type="radio"
+                                name="accstmnt_conformance"
+                                id="accstmnt_conformance_nonconformant"
+                                value="Non conforme"
+                              />
+                              <label
+                                for="accstmnt_conformance_nonconformant"
+                                class="fr-label"
+                              >
+                                <span class="status"
+                                  >Le résultat de l’audit donne un
+                                  <strong
+                                    >taux de conformité inférieur à 50 %</strong
+                                  >.</span
+                                >
+                              </label>
+                            </div>
+                            <div class="fr-radio-group">
+                              <input
+                                type="radio"
+                                name="accstmnt_conformance"
+                                id="accstmnt_conformance_partial"
+                                value="Partiellement conforme"
+                              />
+                              <label
+                                for="accstmnt_conformance_partial"
+                                class="fr-label"
+                              >
+                                <span class="status"
+                                  >Le résultat de l’audit donne un
+                                  <strong
+                                    >taux de conformité supérieur à 50 %</strong
+                                  >.</span
+                                >
+                              </label>
+                            </div>
+                            <div class="fr-radio-group">
+                              <input
+                                type="radio"
+                                name="accstmnt_conformance"
+                                id="accstmnt_conformance_full"
+                                value="Totalement conforme"
+                              />
+                              <label
+                                for="accstmnt_conformance_full"
+                                class="fr-label"
+                              >
+                                <span class="status"
+                                  >Le résultat de l’audit donne un
+                                  <strong
+                                    >taux de conformité égal à 100 %</strong
+                                  >.</span
+                                >
+                              </label>
+                            </div>
+                            <input
+                              id="accstmnt_conformance_meaning"
+                              type="hidden"
+                              value=""
+                            />
+                          </div>
                         </fieldset>
-                        </div>
-                        </div>
+                      </div>
+
+                      <div class="fr-input-group">
+                        <label for="accstmt_taux" class="fr-label"
+                          >Pourcentage de critères RGAA respectés 
+                          <span class="fr-hint-text"
+                            >Exemple : « 78 » (laisser vide si le site est non audité)</span
+                          ></label
+                        >
+                        <input
+                          type="number"
+                          min="0"
+                          max="100"
+                          id="accstmt_taux"
+                          class="fr-input"
+                        />
+                      </div>
                     </div>
 
-                    <div class="fr-accordion">                        
-                        <h3 class="fr-accordion__title">
-                            <button class="fr-accordion__btn fr-text--lg" aria-expanded="false" aria-controls="fr-accordion-derogation" data-fr-js-collapse-button="true">Dérogations pour charge disproportionnée</button></h3>
-                        
-                        <div class="fr-collapse" id="fr-accordion-derogation">
-                        <div class="fr-input-group">
-                            <label for="accstmt_derogation" class="fr-label">Dérogation pour charge disproportionnée
-                                <span class="fr-hint-text">Exemple : « Les vidéos n’ont pas d’audio description, sous-titres ou transcription textuelle. La cellule ayant en charge la mise en ligne de ces animations n’est pas en mesure actuellement de fournir ces éléments pour l’ensemble de ces vidéos. »</span></label>
-                            <textarea id="accstmt_derogation" class="fr-input"></textarea>
-                        </div>
-                        </div>
+                    <div class="fr-mt-8w">
+                      <h3>Réalisation de l’audit</h3>
+                      <p class="fr-text--sm">
+                        Comment le site a-t-il été audité ? Cette information
+                        aide les utilisateurs à comprendre la qualité de cette
+                        déclaration d’accessibilité.
+                      </p>
+
+                      <div class="fr-form-group">
+                        <fieldset id="accstmnt_assessment" class="fr-fieldset">
+                          <legend
+                            class="fr-fieldset__legend fr-text--regular visuallyhidden"
+                          >
+                            Qui a réalisé l’audit ?
+                          </legend>
+                          <div class="fr-fieldset__content">
+                            <div class="fr-radio-group">
+                              <input
+                                id="accstmnt_approach_1"
+                                name="accstmnt_approach"
+                                type="radio"
+                                value="en auto-évaluation"
+                              />
+                              <label for="accstmnt_approach_1" class="fr-label"
+                                >Auto-évaluation 
+                                <span class="fr-hint-text"
+                                  >Le sité a été évalué par votre
+                                  organisation.</span
+                                ></label
+                              >
+                            </div>
+                            <div class="fr-radio-group">
+                              <input
+                                id="accstmnt_approach_2"
+                                name="accstmnt_approach"
+                                type="radio"
+                                value="par évaluation externe"
+                              />
+                              <label for="accstmnt_approach_2" class="fr-label"
+                                >Évaluation externe
+                                <span class="fr-hint-text"
+                                  >Le contenu a été évalué par une entité
+                                  externe. Elle n'a pas participé au processus
+                                  de conception et de développement du
+                                  service.</span
+                                ></label
+                              >
+                              <!-- TODO : demander le nom de l’entreprise auditrice -->
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
                     </div>
 
-                    <div class="fr-accordion">
+                    <div class="fr-mt-8w">
+                      <h3>Moyens de contact</h3>
+
+                      <p class="fr-text--sm">
+                        De quelle manière les utilisateurs peuvent-ils contacter
+                        votre organisation lorsqu’ils rencontrent un obstacle à
+                        l’accessibilité ? Idéalement, vous devriez proposer
+                        <b>plusieurs options</b>.
+                      </p>
+
+                      <fieldset class="fr-fieldset" id="form-feedback">
+                        <legend
+                          class="fr-fieldset__legend fr-text--regular visuallyhidden"
+                        >
+                          Quels moyens de contacts sont proposés ?
+                        </legend>
+                        <div class="fr-fieldset__content">
+                          <div class="fr-input-group">
+                            <label for="accstmnt_contact_phone" class="fr-label"
+                              >Téléphone
+                              <span class="fr-hint-text"
+                                >Exemple : « +33 34 56 78 90 »</span
+                              ></label
+                            >
+                            <input
+                              type="tel"
+                              class="fr-input"
+                              id="accstmnt_contact_phone"
+                            />
+                          </div>
+                          <div class="fr-input-group">
+                            <label for="accstmnt_contact_email" class="fr-label"
+                              >E-mail
+                              <span class="fr-hint-text"
+                                >Exemple : « julien@beta.gouv.fr »</span
+                              ></label
+                            >
+                            <input
+                              type="email"
+                              class="fr-input"
+                              id="accstmnt_contact_email"
+                            />
+                          </div>
+                          <div class="fr-input-group">
+                            <label for="accstmnt_contact_form" class="fr-label"
+                              >Formulaire de contact
+                              <span class="fr-hint-text"
+                                >Exemple :
+                                « https://acceslibre.beta.gouv.fr/contact »</span
+                              ></label
+                            >
+                            <input
+                              type="url"
+                              class="fr-input"
+                              id="accstmnt_contact_form"
+                            />
+                          </div>
+                          <div class="fr-input-group">
+                            <label for="accstmnt_contact_visit" class="fr-label"
+                              >Adresse
+                              <span class="fr-hint-text"
+                                >Exemple : « DINUM, Ségur, Paris »</span
+                              ></label
+                            >
+                            <input
+                              type="text"
+                              class="fr-input"
+                              id="accstmnt_contact_visit"
+                            />
+                          </div>
+
+                          <div class="fr-input-group">
+                            <label for="accstmnt_contact_other" class="fr-label"
+                              >Autres moyens de contact
+                              <span class="fr-hint-text"
+                                >Exemple : « Sur Twitter : @MaStartupDetat
+                                »</span
+                              ></label
+                            >
+                            <textarea
+                              class="fr-input"
+                              id="accstmnt_contact_other"
+                            ></textarea>
+                          </div>
+
+                          <div class="fr-input-group">
+                            <label
+                              for="accstmnt_contact_responsetime"
+                              class="fr-label"
+                              >Délai de réponse moyen
+                              <span class="fr-hint-text"
+                                >Exemple : « 2 jours ouvrés »</span
+                              ></label
+                            >
+                            <input
+                              type="text"
+                              class="fr-input"
+                              id="accstmnt_contact_responsetime"
+                            />
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <div class="fr-mt-8w">
+                      <h3>Date de publication</h3>
+
+                      <p class="fr-text--sm">
+                        La date de publication aide les utilisateurs à
+                        comprendre si la déclaration d’accessibilité est
+                        activement tenue à jour, ou si elle est dépassée. Une
+                        déclaration d’accessibilité de plus d'un an peut être
+                        considérée comme non tenue à jour.
+                      </p>
+
+                      <div class="fr-fieldset">
+                        <label for="accstmt_date" class="fr-label"
+                          >Date de publication de cette déclaration
+                          d’accessibilité</label
+                        >
+                        <input
+                          type="text"
+                          id="accstmt_date"
+                          class="fr-input today"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="fr-mt-8w">
+                      <h3>À propos de l'organisation pilote</h3>
+
+                      <p class="fr-text--sm">L'intité qui pilote votre service (ministère ou opérateur sponsor par exemple) a des obligations d'accessibilités, qui doivent apparaître dans votre déclaration.</p>
+
+                      <div class="fr-input-group">
+                        <label for="accstmt_org" class="fr-label"
+                          >Nom du ministère ou de l’opérateur sponsor
+                          <span class="fr-hint-text"
+                            >Exemple : « Le ministère de l’Écologie »</span
+                          ></label
+                        >
+                        <input type="text" class="fr-input" id="accstmt_org" />
+                      </div>
+
+                      <h4>Schéma pluriannuel</h4>
+
+                      <p class="fr-text--sm">
+                        Le
+                        <a
+                          href="https://accessibilite.numerique.gouv.fr/obligations/schema-pluriannuel/"
+                          >schéma pluriannuel</a
+                        >
+                        est un document qui contient les efforts menés et à
+                        mener en accessibilité : le plan d’action de l’année en
+                        cours, le bilan des actions réalisées l’année
+                        précédente... <b>Ce document est à la charge de votre entité.</b>
+                      </p>
+
+                      <div class="fr-input-group">
+                        <label for="accstmnt_audit_schema" class="fr-label"
+                          >URL du schéma pluriannuel de mise en accessibilité
+                          de votre sponsor
+                          <span class="fr-hint-text"
+                            >Exemple :
+                            « https://beta.gouv.fr/accessibilite/schema-pluriannuel »</span
+                          ></label
+                        >
+                        <input
+                          type="url"
+                          class="fr-input"
+                          id="accstmnt_audit_schema"
+                        />
+                      </div>
+
+                      <div class="fr-input-group">
+                        <label for="accstmnt_plan" class="fr-label"
+                          >URL du plan 2024
+                          <span class="fr-hint-text"
+                            >Exemple :
+                            « https://beta.gouv.fr/accessibilite/plan-2024 »</span
+                          ></label
+                        >
+                        <input
+                          type="url"
+                          class="fr-input"
+                          id="accstmnt_plan"
+                        />
+                      </div>
+
+                      <div class="fr-input-group">
+                        <label for="accstmnt_bilan" class="fr-label"
+                          >URL du bilan 2023
+                          <span class="fr-hint-text"
+                            >Exemple :
+                            « https://beta.gouv.fr/accessibilite/bilan-2023 »</span
+                          ></label
+                        >
+                        <input
+                          type="url"
+                          class="fr-input"
+                          id="accstmnt_bilan"
+                        />
+                      </div>
+                    </div>
+                  </section>
+
+                  <section id="create-technical" class="fr-mt-8w">
+                    <div class="fr-stepper">
+                        <h2 class="fr-stepper__title">
+                            Informations techniques
+                            <span class="fr-stepper__state">Étape 2 sur 2</span>
+                        </h2>
+                        <div class="fr-stepper__steps" data-fr-current-step="2" data-fr-steps="2"></div>
+                    </div>
+
+                    <div class="fr-callout">
+                      <p class="fr-callout__text fr-text--sm">
+                        Les détails techniques
+                        <b
+                          >aident les utilisateurs à comprendre les problèmes
+                          qu’ils peuvent observer</b
+                        >
+                        : par exemple, la compatibilité avec les navigateurs web
+                        et les technologies d’assistance.
+                      </p>
+                    </div>
+
+                    <div
+                      class="fr-accordion-group"
+                      data-fr-js-accordions-group="true"
+                    >
+                      <div class="fr-accordion">
                         <h3 class="fr-accordion__title">
-                            <button class="fr-accordion__btn fr-text--lg" aria-expanded="false" aria-controls="fr-accordion-nonsoumis">Contenus non soumis à l’obligation d’accessibilité</button>
+                          <button
+                            type="button"
+                            class="fr-accordion__btn fr-text--lg"
+                            aria-expanded="true"
+                            aria-controls="fr-accordion-non-accessible-content"
+                            data-fr-js-collapse-button="true"
+                          >
+                            Contenus non accessibles
+                          </button>
                         </h3>
-                                               
-                        <div class="fr-collapse" id="fr-accordion-nonsoumis">
-                            <p class="fr-text--sm">Certaines sections ou contenus non accessibles n’entrent pas dans le champ d’application de la législation appliquable. Il n’y a donc pas d’obligations mais il est utile d’indiquer aux utilisateurs les alternatives possibles.</p>
 
-                        <div class="fr-input-group">
-                            <label for="accstmt_exempt" class="fr-label">Contenus non soumis à l’obligation  d’accessibilité
-                                <span class="fr-hint-text">Exemple : « Le système de cartographie Open Street map est un service externe non soumis à obligation. »</span></label>
-                            <textarea id="accstmt_exempt" class="fr-input"></textarea>
-                        </div>
-                        </div>
-                    </div>
+                        <div
+                          class="fr-collapse"
+                          id="fr-accordion-non-accessible-content"
+                          data-fr-js-collapse="true"
+                        >
+                          <p class="fr-text--sm">
+                            <b
+                              >La transparence aide les utilisateurs à
+                              comprendre</b
+                            >
+                            les problèmes qu’ils peuvent observer et à trouver
+                            des solutions. Si vous avez identifiés des problèmes d'accessibilité dans votre service, mentionnez les.
+                          </p>
 
-                    <div class="fr-accordion">
+                          <div class="fr-form-group">
+                            <fieldset class="fr-fieldset">
+                              <legend
+                                class="fr-fieldset__legend fr-text--regular visuallyhidden"
+                              >
+                                Quelles sont les limites d’accessibilités ?
+                              </legend>
+                              <p class="fr-text--regular">
+                                Listez les contenus qui ne sont pas accessibles
+                                : quel problème peut rencontrer un utilisateur,
+                                pourquoi le problème peut arriver, que peut-on
+                                faire en attendant... ?
+                              </p>
+
+                              <div id="accstmnt_issues">
+                                <fieldset
+                                  id="accstmnt_limitation_1"
+                                  class="fr-fieldset"
+                                >
+                                  <legend
+                                    class="fr-fieldset__legend fr-text--bold"
+                                  >
+                                    Limitation d’accessibilité
+                                  </legend>
+                                  <div class="fr-fieldset__content">
+                                    <div class="fr-input-group">
+                                      <label
+                                        for="accstmnt_limitation_1_element"
+                                        class="fr-label"
+                                        >Contenu
+                                        <span class="fr-hint-text"
+                                          >Exemple : Commentaire des
+                                          utilisateurs </span
+                                        ></label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="fr-input"
+                                        id="accstmnt_limitation_1_element"
+                                        name="element"
+                                      />
+                                    </div>
+                                    <div class="fr-input-group">
+                                      <label
+                                        for="accstmnt_limitation_1_description"
+                                        class="fr-label"
+                                        >Description du problème
+                                        <span class="fr-hint-text"
+                                          >Exemple : « Les images uploadées
+                                          peuvent ne pas avoir de texte
+                                          alternatif »</span
+                                        ></label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="fr-input"
+                                        id="accstmnt_limitation_1_description"
+                                        name="description"
+                                      />
+                                    </div>
+                                    <div class="fr-input-group">
+                                      <label
+                                        for="accstmnt_limitation_1_reason"
+                                        class="fr-label"
+                                        >Pourquoi le problème arrive
+                                        <span class="fr-hint-text"
+                                          >Exemple : « Nous ne pouvons garantir
+                                          la qualité des contributions. »</span
+                                        ></label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="fr-input"
+                                        id="accstmnt_limitation_1_reason"
+                                        name="reason"
+                                      />
+                                    </div>
+                                    <div class="fr-input-group">
+                                      <label
+                                        for="accstmnt_limitation_1_us"
+                                        class="fr-label"
+                                        >Ce que nous faisons pour y pallier
+                                        <span class="fr-hint-text"
+                                          >Exemple : « Nous monitorons les
+                                          commentaires et essayons de les
+                                          corriger dans la semaine suivant leur
+                                          publication. »</span
+                                        ></label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="fr-input"
+                                        id="accstmnt_limitation_1_us"
+                                        name="us"
+                                      />
+                                    </div>
+                                    <div class="fr-input-group">
+                                      <label
+                                        for="accstmnt_limitation_1_you"
+                                        class="fr-label"
+                                        >Ce qui peut être fait en attendant
+                                        <span class="fr-hint-text"
+                                          >Exemple : « Merci d’utiliser le
+                                          formulaire de contact si vous
+                                          rencontrez un problème »</span
+                                        ></label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="fr-input"
+                                        id="accstmnt_limitation_1_you"
+                                        name="you"
+                                      />
+                                    </div>
+                                  </div>
+                                </fieldset>
+
+                                <fieldset
+                                  id="accstmnt_limitation_[n]"
+                                  class="fr-fieldset proto fr-mt-4w"
+                                >
+                                  <legend
+                                    class="fr-fieldset__legend fr-text--bold"
+                                  >
+                                    Limitation d’accessibilité [n]
+                                  </legend>
+                                  <div class="fr-fieldset__content">
+                                    <div class="fr-input-group">
+                                      <label
+                                        for="accstmnt_limitation_[n]_element"
+                                        class="fr-label"
+                                        >Contenu</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="fr-input"
+                                        id="accstmnt_limitation_[n]_element"
+                                        name="element"
+                                      />
+                                    </div>
+                                    <div class="fr-input-group">
+                                      <label
+                                        for="accstmnt_limitation_[n]_description"
+                                        class="fr-label"
+                                        >Description du problème</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="fr-input"
+                                        id="accstmnt_limitation_[n]_description"
+                                        name="description"
+                                      />
+                                    </div>
+                                    <div class="fr-input-group">
+                                      <label
+                                        for="accstmnt_limitation_[n]_reason"
+                                        class="fr-label"
+                                        >Pourquoi le problème arrive</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="fr-input"
+                                        id="accstmnt_limitation_[n]_reason"
+                                        name="reason"
+                                      />
+                                    </div>
+                                    <div class="fr-input-group">
+                                      <label
+                                        for="accstmnt_limitation_[n]_us"
+                                        class="fr-label"
+                                        >Ce que l’équipe fait pour y
+                                        pallier</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="fr-input"
+                                        id="accstmnt_limitation_[n]_us"
+                                        name="us"
+                                      />
+                                    </div>
+                                    <div class="fr-input-group">
+                                      <label
+                                        for="accstmnt_limitation_[n]_you"
+                                        class="fr-label"
+                                        >Ce que l’utilisateur peut faire en
+                                        attendant</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="fr-input"
+                                        id="accstmnt_limitation_[n]_you"
+                                        name="you"
+                                      />
+                                    </div>
+                                  </div>
+                                </fieldset>
+                                <button
+                                  type="button"
+                                  class="add-line fr-mt-2w fr-btn fr-btn--sm fr-btn--secondary"
+                                >
+                                  Ajouter une autre limite d’accessibilité
+                                </button>
+                              </div>
+                            </fieldset>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="fr-accordion">
                         <h3 class="fr-accordion__title">
-                            <button class="fr-accordion__btn fr-text--lg" aria-expanded="false" aria-controls="fr-accordion-compatibilite">Compatibilité avec l’environnement de l’utilisateur</button></h3>
-                            <!-- 
+                          <button
+                            type="button"
+                            class="fr-accordion__btn fr-text--lg"
+                            aria-expanded="false"
+                            aria-controls="fr-accordion-derogation"
+                            data-fr-js-collapse-button="true"
+                          >
+                            Dérogations pour charge disproportionnée
+                          </button>
+                        </h3>
+
+                        <div class="fr-collapse" id="fr-accordion-derogation">
+                          <p class="fr-text--sm">
+                            La dérogation pour charge disproportionnée est le droit de ne pas rendre accessible certains aspects du service, <a href="https://accessibilite.numerique.gouv.fr/obligations/champ-application/">dans certaines conditions</a>.
+                          </p>
+
+                          <div class="fr-input-group">
+                            <label for="accstmt_derogation" class="fr-label"
+                              >Dérogation pour charge disproportionnée
+                              <span class="fr-hint-text"
+                                >Exemple : « Les vidéos n’ont pas d’audio
+                                description, sous-titres ou transcription
+                                textuelle. La cellule ayant en charge la mise en
+                                ligne de ces animations n’est pas en mesure
+                                actuellement de fournir ces éléments pour
+                                l’ensemble de ces vidéos. »</span
+                              ></label
+                            >
+                            <textarea
+                              id="accstmt_derogation"
+                              class="fr-input"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="fr-accordion">
+                        <h3 class="fr-accordion__title">
+                          <button
+                            type="button"
+                            class="fr-accordion__btn fr-text--lg"
+                            aria-expanded="false"
+                            aria-controls="fr-accordion-nonsoumis"
+                          >
+                            Contenus non soumis à l’obligation d’accessibilité
+                          </button>
+                        </h3>
+
+                        <div class="fr-collapse" id="fr-accordion-nonsoumis">
+                          <p class="fr-text--sm">
+                            Certaines sections ou contenus non accessibles
+                            n’entrent pas dans le champ d’application de la
+                            législation appliquable. Il n’y a donc pas
+                            d’obligations mais il est utile d’indiquer aux
+                            utilisateurs les alternatives possibles.
+                          </p>
+
+                          <div class="fr-input-group">
+                            <label for="accstmt_exempt" class="fr-label"
+                              >Contenus non soumis à l’obligation
+                              d’accessibilité
+                              <span class="fr-hint-text"
+                                >Exemple : « Le système de cartographie Open
+                                Street map est un service externe non soumis à
+                                obligation. »</span
+                              ></label
+                            >
+                            <textarea
+                              id="accstmt_exempt"
+                              class="fr-input"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="fr-accordion">
+                        <h3 class="fr-accordion__title">
+                          <button
+                            type="button"
+                            class="fr-accordion__btn fr-text--lg"
+                            aria-expanded="false"
+                            aria-controls="fr-accordion-compatibilite"
+                          >
+                            Compatibilité avec l’environnement de l’utilisateur
+                          </button>
+                        </h3>
+                        <!-- 
                         <div class="information" id="support_asstech" hidden="hidden">
                             <p>Malgré tous les efforts déployés, l’accessibilité peut ne pas fonctionner correctement dans toutes les combinaisons de système d’exploitation, de navigateur web et de technologie d’assistance. Communiquer sur les environnements testés aide l’utilisateur à déterminer si les outils utilisés pourraient être la cause d’un problème observé.</p>
                         </div>
                         -->
-                        <div class="fr-collapse" id="fr-accordion-compatibilite">
-                        <fieldset class="fr-fieldset">
-                            <legend class="fr-fieldset__legend visuallyhidden">Compatibilité avec l’environnement utilisateur</legend>
+                        <div
+                          class="fr-collapse"
+                          id="fr-accordion-compatibilite"
+                        >
+                          <fieldset class="fr-fieldset">
+                            <legend class="fr-fieldset__legend visuallyhidden">
+                              Compatibilité avec l’environnement utilisateur
+                            </legend>
 
-                            <p class="fr-text--regular">Décrivez les environnements (combinaisons de navigateurs web, de technologies d’assistance et de systèmes d’exploitation) avec lesquels le contenu est censé fonctionner.</p>
+                            <p class="fr-text--regular">
+                              Décrivez les environnements (combinaisons de
+                              navigateurs web, de technologies d’assistance et
+                              de systèmes d’exploitation) avec lesquels le
+                              contenu est censé fonctionner.
+                            </p>
 
                             <div class="fr-input-group line">
-                                <label for="accstmnt_asstech_compatible_1" class="fr-label">Environnement compatible 1
-                                    <span class="fr-hint-text">Exemple : « navigateur X avec la technologie d’assistance Y et le système d’exploitation Z »</span></label>
-                                <input type="text" class="fr-input" id="accstmnt_asstech_compatible_1" name="accstmnt_asstech_compatible"/>
+                              <label
+                                for="accstmnt_asstech_compatible_1"
+                                class="fr-label"
+                                >Environnement compatible 1
+                                <span class="fr-hint-text"
+                                  >Exemple : « navigateur X avec la technologie
+                                  d’assistance Y et le système d’exploitation
+                                  Z »</span
+                                ></label
+                              >
+                              <input
+                                type="text"
+                                class="fr-input"
+                                id="accstmnt_asstech_compatible_1"
+                                name="accstmnt_asstech_compatible"
+                              />
                             </div>
 
                             <div class="fr-input-group proto">
-                                <label for="accstmnt_asstech_compatible_[n]" class="fr-label">Environnement compatible [n]</label>
-                                <input type="text" class="fr-input" id="accstmnt_asstech_compatible_[n]" name="accstmnt_asstech_compatible"/>
+                              <label
+                                for="accstmnt_asstech_compatible_[n]"
+                                class="fr-label"
+                                >Environnement compatible [n]</label
+                              >
+                              <input
+                                type="text"
+                                class="fr-input"
+                                id="accstmnt_asstech_compatible_[n]"
+                                name="accstmnt_asstech_compatible"
+                              />
                             </div>
 
-                            <button class="add-line fr-btn fr-btn--sm fr-btn--secondary" type="button">Ajouter un environnement testé</button>
-                        </fieldset>
-                        </div>
-                    </div>
-
-                    <div class="fr-accordion">
-                        <h3 class="fr-accordion__title">
-                            <button class="fr-accordion__btn fr-text--lg" aria-expanded="false" aria-controls="fr-accordion-incomptabilite">Incompatibilités connues</button></h3>
-                         
-                        <div class="fr-collapse" id="fr-accordion-incomptabilite">
-
-                            <p class="fr-text--sm">Aidez les utilisateurs à comprendre quelles versions de systèmes d’exploitation, de navigateurs web et de technologies d’assistance ne sont pas (ou plus) prises en charge. Cela les aide à déterminer s’ils peuvent utiliser votre service avec leur environnement actuel.</p>
-
-                        <fieldset class="fr-fieldset">
-                            <legend class="fr-fieldset__legend visuallyhidden">Environnements incompatibles</legend>
-
-                            <p class="fr-text--regular">Décrivez les environnements (combinaisons de navigateurs web, de technologies d’assistance et de systèmes d’exploitation) avec lesquels le contenu n’est pas censé fonctionner.</p>
-
-                            <div class="fr-input-group line">
-                                <label for="accstmnt_asstech_incompatible_1" class="fr-label">Environnement incompatible 1
-                                    <span class="fr-hint-text">Exemple : « navigateurs vieux de plus de 3 versions majeures »</span></label>
-                                <input type="text" class="fr-input" id="accstmnt_asstech_incompatible_1" name="accstmnt_asstech_incompatible"/>
-                            </div>
-                            <div class="fr-input-group proto">
-                                <label for="accstmnt_asstech_incompatible_[n]" class="fr-label">Environnement incompatible [n]</label>
-                                <input type="text" class="fr-input" id="accstmnt_asstech_incompatible_[n]" name="accstmnt_asstech_incompatible"/>
-                            </div>
-
-                            <button type="button" class="add-line fr-btn fr-btn--sm fr-btn--secondary">
-                                Ajouter une autre incompatibilité connue
+                            <button
+                              class="add-line fr-btn fr-btn--sm fr-btn--secondary"
+                              type="button"
+                            >
+                              Ajouter un environnement testé
                             </button>
-                        </fieldset>
+                          </fieldset>
                         </div>
-                    </div>
+                      </div>
 
-                    <div class="fr-accordion">
+                      <div class="fr-accordion">
                         <h3 class="fr-accordion__title">
-                            <button class="fr-accordion__btn fr-text--lg" aria-expanded="false" aria-controls="fr-accordion-technologies">Technologies utilisées</button></h3>
+                          <button
+                            type="button"
+                            class="fr-accordion__btn fr-text--lg"
+                            aria-expanded="false"
+                            aria-controls="fr-accordion-incomptabilite"
+                          >
+                            Incompatibilités connues
+                          </button>
+                        </h3>
+
+                        <div
+                          class="fr-collapse"
+                          id="fr-accordion-incomptabilite"
+                        >
+                          <p class="fr-text--sm">
+                            Aidez les utilisateurs à comprendre quelles versions
+                            de systèmes d’exploitation, de navigateurs web et de
+                            technologies d’assistance ne sont pas (ou plus)
+                            prises en charge. Cela les aide à déterminer s’ils
+                            peuvent utiliser votre service avec leur
+                            environnement actuel.
+                          </p>
+
+                          <fieldset class="fr-fieldset">
+                            <legend class="fr-fieldset__legend visuallyhidden">
+                              Environnements incompatibles
+                            </legend>
+
+                            <p class="fr-text--regular">
+                              Décrivez les environnements (combinaisons de
+                              navigateurs web, de technologies d’assistance et
+                              de systèmes d’exploitation) avec lesquels le
+                              contenu n’est pas censé fonctionner.
+                            </p>
+
+                            <div class="fr-input-group line">
+                              <label
+                                for="accstmnt_asstech_incompatible_1"
+                                class="fr-label"
+                                >Environnement incompatible 1
+                                <span class="fr-hint-text"
+                                  >Exemple : « navigateurs vieux de plus de 3
+                                  versions majeures »</span
+                                ></label
+                              >
+                              <input
+                                type="text"
+                                class="fr-input"
+                                id="accstmnt_asstech_incompatible_1"
+                                name="accstmnt_asstech_incompatible"
+                              />
+                            </div>
+                            <div class="fr-input-group proto">
+                              <label
+                                for="accstmnt_asstech_incompatible_[n]"
+                                class="fr-label"
+                                >Environnement incompatible [n]</label
+                              >
+                              <input
+                                type="text"
+                                class="fr-input"
+                                id="accstmnt_asstech_incompatible_[n]"
+                                name="accstmnt_asstech_incompatible"
+                              />
+                            </div>
+                          </fieldset>
+                          <button
+                            type="button"
+                            class="add-line fr-btn fr-btn--sm fr-btn--secondary"
+                          >
+                            Ajouter une autre incompatibilité connue
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="fr-accordion">
+                        <h3 class="fr-accordion__title">
+                          <button
+                            type="button"
+                            class="fr-accordion__btn fr-text--lg"
+                            aria-expanded="false"
+                            aria-controls="fr-accordion-technologies"
+                          >
+                            Technologies utilisées
+                          </button>
+                        </h3>
                         <!-- 
                         <div class="information" id="support_tech" hidden="hidden">
                             <p>Vous pouvez vous appuyer sur des technologies web spécifiques, telles que JavaScript, WAI-ARIA ou SVG, pour garantir l’accessibilité de votre contenu. Communiquer sur ces technologies indispensables peut aider les utilisateurs à comprendre la raison des problèmes qu’ils peuvent observer.</p>
-                        </div> --> 
+                        </div> -->
                         <div class="fr-collapse" id="fr-accordion-technologies">
-                        <p class="fr-text--regular">Décrivez les technologies indispensables pour atteindre la conformité. Le contenu n’est pas conforme si cette technologie est désactivée ou non supportée.</p>
+                          <p class="fr-text--regular">
+                            Décrivez les technologies indispensables pour
+                            atteindre la conformité. Le contenu n’est pas
+                            conforme si cette technologie est désactivée ou non
+                            supportée.
+                          </p>
 
-                        <fieldset class="fr-fieldset">
-                            <legend class="fr-fieldset__legend">Technologies indispensables :</legend>
+                          <fieldset class="fr-fieldset" aria-labelledby="checkboxes-legend checkboxes-messages">
+                            <legend class="fr-fieldset__legend fr-fieldset__legend--regular" id="checkboxes-legend">
+                              Technologies indispensables :
+                            </legend>
 
-                            <ul id="tech_relied" class="nolist">
-                                <li class="fr-checkbox-group">
-                                    <input type="checkbox" id="accstmnt_tech_html" name="accstmnt_tech" value="HTML"/>
-                                    <label for="accstmnt_tech_html" class="fr-label">HTML</label>
-                                </li>
+                            <ul id="tech_relied" class="nolist-style">
+                              <li class="fr-fieldset__element">
+                                <div class="fr-checkbox-group">
+                                  <input
+                                    type="checkbox"
+                                    id="accstmnt_tech_html"
+                                    name="accstmnt_tech"
+                                    value="HTML"
+                                  />
+                                  <label for="accstmnt_tech_html" class="fr-label"
+                                    >HTML</label
+                                  >
+                                </div>
+                              </li>
 
-                                <li class="fr-checkbox-group">
-                                    <input type="checkbox" id="accstmnt_tech_aria" name="accstmnt_tech" value="WAI-ARIA"/>
-                                    <label for="accstmnt_tech_aria" class="fr-label">WAI-ARIA</label>
-                                </li>
+                              <li class="fr-fieldset__element">
+                                <div class="fr-checkbox-group">
+                                  <input
+                                    type="checkbox"
+                                    id="accstmnt_tech_aria"
+                                    name="accstmnt_tech"
+                                    value="WAI-ARIA"
+                                  />
+                                  <label for="accstmnt_tech_aria" class="fr-label"
+                                    >WAI-ARIA</label
+                                  >
+                                </div>
+                              </li>
 
-                                <li class="fr-checkbox-group">
-                                    <input type="checkbox" id="accstmnt_tech_css" name="accstmnt_tech" value="CSS"/>
-                                    <label for="accstmnt_tech_css" class="fr-label">CSS</label>
-                                </li>
+                              <li class="fr-fieldset__element">
+                                <div class="fr-checkbox-group">
+                                  <input
+                                    type="checkbox"
+                                    id="accstmnt_tech_css"
+                                    name="accstmnt_tech"
+                                    value="CSS"
+                                  />
+                                  <label for="accstmnt_tech_css" class="fr-label"
+                                    >CSS</label
+                                  >
+                                </div>
+                              </li>
 
-                                <li class="fr-checkbox-group">
-                                    <input type="checkbox" id="accstmnt_tech_js" name="accstmnt_tech" value="JavaScript"/>
-                                    <label for="accstmnt_tech_js" class="fr-label">JavaScript</label>
-                                </li>
+                              <li class="fr-fieldset__element">
+                                <div class="fr-checkbox-group">
+                                  <input
+                                    type="checkbox"
+                                    id="accstmnt_tech_js"
+                                    name="accstmnt_tech"
+                                    value="JavaScript"
+                                  />
+                                  <label for="accstmnt_tech_js" class="fr-label"
+                                    >JavaScript</label
+                                  >
+                                </div>
+                              </li>
 
-                                <li class="fr-checkbox-group proto">
-                                    <input type="checkbox" id="accstmnt_tech_other_[n]" value="other" checked="checked"/>
-                                    <div class="fr-input-group" id="accstmnt_tech_other_label_[n]">
-                                        <label for="accstmnt_tech_other_[n]" class="fr-label">Autre [n]</label>
-                                        <span class="visuallyhidden">nom</span>
-                                    </div>
-                                        <input id="accstmnt_tech_other_[n]_value" class="fr-input" type="text" aria-describedby="accstmnt_tech_other_label_[n]" name="accstmnt_tech"/>
-                                    </li>
-                                </ul>
-
-                                <button class="add-line fr-btn fr-btn--sm fr-btn--secondary" type="button">Ajouter une autre technologie</button>
-
-                            </fieldset>
+                              <li class="fr-checkbox-group proto">
+                                <input
+                                  type="checkbox"
+                                  id="accstmnt_tech_other_[n]"
+                                  value="other"
+                                  checked="checked"
+                                />
+                                <div
+                                  class="fr-input-group"
+                                  id="accstmnt_tech_other_label_[n]"
+                                >
+                                  <label
+                                    for="accstmnt_tech_other_[n]"
+                                    class="fr-label"
+                                    >Autre [n]</label
+                                  >
+                                  <span class="visuallyhidden">nom</span>
+                                </div>
+                                <input
+                                  id="accstmnt_tech_other_[n]_value"
+                                  class="fr-input"
+                                  type="text"
+                                  aria-describedby="accstmnt_tech_other_label_[n]"
+                                  name="accstmnt_tech"
+                                />
+                              </li>
+                            </ul>
+                          </fieldset>
+                          <button
+                            class="add-line fr-btn fr-btn--sm fr-btn--secondary"
+                            type="button"
+                          >
+                            Ajouter une autre technologie
+                          </button>
                         </div>
+                      </div>
                     </div>
+                  </section>
 
-                    </div>
-
-                </section>
-
-                    
-                    <div class="fr-mt-8w statement-actions">                        
-                        <a class="fr-btn" href="#preview" data-action="statement_preview">
-                            Prévisualiser votre déclaration d’accessibilité
-                        </a>
-                    </div>
-
-
-            </form>
-
-                    </div>
-                </div>
+                  <div class="fr-mt-8w statement-actions">
+                    <a
+                      class="fr-btn"
+                      href="#preview"
+                      data-action="statement_preview"
+                    >
+                      Prévisualiser votre déclaration d’accessibilité
+                    </a>
+                  </div>
+                </form>
+              </div>
             </div>
-
+          </div>
         </section>
 
         <section class="page preview" hidden="hidden">
+          <h2>Prévisualisation de votre déclaration d’accessibilité</h2>
 
-            <h1>Prévisualisation de votre déclaration d’accessibilité</h1>
+          <div
+            id="statement_generated"
+            class="fr-callout fr-my-2w"
+          >
+            <div id="statement_header">
+              <h1>Déclaration d’accessibilité</h1>
+              <p>
+                Établie le
+                <span data-print="accstmt_date" data-printdefault="DATE"></span
+                >.
+              </p>
+              <p>
+                <span
+                  data-print="accstmt_org"
+                  data-printdefault="Notre organisation"
+                ></span>
+                s’engage à rendre son service accessible, conformément à
+                l’article 47 de la loi n° 2005-102 du 11 février 2005.
+              </p>
 
-                <div id="statement_generated" class="fr-callout fr-callout--blue-cumulus fr-my-2w">
-                    <div id="statement_header">
-                        <h1>Déclaration d’accessibilité</h1>
-                        <p>Établie le <span data-print="accstmt_date" data-printdefault="DATE"></span>.</p>
-                        <p><span data-print="accstmt_org" data-printdefault="Notre organisation"></span> s’engage à rendre son service accessible, conformément à l’article 47 de la loi n° 2005-102 du 11 février 2005.</p>
+              <div data-if="accstmnt_audit_schema, accstmnt_plan, accstmnt_bilan">
+                <p>
+                  À cette fin, nous mettons en œuvre la stratégie et les actions
+                  suivantes :
+                  <ul>
+                    <li data-if="accstmnt_audit_schema"><a href="" data-print="accstmnt_audit_schema">Schéma pluriannuel</a></li>
+                    <li data-if="accstmnt_plan"><a href="" data-print="accstmnt_plan">Plan 2024</a></li>
+                    <li data-if="accstmnt_bilan"><a href="" data-print="accstmnt_bilan">Bilan 2023</a></li>
+                  </ul>
+                </p>
+              </div>
 
-                        <div data-if="accstmnt_audit_schema">
-                            <p>À cette fin, nous mettons en œuvre la stratégie et les actions suivantes : <a href="" data-print="accstmnt_audit_schema">Schéma pluriannuel</a>.</p>
-                        </div>
+              <p>
+                Cette déclaration d’accessibilité s’applique à
+                <strong
+                  data-print="accstmt_namesite"
+                  data-printdefault="ce service"
+                ></strong
+                ><span data-if="accstmt_urlsite">
+                  (<span data-print="accstmt_urlsite"></span>)</span
+                >.
+              </p>
+            </div>
 
-                        <p>Cette déclaration d’accessibilité s’applique à <strong data-print="accstmt_namesite" data-printdefault="ce service"></strong><span data-if="accstmt_urlsite"> (<span data-print="accstmt_urlsite"></span>)</span>.</p>
+            <div id="statement-conformance" data-if="accstmnt_conformance">
+              <h2>État de conformité</h2>
+              <p>
+                <strong
+                  data-print="accstmt_namesite"
+                  data-printdefault="Notre site"
+                  >Notre site</strong
+                >
+                est
+                <strong
+                  ><span
+                    data-print="accstmnt_conformance"
+                    data-printfilter="lowercase"
+                  ></span
+                ></strong>
+                avec le
+                <abbr
+                  title="Référentiel général d’amélioration de l’accessibilité"
+                  >RGAA</abbr
+                >. <span data-print="accstmnt_conformance_meaning"></span>
+              </p>
+            </div>
 
-                    </div>
+            <div id="statement-assessment-block" data-if="accstmt_taux">
+              <h2>Résultats des tests</h2>
+              <p>
+                L’audit de conformité réalisé
+                <span data-print="accstmnt_approach"></span> révèle que
+                <span data-print="accstmt_taux"></span>% des critères sont
+                respectés.
+              </p>
+            </div>
 
-                    <div id="statement-conformance" data-if="accstmnt_conformance">
-                        <h2>État de conformité</h2>
-                        <p>
-                            <strong data-print="accstmt_namesite" data-printdefault="Notre site">Notre site</strong> est 
-                            <strong><span data-print="accstmnt_conformance" data-printfilter="lowercase"></span></strong> avec le <abbr title="Référentiel général d’amélioration de l’accessibilité">RGAA</abbr>. <span data-print="accstmnt_conformance_meaning"></span>
-                        </p>
-                    </div>
+            <div id="statement-limitations-block" data-if="accstmt_limitations">
+              <h2>Contenus non accessibles</h2>
+              <p>
+                Les contenus listés ci-dessous ne sont pas accessibles pour les
+                raisons suivantes.
+              </p>
 
-                    <div id="statement-assessment-block" data-if="accstmt_taux">
-                        <h2>Résultats des tests</h2>
-                        <p>L’audit de conformité réalisé <span data-print="accstmnt_approach"></span> révèle que <span data-print="accstmt_taux"></span>% des critères sont respectés.</p>
-                    </div>
+              <div>
+                <h3>Non conformité</h3>
+                <p>
+                  Malgré nos efforts, certains contenus sont inaccessibles. Vous
+                  trouverez ci-dessous une liste des limitations connues et des
+                  solutions potentielles :
+                </p>
 
-                    <h2>Contenus non accessibles</h2>
+                <ol
+                  id="statement-limitations"
+                  class="technical-information accessibility-limitations"
+                ></ol>
+              </div>
+            </div>
 
-                    <div id="statement-limitations-block" data-if="accstmt_limitations">
-                        <p>Les contenus listés ci-dessous ne sont pas accessibles pour les raisons suivantes.</p>
+            <div id="statement-derogations-block" data-if="accstmt_derogation">
+              <h3>Dérogations pour charge disproportionnée</h3>
+              <p data-print="accstmt_derogation"></p>
+            </div>
 
-                        <div>
-                            <h3>Non conformité</h3>
-                            <p>Malgré nos efforts, certains contenus sont inaccessibles. Vous trouverez ci-dessous une liste des limitations connues et des solutions potentielles :</p>
+            <div id="statement-exempt-block" data-if="accstmt_exempt">
+              <h3>Contenus non soumis à l’obligation d’accessibilité</h3>
+              <p data-print="accstmt_exempt"></p>
+            </div>
 
-                            <ol id="statement-limitations" class="technical-information accessibility-limitations"></ol>
-                        </div>
-                    </div>
+            <div id="statement-conftech" data-if="accstmnt_tech">
+              <h2>Établissement de cette déclaration d’accessibilité</h2>
+              <p>
+                Cette déclaration a été établie le
+                <span data-print="accstmt_date" data-printdefault="DATE"></span
+                >.
+              </p>
+              <h3>Technologies utilisées</h3>
 
-                    <div id="statement-derogations-block" data-if="accstmt_derogation">
-                        <h3>Dérogations pour charge disproportionnée</h3>
-                        <p data-print="accstmt_derogation"></p>
-                    </div>
+              <p>
+                L’accessibilité de
+                <span
+                  data-print="accstmt_namesite"
+                  data-printdefault="ce service"
+                ></span>
+                s’appuie sur les technologies suivantes :
+              </p>
 
-                    <div id="statement-exempt-block" data-if="accstmt_exempt">
-                        <h3>Contenus non soumis à l’obligation d’accessibilité</h3>
-                        <p data-print="accstmt_exempt"></p>
-                    </div>
+              <ul
+                id="statement-tech"
+                class="technical-information technologies-used"
+                data-print="accstmnt_tech"
+              ></ul>
+            </div>
 
-                    <div id="statement-conftech" data-if="accstmnt_tech">
-                        <h2>Établissement de cette déclaration d’accessibilité</h2>
-                        <p>Cette déclaration a été établie le <span data-print="accstmt_date" data-printdefault="DATE"></span>.</p>
-                        <h3>Technologies utilisées</h3>
+            <div
+              id="statement-asstech"
+              data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible"
+            >
+              <h3>
+                Agents utilisateurs, technologies d’assistance et outils
+                utilisés pour vérifier l’accessibilité
+              </h3>
+              <div id="statement-asstech-compatible-block">
+                <p>
+                  Les tests des pages web ont été effectués avec les
+                  combinaisons de navigateurs web et lecteurs d’écran suivants :
+                </p>
+                <ul
+                  id="statement-asstech-compatible"
+                  data-print="accstmnt_asstech_compatible"
+                  data-printdefault="COMPATIBLE_LIST"
+                ></ul>
+              </div>
 
-                        <p>L’accessibilité de <span data-print="accstmt_namesite" data-printdefault="ce service"></span> s’appuie sur les technologies suivantes :</p>
+              <div
+                id="statement-asstech-incompatible-block"
+                data-if="accstmnt_asstech_incompatible"
+              >
+                <p>
+                  <span
+                    data-print="accstmt_namesite"
+                    data-printdefault="ce service"
+                  ></span>
+                  n’est pas compatible avec :
+                </p>
+                <ul
+                  id="statement-asstech-incompatible"
+                  data-print="accstmnt_asstech_incompatible"
+                ></ul>
+              </div>
+            </div>
 
-                        <ul id="statement-tech" class="technical-information technologies-used" data-print="accstmnt_tech"></ul>
-                    </div>
+            <div data-if="accstmnt_tested_pages">
+              <h3>Pages auditées</h3>
 
-                    <div id="statement-asstech" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
-                        <h3>Agents utilisateurs, technologies d’assistance et outils utilisés pour vérifier l’accessibilité</h3>
-                        <div id="statement-asstech-compatible-block">
-                            <p>Les tests des pages web ont été effectués avec les combinaisons de navigateurs web et lecteurs d’écran suivants :</p>
-                            <ul id="statement-asstech-compatible" data-print="accstmnt_asstech_compatible" data-printdefault="COMPATIBLE_LIST"></ul>
-                        </div>
+              <p>
+                Les pages suivantes ont fait l’objet de la vérification de
+                confirmité :
+              </p>
+              <ul data-print="accstmnt_tested_pages"></ul>
+            </div>
 
-                        <div id="statement-asstech-incompatible-block" data-if="accstmnt_asstech_incompatible">
-                            <p><span data-print="accstmt_namesite" data-printdefault="ce service"></span>
-                            n’est pas compatible avec :</p>
-                            <ul id="statement-asstech-incompatible" data-print="accstmnt_asstech_incompatible"></ul>
-                        </div>
-                    </div>
+            <div
+              data-if="accstmnt_contact_phone, accstmnt_contact_email, accstmnt_contact_form, accstmnt_contact_visit, accstmnt_contact_other"
+            >
+              <h2>Amélioration et contact</h2>
+              <p>
+                Si vous n’arrivez pas à accéder à un contenu ou à un service,
+                vous pouvez contacter le responsable de
+                <span
+                  data-print="accstmt_namesite"
+                  data-printdefault="ce service"
+                  >ce service</span
+                >
+                pour être orienté vers une alternative accessible ou obtenir le
+                contenu sous une autre forme.
+              </p>
 
+              <ul class="basic-information feedback h-card">
+                <li data-if="accstmnt_contact_phone">
+                  Téléphone : <span data-print="accstmnt_contact_phone"></span>
+                </li>
+                <li data-if="accstmnt_contact_email">
+                  E-mail :
+                  <a href="mailto:" data-print="accstmnt_contact_email"></a>
+                </li>
 
-                    <div data-if="accstmnt_tested_pages">
-                        <h3>Pages auditées</h3>
+                <li data-if="accstmnt_contact_form">
+                  Formulaire de contact :
+                  <a href="" data-print="accstmnt_contact_form">Nous contacter</a>
+                </li>
+                <li data-if="accstmnt_contact_visit">
+                  Adresse : <span data-print="accstmnt_contact_visit"></span>
+                </li>
+                <li
+                  data-if="accstmnt_contact_other"
+                  data-print="accstmnt_contact_other"
+                ></li>
+              </ul>
+              <p data-if="accstmnt_contact_responsetime">
+                Nous essayons de répondre dans les
+                <span data-print="accstmnt_contact_responsetime"></span>.
+              </p>
+            </div>
 
-                        <p>Les pages suivantes ont fait l’objet de la vérification de confirmité :</p>
-                        <ul data-print="accstmnt_tested_pages"></ul>
-                    </div>
+            <div>
+              <h2>Voie de recours</h2>
 
-                    <div data-if="accstmnt_contact_phone, accstmnt_contact_email, accstmnt_contact_form, accstmnt_contact_visit, accstmnt_contact_other">
-                        <h2>Amélioration et contact</h2>
-                        <p>Si vous n’arrivez pas à accéder à un contenu ou à un service, vous pouvez contacter le responsable de <span data-print="accstmt_namesite" data-printdefault="ce service">ce service</span> pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme.</p>
+              <p>
+                Cette procédure est à utiliser dans le cas suivant : vous avez
+                signalé au responsable du site internet un défaut
+                d’accessibilité qui vous empêche d’accéder à un contenu ou à un
+                des services du portail et vous n’avez pas obtenu de réponse
+                satisfaisante.
+              </p>
 
-                        <ul class="basic-information feedback h-card">
-                            <li data-if="accstmnt_contact_phone">
-                                Téléphone : <span data-print="accstmnt_contact_phone"></span>
-                            </li>
-                            <li data-if="accstmnt_contact_email">
-                                E-mail : <a href="mailto:" data-print="accstmnt_contact_email"></a>
-                            </li>
+              <p>Vous pouvez :</p>
 
-                            <li data-if="accstmnt_contact_form">
-                                Formulaire de contact : <a href="" data-print="accstmnt_contact_form"></a>
-                            </li>
-                            <li data-if="accstmnt_contact_visit">
-                                Adresse : <span data-print="accstmnt_contact_visit"></span>
-                            </li>
-                            <li data-if="accstmnt_contact_other" data-print="accstmnt_contact_other"></li>
-                        </ul>
-                        <p data-if="accstmnt_contact_responsetime">
-                            Nous essayons de répondre dans les <span data-print="accstmnt_contact_responsetime"></span>.
-                        </p>
-                    </div>
+              <ul>
+                <li>
+                  Écrire un message au
+                  <a href="https://formulaire.defenseurdesdroits.fr/"
+                    >Défenseur des droits</a
+                  >
+                </li>
+                <li>
+                  Contacter
+                  <a href="https://www.defenseurdesdroits.fr/saisir/delegues"
+                    >le délégué du Défenseur des droits dans votre région</a
+                  >
+                </li>
+                <li>
+                  Envoyer un courrier par la poste (gratuit, ne pas mettre de
+                  timbre) :<br />
+                  Défenseur des droits<br />
+                  Libre réponse 71120 75342 Paris CEDEX 07
+                </li>
+              </ul>
+            </div>
 
-                    <div>
-                        <h2>Voie de recours</h2>
+            <hr />
 
-                        <p>Cette procédure est à utiliser dans le cas suivant : vous avez signalé au responsable du site internet un défaut d’accessibilité qui vous empêche d’accéder à un contenu ou à un des services du portail et vous n’avez pas obtenu de réponse satisfaisante.</p>
+            <p>
+              Cette déclaration d’accessibilité a été créé le
+              <span data-print="accstmt_date" data-printdefault="DATE"></span>
+              grâce au
+              <a
+                href="https://betagouv.github.io/a11y-generateur-declaration/#create"
+                >Générateur de Déclaration d’Accessibilité de BetaGouv</a
+              >.
+            </p>
+          </div>
 
-                        <p>Vous pouvez :</p>
+          <ul class="statement-actions fr-btns-group fr-btns-group--inline">
+            <li>
+              <button
+                class="fr-btn"
+                type="button"
+                data-action="preview_save_as_html"
+              >
+                Télécharger au format HTML
+              </button>
+            </li>
+            <li>
+              <a class="fr-btn fr-btn--secondary" href="#create"
+                >Modifier la déclaration</a
+              >
+            </li>
+          </ul>
 
-                        <ul>
-                            <li>Écrire un message au <a href="https://formulaire.defenseurdesdroits.fr/">Défenseur des droits</a></li>
-                            <li>Contacter <a href="https://www.defenseurdesdroits.fr/saisir/delegues">le délégué du Défenseur des droits dans votre région</a></li>
-                            <li>Envoyer un courrier par la poste (gratuit, ne pas mettre de timbre) :<br />
-                                Défenseur des droits<br />
-                            Libre réponse 71120 75342 Paris CEDEX 07</li>
-                        </ul>
-                    </div>
+          <div class="fr-mt-8w">
+            <h1>Et après ?</h1>
 
-                    <hr />
+            <fieldset class="fr-fieldset" id="checkboxes-after" aria-labelledby="checkboxes-legend-after checkboxes-messages">
+              <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="checkboxes-legend-after">
+                  Pour remplir vos obligations déclaratives :
+              </legend>
+              <div class="fr-fieldset__element">
+                  <div class="fr-checkbox-group">
+                      <input name="obligation-2" id="obligation-2" type="checkbox">
+                      <label class="fr-label" for="obligation-2">
+                          Publier cette déclaration d'accessibilité
+                          <span class="fr-hint-text">Si possible à l'adresse&nbsp;<span data-print="accstmt_urlsite"></span>/accessibilite</span>
+                      </label>
+                  </div>
+              </div>
+              <div class="fr-fieldset__element">
+                  <div class="fr-checkbox-group">
+                      <input name="obligation-1" id="obligation-1" type="checkbox">
+                      <label class="fr-label" for="obligation-1">
+                          Afficher la mention&nbsp;«&nbsp;<b>Accessibilité :&nbsp;<span data-print="accstmnt_conformance" data-printfilter="lowercase"></span></b>&nbsp;»&nbsp; sur toutes les pages
+                          <span class="fr-hint-text">En pied de page de votre service</span>
+                      </label>
+                  </div>
+              </div>
+              <div class="fr-fieldset__element">
+                  <div class="fr-checkbox-group">
+                      <input name="obligation-1" id="obligation-1" type="checkbox">
+                      <label class="fr-label" for="obligation-1">
+                          Rendre cette mention cliquable
+                          <span class="fr-hint-text">Conduire vers la page Accessibilité ou vers la déclaration d’accessibilité.</span>
+                      </label>
+                  </div>
+              </div>
+            </fieldset>
 
-                    <p>
-                        Cette déclaration d’accessibilité a été créé le <span data-print="accstmt_date" data-printdefault="DATE"></span> grâce au <a href="https://betagouv.github.io/a11y-generateur-declaration/#create">Générateur de Déclaration d’Accessibilité de BetaGouv</a>.
-                    </p>
-                </div>
+            <p><a href="https://accessibilite.numerique.gouv.fr/obligations/mentions-et-pages-obligatoires/" class="fr-link" >En savoir plus sur les mentions et pages obligatoires</a></p>
+          </div>
 
-                <ul class="statement-actions fr-btns-group fr-btns-group--inline">
-                    <li>
-                        <button class="fr-btn" type="button" data-action="preview_save_as_html">
-                            Télécharger au format HTML
-                        </button>
-                    </li>
-                    <li>
-                        <a class="fr-btn fr-btn--secondary" href="#create">Modifier la déclaration</a>
-                    </li>
-                </ul>
-
-                <!-- TODO guider l'utilisateur sur quoi en faire -->
         </section>
 
         <div class="fr-mt-8w">
-            <h2>À propos de la démarche</h2>
-            <p><a href="https://voxusagers.numerique.gouv.fr/Demarches/3378?&view-mode=formulaire-avis&nd_mode=en-ligne-enti%C3%A8rement&nd_source=button&key=4b006cb7dbf748e5d4b38cde532722e0">
-          <img src="https://voxusagers.numerique.gouv.fr/static/bouton-bleu.svg" alt="Je donne mon avis" /></a></p>
+          <h1>À propos</h1>
+
+          <p>Ce générateur de déclaration d’accessibilité est maintenu par les équipes de beta.gouv.fr. Vous pouvez contribuez en donnant votre avis sur cette démarche :</p>
+          <p>
+            <a
+              href="https://voxusagers.numerique.gouv.fr/Demarches/3378?&view-mode=formulaire-avis&nd_mode=en-ligne-enti%C3%A8rement&nd_source=button&key=4b006cb7dbf748e5d4b38cde532722e0"
+            >
+              <img
+                src="https://voxusagers.numerique.gouv.fr/static/bouton-bleu.svg"
+                alt="Je donne mon avis"
+            /></a>
+          </p>
+        </div>
       </div>
 
+      <!-- generator standalone js -->
+      <script src="js/generator.js"></script>
+      <!-- Script en version es6 module et nomodule pour les navigateurs le ne supportant pas -->
+      <script type="module" src="js/dsfr.module.min.js"></script>
+      <script
+        type="text/javascript"
+        nomodule
+        src="js/dsfr.nomodule.min.js"
+      ></script>
+    </main>
 
-</div>
-
-<!-- generator standalone js -->
-<script src="js/generator.js"></script>
-<!-- Script en version es6 module et nomodule pour les navigateurs le ne supportant pas -->
-<script type="module" src="js/dsfr.module.min.js"></script>
-<script type="text/javascript" nomodule src="js/dsfr.nomodule.min.js"></script>
-
-
-</main>
-
-<!-- Footer --> 
-<footer class="fr-footer" role="contentinfo" id="footer">
-    <div class="fr-container">
+    <!-- Footer -->
+    <footer class="fr-footer" role="contentinfo" id="footer">
+      <div class="fr-container">
         <div class="fr-footer__body">
-            <div class="fr-footer__brand fr-enlarge-link">
-                <a href="/" title="Retour à l’accueil">
-                    <p class="fr-logo">
-                        République
-                        <br>française
-                    </p>
-                </a>
-            </div>
-            <div class="fr-footer__content">
-                <p class="fr-footer__content-desc">Ce générateur de déclaration d’accessibilité est maintenu par les équipes de <a href="https://beta.gouv.fr/">beta.gouv.fr</a>. Il est une adaptation libre française du projet <a href="https://www.w3.org/WAI/planning/statements/generator/#create" lang="en">Generate an Accessibility Statement</a> du groupe de travail <a href="https://www.w3.org/WAI/EO/" lang="en">Education and Outreach Working Group (EOWG)</a> du W3C.</p>
+          <div class="fr-footer__brand fr-enlarge-link">
+            <a href="/" title="Retour à l’accueil">
+              <p class="fr-logo">
+                République
+                <br />française
+              </p>
+            </a>
+          </div>
+          <div class="fr-footer__content">
+            <p class="fr-footer__content-desc">
+              Ce générateur de déclaration d’accessibilité est maintenu par les
+              équipes de <a href="https://beta.gouv.fr/">beta.gouv.fr</a>. Il
+              est une adaptation libre française du projet
+              <a
+                href="https://www.w3.org/WAI/planning/statements/generator/#create"
+                lang="en"
+                >Generate an Accessibility Statement</a
+              >
+              du groupe de travail
+              <a href="https://www.w3.org/WAI/EO/" lang="en"
+                >Education and Outreach Working Group (EOWG)</a
+              >
+              du W3C.
+            </p>
 
-                <p class="fr-footer__content-desc"><strong>Dernière mise à jour le 28 juin 2022 </strong> : correction d'un bug (la section Informations techniques ne s'affichait pas si aucun taux de conformité n'était renseigné).</p>
+            <p class="fr-footer__content-desc">
+              <strong>Dernière mise à jour le 23 mai 2024 </strong> :
+              passage au DSFR.
+            </p>
 
-                <ul class="fr-footer__content-list">
-                    <li class="fr-footer__content-item">
-                        <a class="fr-footer__content-link" target="_blank" href="https://accessibilite.gouv.fr">accessibilite.gouv.fr</a>
-                    </li>
-                    <li class="fr-footer__content-item">
-                        <a class="fr-footer__content-link" target="_blank" href="https://beta.gouv.fr">beta.gouv.fr</a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item">
+                <a
+                  class="fr-footer__content-link"
+                  target="_blank"
+                  href="https://accessibilite.gouv.fr"
+                  >accessibilite.gouv.fr</a
+                >
+              </li>
+              <li class="fr-footer__content-item">
+                <a
+                  class="fr-footer__content-link"
+                  target="_blank"
+                  href="https://beta.gouv.fr"
+                  >beta.gouv.fr</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="fr-footer__bottom">
-            <ul class="fr-footer__bottom-list">
-                <li class="fr-footer__bottom-item">
-                    <a class="fr-footer__bottom-link" href="#">Accessibilité : non conforme</a>
-                </li>
-            </ul>
-            <div class="fr-footer__bottom-copy">
-                <p>Sauf mention contraire, tous les contenus de ce site sont sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank">licence etalab-2.0</a>
-                </p>
-            </div>
+          <ul class="fr-footer__bottom-list">
+            <li class="fr-footer__bottom-item">
+              <a class="fr-footer__bottom-link" href="#"
+                >Accessibilité : non conforme</a
+              >
+            </li>
+          </ul>
+          <div class="fr-footer__bottom-copy">
+            <p>
+              Sauf mention contraire, tous les contenus de ce site sont sous
+              <a
+                href="https://github.com/etalab/licence-ouverte/blob/master/LO.md"
+                target="_blank"
+                >licence etalab-2.0</a
+              >
+            </p>
+          </div>
         </div>
-    </div>
-</footer>
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
