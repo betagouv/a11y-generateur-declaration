@@ -93,6 +93,7 @@
                 >
                   <section id="create-basic">
 
+                    <div id="step-1">
                     <div class="fr-stepper">
                         <h2 class="fr-stepper__title">
                             Informations générales
@@ -520,9 +521,10 @@
                         />
                       </div>
                     </div>
+                    </div>
                   </section>
 
-                  <section id="create-technical" class="fr-mt-8w">
+                  <section id="create-technical" class="fr-mt-8w" class="hidden">
                     <div class="fr-stepper">
                         <h2 class="fr-stepper__title">
                             Informations techniques
@@ -1452,8 +1454,8 @@
               </legend>
               <div class="fr-fieldset__element">
                   <div class="fr-checkbox-group">
-                      <input name="obligation-2" id="obligation-2" type="checkbox">
-                      <label class="fr-label" for="obligation-2">
+                      <input name="obligation-1" id="obligation-1" type="checkbox">
+                      <label class="fr-label" for="obligation-1">
                           Publier cette déclaration d'accessibilité
                           <span class="fr-hint-text">Si possible à l'adresse&nbsp;<span data-print="accstmt_urlsite"></span>/accessibilite</span>
                       </label>
@@ -1461,8 +1463,8 @@
               </div>
               <div class="fr-fieldset__element">
                   <div class="fr-checkbox-group">
-                      <input name="obligation-1" id="obligation-1" type="checkbox">
-                      <label class="fr-label" for="obligation-1">
+                      <input name="obligation-2" id="obligation-2" type="checkbox">
+                      <label class="fr-label" for="obligation-2">
                           Afficher la mention&nbsp;«&nbsp;<b>Accessibilité :&nbsp;<span data-print="accstmnt_conformance" data-printfilter="lowercase"></span></b>&nbsp;»&nbsp; sur toutes les pages
                           <span class="fr-hint-text">En pied de page de votre service</span>
                       </label>
@@ -1470,8 +1472,8 @@
               </div>
               <div class="fr-fieldset__element">
                   <div class="fr-checkbox-group">
-                      <input name="obligation-1" id="obligation-1" type="checkbox">
-                      <label class="fr-label" for="obligation-1">
+                      <input name="obligation-3" id="obligation-3" type="checkbox">
+                      <label class="fr-label" for="obligation-3">
                           Rendre cette mention cliquable
                           <span class="fr-hint-text">Conduire vers la page Accessibilité ou vers la déclaration d’accessibilité.</span>
                       </label>
@@ -1542,7 +1544,7 @@
 
             <p class="fr-footer__content-desc">
               <strong>Dernière mise à jour le 23 mai 2024 </strong> :
-              passage au DSFR.
+              ajout d'une checklist
             </p>
 
             <ul class="fr-footer__content-list">
