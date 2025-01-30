@@ -587,7 +587,9 @@
             var hrefPrefix = item.getAttribute("href");
 
             item.setAttribute("href", hrefPrefix + printData);
-            item.innerText = printData;
+            if(!item.innerText) {
+              item.innerText = printData;
+            }
             break;
 
           default:
