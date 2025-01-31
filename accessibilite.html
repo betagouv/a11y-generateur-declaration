@@ -73,7 +73,8 @@
         <h1>Déclaration d'accessibilité</h1>   
         <p>
           Établie le
-          <span>30 janvier 2025</span>
+          <span>30 janvier 2025</span>.<br />
+          Mise à jour le <b>31 janvier 2025</b>.
         </p> 
         </div>
       </section>
@@ -90,12 +91,46 @@
         </p>
         <h2>État de conformité</h2>
         <p>
-          <strong>Générateur de déclaration d'accessibilité</strong>
+          Le <strong>générateur de déclaration d'accessibilité</strong>
           est
-          <strong><span data-printfilter="lowercase">non conforme</span></strong>
+          <strong><span data-printfilter="lowercase">partiellement conforme</span></strong>
           avec le
-          <abbr title="Référentiel général d’amélioration de l’accessibilité">RGAA</abbr> : <span>le site n’a encore pas été audité.<br></span>
+          <abbr title="Référentiel général d’amélioration de l’accessibilité">RGAA</abbr>. 
+           L’audit de conformité réalisé en interne en janvier 2025 révèle que 80% des critères du RGAA version 4.2 sont respectés.
         </p>
+
+        <h2>Contenus non accessibles</h2>
+
+        <ul>
+          <li>Critère 12.6 : certaines zones de regroupements ne peuvent pas être évitées (les liens d'évitement ne sont pas fonctionnels).</li>
+          <li>Critère 7.1 : certains champs de formulaires générés par un script ne sont pas accessibles. Par exemple, certains input n'ont pas de libellés.</li>
+          <li>Critère 8.2 : certaines balises ne sont pas fermées.</li>
+          <li>Critère 9.3 : certains listes ne sont pas correctements structurées.</li>
+          <li>Critère 10.4 : quand la taille des caractères est augmentée à 200 %, certains textes sont coupés.</li>
+          <li>Critère 10.11 : dans une fenêtre de 320 px de large, certains textes sont coupés.</li>
+          <li>Critère 11.5 : certains champs de formulaires (les documents du schéma pluriannuel) devraient être regroupés.</li>
+          <li>Critère 13.2 : certaines pages (dans le pied de page) s'ouvrent dans une nouvelle page, sans prévenir l'utilisateur.</li>
+        </ul>
+
+        <h2>Réalisation du test</h2>
+
+        <h3>Outils pour évaluer l’accessibilité</h3>
+
+        <ul>
+          <li>Web Developer Toolbar</li>
+          <li>HeadingsMap</li>
+          <li>Inspecteur de composants</li>
+          <li>Validateur HTML du W3C</li>
+        </ul>
+
+        <h3>Pages vérifiées</h3>
+
+        <ul>
+          <li><a href="https://betagouv.github.io/a11y-generateur-declaration/#create">Générateur</a></li>
+          <li><a href="https://betagouv.github.io/a11y-generateur-declaration/#preview">Prévisualisation</a></li>
+          <li><a href="https://betagouv.github.io/a11y-generateur-declaration/accessibilite.html">Déclaration d'accessibilité</a></li>
+        </ul>
+
         <h2>Amélioration et contact</h2>
         <p>
           Si vous n’arrivez pas à accéder à un contenu ou à un service,
@@ -208,7 +243,7 @@
           <ul class="fr-footer__bottom-list">
             <li class="fr-footer__bottom-item">
               <a class="fr-footer__bottom-link" href="/a11y-generateur-declaration/accessibilite.html"
-                >Accessibilité : non conforme</a
+                >Accessibilité : partiellement conforme</a
               >
             </li>
           </ul>
