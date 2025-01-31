@@ -696,7 +696,7 @@
         newLine.classList.add("line");
         newLine.innerHTML = newLine.innerHTML.replace(
           /\[n\]/g,
-          lines.length + 1
+          lines.length + 2 // 1 + 1 = array starts ar 1 plus increment
         );
 
         proto.parentNode.insertBefore(newLine, proto);
