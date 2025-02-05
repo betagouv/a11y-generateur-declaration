@@ -428,6 +428,8 @@
       el.setAttribute("href", "#" + _getCurrentPage() + "-top");
     });
 
+    document.title = "Générateur de déclaration d'accessibilité";
+
     if (currentPage === "preview") {
       _showPreview();
     }
@@ -449,6 +451,8 @@
     var statementPreview = document.querySelector(
       "#accstatement .page.preview"
     );
+
+    document.title = "Prévisualisation de la déclaration d'accessibilité";
 
     // Apply conditionals
     _applyConditionals();
