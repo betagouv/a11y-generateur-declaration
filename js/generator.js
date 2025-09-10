@@ -445,6 +445,7 @@
       .removeAttribute("hidden");
 
     window.scrollTo(0, 0);
+    document.body.focus();
   }
 
   function _showPreview() {
