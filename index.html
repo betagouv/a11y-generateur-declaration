@@ -23,9 +23,10 @@
       href="favicon/manifest.webmanifest"
       crossorigin="use-credentials"
     />
+    <script src="js/skip-links.js" async></script>
   </head>
 
-  <body>
+  <body tabindex="-1">
     <div class="fr-skiplinks">
       <nav class="fr-container" role="navigation" aria-label="Accès rapide">
         <ul class="fr-skiplinks__list">
@@ -68,7 +69,7 @@
       </div>
     </header>
 
-    <main id="main" >
+    <main id="main">
       <section id="hero" class="">
         <div class="fr-container fr-py-6w">
         <h1>Générateur de déclaration d'accessibilité</h1>    
@@ -893,37 +894,38 @@
                               contenu est censé fonctionner.
                             </p>
 
-                            <div class="fr-input-group line">
-                              <label
-                                for="accstmnt_asstech_compatible_1"
-                                class="fr-label"
-                                >Environnement compatible 1
-                                <span class="fr-hint-text"
-                                  >Exemple : « navigateur X avec la technologie
-                                  d’assistance Y et le système d’exploitation
-                                  Z »</span
-                                ></label
-                              >
-                              <input
-                                type="text"
-                                class="fr-input"
-                                id="accstmnt_asstech_compatible_1"
-                                name="accstmnt_asstech_compatible"
-                              />
-                            </div>
-
-                            <div class="fr-input-group proto">
-                              <label
-                                for="accstmnt_asstech_compatible_[n]"
-                                class="fr-label"
-                                >Environnement compatible [n]</label
-                              >
-                              <input
-                                type="text"
-                                class="fr-input"
-                                id="accstmnt_asstech_compatible_[n]"
-                                name="accstmnt_asstech_compatible"
-                              />
+                            <div class="fr-fieldset__element">
+                              <div class="fr-input-group line">
+                                <label
+                                  for="accstmnt_asstech_compatible_1"
+                                  class="fr-label"
+                                  >Environnement compatible 1
+                                  <span class="fr-hint-text"
+                                    >Exemple : « navigateur X avec la technologie
+                                    d’assistance Y et le système d’exploitation
+                                    Z »
+                                  </span>
+                                </label>
+                                <input
+                                  type="text"
+                                  class="fr-input"
+                                  id="accstmnt_asstech_compatible_1"
+                                  name="accstmnt_asstech_compatible"
+                                />
+                              </div>
+                              <div class="fr-input-group proto">
+                                <label
+                                  for="accstmnt_asstech_compatible_[n]"
+                                  class="fr-label"
+                                  >Environnement compatible [n]
+                                </label>
+                                <input
+                                  type="text"
+                                  class="fr-input"
+                                  id="accstmnt_asstech_compatible_[n]"
+                                  name="accstmnt_asstech_compatible"
+                                />
+                              </div>
                             </div>
 
                             <button
@@ -973,35 +975,37 @@
                               contenu n’est pas censé fonctionner.
                             </p>
 
-                            <div class="fr-input-group line">
-                              <label
-                                for="accstmnt_asstech_incompatible_1"
-                                class="fr-label"
-                                >Environnement incompatible 1
-                                <span class="fr-hint-text"
-                                  >Exemple : « navigateurs vieux de plus de 3
-                                  versions majeures »</span
-                                ></label
-                              >
-                              <input
-                                type="text"
-                                class="fr-input"
-                                id="accstmnt_asstech_incompatible_1"
-                                name="accstmnt_asstech_incompatible"
-                              />
-                            </div>
-                            <div class="fr-input-group proto">
-                              <label
-                                for="accstmnt_asstech_incompatible_[n]"
-                                class="fr-label"
-                                >Environnement incompatible [n]</label
-                              >
-                              <input
-                                type="text"
-                                class="fr-input"
-                                id="accstmnt_asstech_incompatible_[n]"
-                                name="accstmnt_asstech_incompatible"
-                              />
+                            <div class="fr-fieldset__element">
+                              <div class="fr-input-group line">
+                                <label
+                                  for="accstmnt_asstech_incompatible_1"
+                                  class="fr-label"
+                                  >Environnement incompatible 1
+                                  <span class="fr-hint-text"
+                                    >Exemple : « navigateurs vieux de plus de 3
+                                    versions majeures »</span
+                                  ></label
+                                >
+                                <input
+                                  type="text"
+                                  class="fr-input"
+                                  id="accstmnt_asstech_incompatible_1"
+                                  name="accstmnt_asstech_incompatible"
+                                />
+                              </div>
+                              <div class="fr-input-group proto">
+                                <label
+                                  for="accstmnt_asstech_incompatible_[n]"
+                                  class="fr-label"
+                                  >Environnement incompatible [n]</label
+                                >
+                                <input
+                                  type="text"
+                                  class="fr-input"
+                                  id="accstmnt_asstech_incompatible_[n]"
+                                  name="accstmnt_asstech_incompatible"
+                                />
+                              </div>
                             </div>
                           </fieldset>
                           <button
@@ -1036,7 +1040,7 @@
                             supportée.
                           </p>
 
-                          <fieldset class="fr-fieldset" aria-labelledby="checkboxes-legend checkboxes-messages">
+                          <fieldset class="fr-fieldset" aria-labelledby="checkboxes-legend">
                             <legend class="fr-fieldset__legend fr-fieldset__legend--regular" id="checkboxes-legend">
                               Technologies indispensables :
                             </legend>
@@ -1117,7 +1121,7 @@
                                   <span class="visuallyhidden">nom</span>
                                 </div>
                                 <input
-                                  id="accstmnt_tech_other_[n]_value"
+                                  id="accstmnt_tech_other_[n]"
                                   class="fr-input"
                                   type="text"
                                   aria-describedby="accstmnt_tech_other_label_[n]"
@@ -1448,7 +1452,7 @@
           <div class="fr-mt-8w">
             <h1>Et après ?</h1>
 
-            <fieldset class="fr-fieldset" id="checkboxes-after" aria-labelledby="checkboxes-legend-after checkboxes-messages">
+            <fieldset class="fr-fieldset" id="checkboxes-after" aria-labelledby="checkboxes-legend-after">
               <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="checkboxes-legend-after">
                   Pour remplir vos obligations déclaratives :
               </legend>
@@ -1543,13 +1547,14 @@
             </p>
 
             <p class="fr-footer__content-desc">
-              <strong>Dernière mise à jour le 30 janvier 2025 </strong> :
-              correction de l'affichage de l'email dans la déclaration
+              <strong>Dernière mise à jour le 1 octobre 2025 </strong> :
+              mise en ligne de l'audit d'accessibilité
             </p>
 
             <ul class="fr-footer__content-list">
               <li class="fr-footer__content-item">
                 <a
+                  title="accessibilite.gouv.fr - nouvelle fenêtre" 
                   class="fr-footer__content-link"
                   target="_blank"
                   href="https://accessibilite.gouv.fr"
@@ -1558,6 +1563,7 @@
               </li>
               <li class="fr-footer__content-item">
                 <a
+                  title="beta.gouv.fr - nouvelle fenêtre" 
                   class="fr-footer__content-link"
                   target="_blank"
                   href="https://beta.gouv.fr"
@@ -1571,19 +1577,12 @@
           <ul class="fr-footer__bottom-list">
             <li class="fr-footer__bottom-item">
               <a class="fr-footer__bottom-link" href="/a11y-generateur-declaration/accessibilite.html"
-                >Accessibilité : non conforme</a
+                >Accessibilité : partiellement conforme</a
               >
             </li>
           </ul>
           <div class="fr-footer__bottom-copy">
-            <p>
-              Sauf mention contraire, tous les contenus de ce site sont sous
-              <a
-                href="https://github.com/etalab/licence-ouverte/blob/master/LO.md"
-                target="_blank"
-                >licence etalab-2.0</a
-              >
-            </p>
+            <p>Sauf mention explicite de propriété intellectuelle détenue par des tiers, les contenus de ce site sont proposés sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank" rel="noopener external" title="Licence etalab - nouvelle fenêtre">licence etalab-2.0</a></p>
           </div>
         </div>
       </div>

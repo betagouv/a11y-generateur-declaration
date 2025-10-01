@@ -428,6 +428,8 @@
       el.setAttribute("href", "#" + _getCurrentPage() + "-top");
     });
 
+    document.title = "Générateur de déclaration d'accessibilité";
+
     if (currentPage === "preview") {
       _showPreview();
     }
@@ -443,12 +445,15 @@
       .removeAttribute("hidden");
 
     window.scrollTo(0, 0);
+    document.body.focus();
   }
 
   function _showPreview() {
     var statementPreview = document.querySelector(
       "#accstatement .page.preview"
     );
+
+    document.title = "Prévisualisation de la déclaration d'accessibilité";
 
     // Apply conditionals
     _applyConditionals();
@@ -696,7 +701,7 @@
         newLine.classList.add("line");
         newLine.innerHTML = newLine.innerHTML.replace(
           /\[n\]/g,
-          lines.length + 1
+          lines.length + 2 // 1 + 1 = array starts ar 1 plus increment
         );
 
         proto.parentNode.insertBefore(newLine, proto);
